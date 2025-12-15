@@ -245,8 +245,14 @@ class HabitatManager:
             print(f"   Workspace: {status['workspace']}")
             print()
     
-    def cleanup_all(self):
+    def cleanup_all(self, force: bool = False):
         """Cleanup all habitats"""
+        if not force:
+            response = input("⚠️  Are you sure you want to cleanup all habitats? This cannot be undone. [y/N] ")
+            if response.lower() not in ['y', 'yes']:
+                print("❌ Cleanup cancelled.")
+                return
+
         print("🧹 Cleaning up all habitats...")
         
         for key, habitat in self.habitats.items():
@@ -300,7 +306,8 @@ def main():
     subparsers.add_parser('list-habitats', help='List all habitats')
     
     # Cleanup command
-    subparsers.add_parser('cleanup', help='Cleanup all habitats')
+    cleanup_parser = subparsers.add_parser('cleanup', help='Cleanup all habitats')
+    cleanup_parser.add_argument('-f', '--force', action='store_true', help='Force cleanup without confirmation')
     
     args = parser.parse_args()
     
@@ -334,7 +341,7 @@ def main():
             manager.list_habitats()
             
         elif args.command == 'cleanup':
-            manager.cleanup_all()
+            manager.cleanup_all(args.force)
             
     except Exception as e:
         print(f"❌ Command failed: {e}")
