@@ -11,6 +11,7 @@ additional isolation and structure for safe experimentation.
 
 import json
 import os
+import re
 import subprocess
 import tempfile
 import time
@@ -128,9 +129,17 @@ class ExperimentalHabitat:
         self.temp_dir = tempfile.mkdtemp(prefix=f"habitat_{name}_")
         logger.info(f"Habitat {name} established at {self.temp_dir}")
         
+    def _validate_name(self, name: str) -> None:
+        """Validate that the name contains only safe characters"""
+        if not re.match(r'^[a-zA-Z0-9_-]+$', name):
+            raise ValueError(f"Invalid name '{name}'. Only alphanumeric characters, underscores, and hyphens are allowed.")
+
     def spawn_experiment(self, experiment: ExperimentalSystem, containment_rules: Dict[str, Any]) -> Dict[str, Any]:
         """Spawn a new experimental system within containment boundaries"""
         
+        # Validate experiment name to prevent path traversal
+        self._validate_name(experiment.name)
+
         # Create containment boundary
         boundary = ContainmentBoundary(
             name=f"boundary_{experiment.name}",
@@ -197,6 +206,8 @@ class ExperimentalHabitat:
     
     def nest_habitat(self, parent_experiment: str, child_name: str) -> 'ExperimentalHabitat':
         """Create a nested habitat within an existing experiment"""
+        self._validate_name(child_name)
+
         if parent_experiment not in self.active_experiments:
             raise ValueError(f"Parent experiment {parent_experiment} not found")
         
