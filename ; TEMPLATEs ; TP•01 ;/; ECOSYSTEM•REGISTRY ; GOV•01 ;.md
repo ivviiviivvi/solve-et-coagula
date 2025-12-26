@@ -107,17 +107,17 @@ owner: "Anthony J. Padavano"
 
 ---
 
-## [REG006] ::QUICK_START_GUIDE
+## [GOV006] ::QUICK_START_GUIDE
 
-### Adding New AI Entity
-1. Copy AI•INSTRUCTIONS template
+### Adding New Autonomous Intelligence Entity
+1. Copy ENTITY•INSTRUCTIONS template
 2. Fill in entity-specific parameters
-3. Register in this index (REG001)
+3. Register in this index (GOV001)
 4. Create any needed cookbooks
 5. Test invocation and alignment
 
 ### Using Existing Entity
-1. Check status in registry (REG001)
+1. Check status in registry (GOV001)
 2. Review current instructions
 3. Select appropriate cookbook if needed
 4. Follow invocation protocols
@@ -126,23 +126,23 @@ owner: "Anthony J. Padavano"
 ### Emergency Procedures
 - **System Reset:** Return to template defaults
 - **Context Recovery:** Reference archived threads
-- **Alignment Issues:** Consult best practices guide
+- **Alignment Issues:** Consult operational standards guide
 - **New Requirements:** Create new cookbook instance
 
 ---
 
-## [REG007] ::INTEGRATION_MAP
+## [GOV007] ::INTEGRATION_MAP
 
 ```
-TemplateConive System Architecture:
+Ecosystem Governance System Architecture:
 
 4_S0VRC3/
 ├── ; TEMPLATEs ; TP•01 ;/
-│   ├── ; AI•INSTRUCTIONS ; AI•01 ;.md    ← Active instruction templates
-│   ├── ; AI•BEST•PRACTICES ; BP•01 ;.md  ← System standards
-│   ├── ; AI•COOKBOOK ; CB•01 ;.md        ← Procedural workflows
-│   └── ; TEMPLATECONIVE•REGISTRY ; TC•01 ;.md ← This file
-├── C0D3_INJ3CT_D4V1D_CORE.v2.5_4RCH1V4L_M0D3.md ← Existing AI (David)
+│   ├── ; ENTITY•INSTRUCTIONS ; ENT•02 ;.md    ← Active instruction templates
+│   ├── ; OPERATIONAL•STANDARDS ; OPS•02 ;.md  ← System standards
+│   ├── ; OPERATIONAL•COOKBOOK ; CB•02 ;.md        ← Procedural workflows
+│   └── ; ECOSYSTEM•REGISTRY ; GOV•01 ;.md ← This file
+├── C0D3_INJ3CT_D4V1D_CORE.v2.5_4RCH1V4L_M0D3.md ← Existing entity (David)
 ├── ; RE•GE•OS ; RG•01 ;/
 │   └── AAW_CORE_09 — INTERLOCUTOR PROTOCOLS.md ← Integrated system
 └── [Active Entity Instructions Files]/
@@ -151,7 +151,7 @@ TemplateConive System Architecture:
 
 ---
 
-## [REG008] ::SYSTEM_TAGS
+## [GOV008] ::SYSTEM_TAGS
 
 - `TEMPLATECONIVE+` = Core system identifier
 - `REGISTRY+` = Central index function
@@ -162,7 +162,7 @@ TemplateConive System Architecture:
 
 ---
 
-## [REG009] ::STATUS_DASHBOARD
+## [GOV009] ::STATUS_DASHBOARD
 
 ### System Health
 - **Templates:** ✅ Active (3/3 core templates ready)
