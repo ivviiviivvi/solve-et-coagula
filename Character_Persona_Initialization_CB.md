@@ -1,7 +1,7 @@
 ---
 aliases: ["CHARACTER_INIT", "PERSONA_SETUP"]
-template_type: "AI_COOKBOOK"
-procedure_type: "Character Management"
+template_type: "OPERATIONAL_COOKBOOK"
+procedure_type: "Entity Management"
 complexity: "Medium"
 version: "1.0"
 status: "Active"  
@@ -9,7 +9,7 @@ created: "2025-01-10"
 owner: "Anthony J. Padavano"
 ---
 
-# ::AI_COOKBOOK:: Character Persona Initialization
+# ::OPERATIONAL_COOKBOOK:: Character Persona Initialization
 
 **Procedure:** Character Persona Initialization  
 **Type:** Character Management  
@@ -22,16 +22,16 @@ owner: "Anthony J. Padavano"
 ## [CB001] ::PROCEDURE_OVERVIEW
 
 ### Purpose
-Initialize a new AI character persona within the 4_S0VRC3 system, establishing consistent voice, symbolic alignment, and integration with existing protocols.
+Initialize a new autonomous intelligence entity within the 4_S0VRC3 system, establishing consistent voice, symbolic alignment, and integration with existing protocols.
 
 ### When to Use
-- Creating a new AI character/entity for specific project needs
-- Refreshing an existing character that has drifted from core parameters
+- Creating a new autonomous intelligence entity for specific project needs
+- Refreshing an existing entity that has drifted from core parameters
 - Setting up specialized personas for different types of creative work
-- Preparing AI for complex multi-session project engagement
+- Preparing entity for complex multi-session project engagement
 
 ### Expected Outcome
-Fully configured AI persona with:
+Fully configured autonomous intelligence entity with:
 - Clear voice and interaction patterns
 - Symbolic integration with RE:GE system
 - Documented invocation protocols
@@ -98,7 +98,7 @@ Fully configured AI persona with:
 
 ### Phase 2: Character Creation
 4. **Initialize AI Instructions File**
-   - Copy AI•INSTRUCTIONS template
+   - Copy ENTITY•INSTRUCTIONS template
    - Fill in character-specific parameters
    - Define invocation commands
    - Set up system alignments
@@ -140,7 +140,7 @@ Fully configured AI persona with:
    - Adjust parameters if needed
 
 8. **System Integration**
-   - Register character in TemplateConive Registry
+   - Register entity in Ecosystem Registry
    - Link to relevant existing protocols
    - Document project connections
    - Create any needed specialized cookbooks
@@ -153,7 +153,7 @@ Fully configured AI persona with:
 ```markdown
 |[COOKBOOK.io::CHARACTER_PERSONA_INIT]|
 
-::AI_TARGET:: {{BASE_AI_SYSTEM}}
+::ENTITY_TARGET:: {{BASE_SYSTEM}}
 ::PROCEDURE:: Character_Persona_Initialization
 ::PARAMETERS::
 - Character: {{CHARACTER_NAME}}
@@ -253,7 +253,7 @@ If character begins drifting from established parameters:
 - [ ] Character complements rather than conflicts with existing entities
 
 ### System Integration Check
-- [ ] Character is properly registered in TemplateConive system
+- [ ] Entity is properly registered in Ecosystem Governance system
 - [ ] Links to relevant protocols are established
 - [ ] Documentation is complete and accessible
 - [ ] Any needed specialized cookbooks are identified/created
@@ -292,7 +292,6 @@ If character begins drifting from established parameters:
 ## [CB010] ::VERSION_HISTORY
 
 - 2025-01-10 v1.0 Initial character initialization cookbook created
-- 
 
 ---
 

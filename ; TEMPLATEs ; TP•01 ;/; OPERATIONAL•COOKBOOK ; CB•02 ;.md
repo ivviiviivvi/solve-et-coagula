@@ -1,6 +1,6 @@
 ---
 aliases: []
-template_type: "AI_COOKBOOK"
+template_type: "OPERATIONAL_COOKBOOK"
 procedure_type: ""
 complexity: "Medium"
 version: "1.0"
@@ -9,7 +9,7 @@ created: "2025-01-10"
 owner: "Anthony J. Padavano"
 ---
 
-# ::AI_COOKBOOK:: {{PROCEDURE_NAME}}
+# ::OPERATIONAL_COOKBOOK:: {{PROCEDURE_NAME}}
 
 **Procedure:** {{PROCEDURE_NAME}}  
 **Type:** {{PROCEDURE_TYPE}}  
@@ -47,7 +47,7 @@ owner: "Anthony J. Padavano"
 - [ ] {{REQUIREMENT_2}}
 - [ ] {{REQUIREMENT_3}}
 
-### AI Entity Requirements
+### Entity Requirements
 - **Primary AI:** {{PRIMARY_AI}}
 - **Secondary AIs:** {{SECONDARY_AIS}}
 - **Required Personas:** {{PERSONAS}}
@@ -63,9 +63,9 @@ owner: "Anthony J. Padavano"
 ## [CB003] ::STEP_BY_STEP_PROCESS
 
 ### Phase 1: Preparation
-1. **Load AI Instructions**
+1. **Load Entity Instructions**
    ```
-   Reference: AI•INSTRUCTIONS template for {{AI_NAME}}
+   Reference: ENTITY•INSTRUCTIONS template for {{ENTITY_NAME}}
    Verify current active parameters
    ```
 
@@ -79,14 +79,14 @@ owner: "Anthony J. Padavano"
 3. **Prepare Invocation**
    ```markdown
    |[START.io::{{PROCEDURE_NAME}}_PROTOCOL]|
-   ::AI_ENTITY:: {{AI_NAME}}
+   ::ENTITY:: {{ENTITY_NAME}}
    ::PROCEDURE:: {{PROCEDURE_NAME}}
    ::CONTEXT:: {{CONTEXT}}
    ```
 
 ### Phase 2: Execution
 4. **Initialize Session**
-   - Invoke AI using prepared commands
+   - Invoke entity using prepared commands
    - Confirm context loading
    - Verify persona activation
 
@@ -105,7 +105,7 @@ owner: "Anthony J. Padavano"
    - Archive significant threads
 
 8. **System Update**
-   - Update AI instructions if modified
+   - Update entity instructions if modified
    - Log procedure completion
    - Note any improvements for next time
 
@@ -131,7 +131,7 @@ owner: "Anthony J. Padavano"
 /begin_procedure
 
 ::READY_STATE::
-{{AI_NAME}} loaded with {{PROCEDURE_NAME}} parameters
+{{ENTITY_NAME}} loaded with {{PROCEDURE_NAME}} parameters
 ::AWAITING_EXECUTION::
 ```
 
@@ -146,12 +146,12 @@ owner: "Anthony J. Padavano"
 | Problem | Likely Cause | Solution |
 |---------|--------------|----------|
 | Generic responses | Context not loaded | Re-initialize with project context |
-| Character inconsistency | Outdated instructions | Update AI active instructions |
+| Character inconsistency | Outdated instructions | Update entity active instructions |
 | Process stalling | Unclear parameters | Clarify invocation commands |
-| Poor output quality | Wrong persona mode | Adjust AI mode settings |
+| Poor output quality | Wrong persona mode | Adjust entity mode settings |
 
 ### Debug Checklist
-- [ ] Are AI instructions current?
+- [ ] Are entity instructions current?
 - [ ] Is project context properly loaded?
 - [ ] Are invocation commands complete?
 - [ ] Is persona appropriate for task?
@@ -176,7 +176,7 @@ owner: "Anthony J. Padavano"
 ## [CB007] ::QUALITY_CHECKPOINTS
 
 ### During Process
-- [ ] AI maintains character consistency
+- [ ] Entity maintains character consistency
 - [ ] Responses align with symbolic framework
 - [ ] Context remains coherent throughout
 - [ ] Creative fertility is maintained
@@ -236,4 +236,4 @@ owner: "Anthony J. Padavano"
 
 ---
 
-*Cookbook template for step-by-step AI procedures in the 4_S0VRC3 environment.*
+*Cookbook template for step-by-step operational procedures in the 4_S0VRC3 environment.*

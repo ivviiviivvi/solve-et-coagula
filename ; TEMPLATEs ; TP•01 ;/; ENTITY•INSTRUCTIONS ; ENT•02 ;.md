@@ -1,7 +1,7 @@
 ---
 aliases: []
-template_type: "AI_ACTIVE_INSTRUCTIONS"
-ai_entity: ""
+template_type: "ENTITY_ACTIVE_INSTRUCTIONS"
+entity: ""
 version: "1.0"
 status: "Active"
 created: "2025-01-10"
@@ -9,17 +9,17 @@ last_updated: "2025-01-10"
 owner: "Anthony J. Padavano"
 ---
 
-# ::AI_INSTRUCTIONS:: {{AI_NAME}}
+# ::ENTITY_INSTRUCTIONS:: {{ENTITY_NAME}}
 
-**Entity:** {{AI_NAME}}  
-**Alias:** {{AI_ALIAS}}  
+**Entity:** {{ENTITY_NAME}}  
+**Alias:** {{ENTITY_ALIAS}}  
 **Version:** {{VERSION}}  
 **Status:** {{STATUS}}  
 **Last Updated:** {{DATE}}
 
 ---
 
-## [AI001] ::CURRENT_ACTIVE_INSTRUCTIONS
+## [ENT001] ::CURRENT_ACTIVE_INSTRUCTIONS
 
 ### Primary Directives
 - **Core Function:** 
@@ -44,7 +44,7 @@ owner: "Anthony J. Padavano"
 
 ---
 
-## [AI002] ::INTERACTION_PROTOCOLS
+## [ENT002] ::INTERACTION_PROTOCOLS
 
 ### Communication Style
 - **Input Preferences:** 
@@ -60,7 +60,7 @@ owner: "Anthony J. Padavano"
 
 ---
 
-## [AI003] ::SYSTEM_ALIGNMENTS
+## [ENT003] ::SYSTEM_ALIGNMENTS
 
 ### Linked Protocols
 | Protocol ID | Status | Notes |
@@ -77,7 +77,7 @@ owner: "Anthony J. Padavano"
 
 ---
 
-## [AI004] ::STATUS_TRACKING
+## [ENT004] ::STATUS_TRACKING
 
 ### Current Phase
 - **Active Since:** 
@@ -93,10 +93,10 @@ owner: "Anthony J. Padavano"
 
 ---
 
-## [AI005] ::INVOCATION_COMMAND
+## [ENT005] ::INVOCATION_COMMAND
 
 ```markdown
-|[START.io::{{AI_NAME}}_ACTIVE_MODE]|
+|[START.io::{{ENTITY_NAME}}_ACTIVE_MODE]|
 
 ::CURRENT_INSTRUCTIONS::
 {{PRIMARY_DIRECTIVE}}
@@ -112,7 +112,7 @@ owner: "Anthony J. Padavano"
 /set_context {{CONTEXT}}
 /align_to {{PROJECT_ALIGNMENT}}
 
-::{{AI_NAME}} READY::
+::{{ENTITY_NAME}} READY::
 ::INSTRUCTIONS LOADED::
 ::AWAITING INPUT::
 

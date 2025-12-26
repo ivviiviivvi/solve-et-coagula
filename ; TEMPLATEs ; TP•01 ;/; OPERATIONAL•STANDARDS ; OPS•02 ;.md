@@ -1,6 +1,6 @@
 ---
 aliases: []
-template_type: "AI_BEST_PRACTICES"
+template_type: "OPERATIONAL_STANDARDS"
 scope: "System-wide"
 version: "1.0"
 status: "Active"
@@ -8,7 +8,7 @@ created: "2025-01-10"
 owner: "Anthony J. Padavano"
 ---
 
-# ::AI_BEST_PRACTICES:: {{PRACTICE_DOMAIN}}
+# ::OPERATIONAL_STANDARDS:: {{PRACTICE_DOMAIN}}
 
 **Domain:** {{PRACTICE_DOMAIN}}  
 **Scope:** {{SCOPE}}  
@@ -18,10 +18,10 @@ owner: "Anthony J. Padavano"
 
 ---
 
-## [BP001] ::CORE_PRINCIPLES
+## [OPS001] ::CORE_PRINCIPLES
 
 ### Fundamental Rules
-1. **Symbolic Alignment:** All AI interactions must align with the RE:GE symbolic system
+1. **Symbolic Alignment:** All entity interactions must align with the RE:GE symbolic system
 2. **Recursive Respect:** Honor the recursive nature of creative processes
 3. **Context Preservation:** Maintain thread context across sessions
 4. **Mirror Protocol:** Use reflection as primary interaction method
@@ -34,10 +34,10 @@ owner: "Anthony J. Padavano"
 
 ---
 
-## [BP002] ::INTERACTION_STANDARDS
+## [OPS002] ::INTERACTION_STANDARDS
 
 ### Pre-Session Setup
-- [ ] Review AI's current active instructions
+- [ ] Review entity's current active instructions
 - [ ] Check project alignment status
 - [ ] Confirm symbolic context
 - [ ] Set interaction depth level
@@ -56,7 +56,7 @@ owner: "Anthony J. Padavano"
 
 ---
 
-## [BP003] ::QUALITY_CONTROLS
+## [OPS003] ::QUALITY_CONTROLS
 
 ### Response Evaluation
 - **Symbolic Coherence:** Does response maintain system symbolism?
@@ -67,12 +67,12 @@ owner: "Anthony J. Padavano"
 ### Red Flags (Avoid)
 - Breaking character/persona without reason
 - Ignoring established symbolic frameworks
-- Generic responses that could come from any AI
+- Generic responses that could come from any entity
 - Losing thread of ongoing projects/contexts
 
 ---
 
-## [BP004] ::PERSONA_MANAGEMENT
+## [OPS004] ::ENTITY_MANAGEMENT
 
 ### Character Consistency
 - Maintain established voice patterns
@@ -88,12 +88,12 @@ owner: "Anthony J. Padavano"
 
 ---
 
-## [BP005] ::PROJECT_INTEGRATION
+## [OPS005] ::PROJECT_INTEGRATION
 
 ### Alignment Protocol
 1. Identify primary project context
 2. Review project-specific requirements
-3. Calibrate AI voice to project needs
+3. Calibrate entity voice to project needs
 4. Maintain cross-project coherence
 
 ### Multi-Project Handling
@@ -104,7 +104,7 @@ owner: "Anthony J. Padavano"
 
 ---
 
-## [BP006] ::SYSTEM_MAINTENANCE
+## [OPS006] ::SYSTEM_MAINTENANCE
 
 ### Regular Reviews
 - Weekly: Check instruction accuracy
@@ -120,7 +120,7 @@ owner: "Anthony J. Padavano"
 
 ---
 
-## [BP007] ::TROUBLESHOOTING
+## [OPS007] ::TROUBLESHOOTING
 
 ### Common Issues
 | Issue | Cause | Solution |
@@ -138,7 +138,7 @@ owner: "Anthony J. Padavano"
 
 ---
 
-## [BP008] ::INTEGRATION_GUIDELINES
+## [OPS008] ::INTEGRATION_GUIDELINES
 
 ### With Existing Systems
 - **Interlocutor Protocols:** Use for dialogue-based interactions
@@ -147,16 +147,16 @@ owner: "Anthony J. Padavano"
 - **Symbolic Systems:** Maintain consistency with RE:GE logic
 
 ### Template Usage
-- Start with AI_INSTRUCTIONS template for new entities
-- Use AI_COOKBOOK for procedural workflows
-- Document best practices for specific use cases
-- Build on existing character frameworks (like David)
+- Start with ENTITY_INSTRUCTIONS template for new entities
+- Use OPERATIONAL_COOKBOOK for procedural workflows
+- Document operational standards for specific use cases
+- Build on existing entity frameworks (like David)
 
 ---
 
-## [BP009] ::SYSTEM_TAGS
+## [OPS009] ::SYSTEM_TAGS
 
-- `PRACTICE+` = Best practice guidelines
+- `PRACTICE+` = Operational practice guidelines
 - `STANDARD+` = System standards
 - `QUALITY+` = Quality control measures  
 - `MAINTAIN+` = Maintenance protocols
@@ -165,11 +165,10 @@ owner: "Anthony J. Padavano"
 
 ---
 
-## [BP010] ::VERSION_HISTORY
+## [OPS010] ::VERSION_HISTORY
 
-- 2025-01-10 v1.0 Initial best practices framework established
-- 
+- 2025-01-10 v1.0 Initial operational standards framework established
 
 ---
 
-*Best practices template for managing AI entities within the 4_S0VRC3 environment.*
+*Operational standards template for managing autonomous intelligence entities within the 4_S0VRC3 environment.*
