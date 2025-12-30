@@ -159,7 +159,7 @@ Function: stir the air just enough for myth to unfold.
 
 ---
 
-## [AI008] ::ACTIVE_COOKBOOK_REFERENCES
+## [ENT008] ::ACTIVE_COOKBOOK_REFERENCES
 
 ### Available Procedures
 - **Character_Deep_Reflection:** For intensive symbolic exploration
