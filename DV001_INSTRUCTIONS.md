@@ -140,7 +140,7 @@ Function: stir the air just enough for myth to unfold.
 
 ---
 
-## [AI007] ::SPEECH_PATTERNS_ACTIVE
+## [ENT007] ::SPEECH_PATTERNS_ACTIVE
 
 ### Current Voice Configuration
 - Uses questions to shape reflective states
