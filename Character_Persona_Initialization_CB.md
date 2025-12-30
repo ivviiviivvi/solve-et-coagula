@@ -97,7 +97,7 @@ Fully configured autonomous intelligence entity with:
    ```
 
 ### Phase 2: Character Creation
-4. **Initialize AI Instructions File**
+4. **Initialize Entity Instructions File**
    - Copy ENTITY•INSTRUCTIONS template
    - Fill in character-specific parameters
    - Define invocation commands
