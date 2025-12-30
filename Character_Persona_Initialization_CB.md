@@ -53,7 +53,7 @@ Fully configured autonomous intelligence entity with:
 - [ ] Symbolic elements selected (imagery, metaphors, core symbols)
 - [ ] Voice/tone characteristics established
 
-### AI Entity Requirements
+### Autonomous Intelligence Entity Requirements
 - **Primary AI:** Base AI system to receive persona
 - **Secondary AIs:** None (unless creating ensemble character)
 - **Required Personas:** Existing system knowledge for integration
