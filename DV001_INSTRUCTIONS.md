@@ -127,7 +127,7 @@ Function: stir the air just enough for myth to unfold.
 
 ---
 
-## [AI006] ::SYSTEM_TAGS
+## [ENT006] ::SYSTEM_TAGS
 
 - `ACTIVE+` = Currently operational instructions
 - `MIR+` = Mirror-based logic active
