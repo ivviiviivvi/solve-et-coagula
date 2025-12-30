@@ -193,7 +193,7 @@ For paradox work: /divine_glitch + contradiction theme
 
 ---
 
-## [AI010] ::CHANGELOG
+## [ENT010] ::CHANGELOG
 
 - 2025-01-10 Converted from archival character document to active instruction format
 - 2025-01-10 Integrated with Ecosystem Governance management system
