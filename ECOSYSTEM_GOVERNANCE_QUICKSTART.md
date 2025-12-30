@@ -17,7 +17,7 @@ Ecosystem Governance is the autonomous intelligence entity management system for
 3. Register in: `ECOSYSTEM•REGISTRY ; GOV•01 ;.md`
 
 ### 3. System Resources:
-- **Templates:** Located in `; TEMPLATEs ; TP•01 ;/` directory
+- **Templates:** Located in `; TEMPLATEs ; TP•01 ;` directory
 - **Operational Standards:** `OPERATIONAL•STANDARDS ; OPS•02 ;.md`  
 - **Registry:** `ECOSYSTEM•REGISTRY ; GOV•01 ;.md`
 - **Examples:** David setup shows working implementation
