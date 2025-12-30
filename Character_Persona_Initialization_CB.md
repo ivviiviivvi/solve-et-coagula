@@ -12,7 +12,7 @@ owner: "Anthony J. Padavano"
 # ::OPERATIONAL_COOKBOOK:: Character Persona Initialization
 
 **Procedure:** Character Persona Initialization  
-**Type:** Character Management  
+**Type:** Entity Management  
 **Complexity:** Medium  
 **Version:** 1.0  
 **Created:** 2025-01-10
