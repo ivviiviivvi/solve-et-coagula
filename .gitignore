@@ -1,3 +1,5 @@
+__pycache__/
+.pytest_cache/
 # Obsidian workspace files (user-specific settings)
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
