@@ -14,6 +14,7 @@
 ## File Categories
 
 ### Core Documentation Files
+
 - README.md - Main repository overview
 - SECURITY.md - Security policies  
 - CHANGELOG.md - Change tracking
