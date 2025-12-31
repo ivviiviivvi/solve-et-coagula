@@ -31,13 +31,13 @@ Ecosystem Governance is the autonomous intelligence entity management system for
 
 ## Related Governance Enhancements
 
-To operate entities safely and consistently within the ecosystem, review the following companion documents:
+To operate entities safely and consistently within the ecosystem, the following governance enhancement documents are planned and will be introduced in future updates:
 
-- `ARCHETYPAL_IDENTITY_PRESERVATION_ENHANCEMENT.md`  
+- Archetypal Identity Preservation Enhancement  
   - Framework for entity identity integrity and contamination prevention across interactions and sessions.
-- `MULTI_ENTITY_COORDINATION_ENHANCEMENT.md`  
+- Multi-Entity Coordination Enhancement  
   - Patterns and protocols for scalable collaboration, orchestration, and conflict resolution across multiple entities.
-- `ECOSYSTEM_GOVERNANCE_LOGIC_CHECK.md`  
-  - Comprehensive governance logic analysis, including six identified vulnerabilities and recommended mitigation patterns.
+- Ecosystem Governance Logic Check  
+  - Comprehensive governance logic analysis, including identified vulnerabilities and recommended mitigation patterns.
 
-These enhancements are designed to be used together with this quick start guide and the core operational standards documents.
+These enhancements are designed to be used together with this quick start guide and the core operational standards documents once they are available.
