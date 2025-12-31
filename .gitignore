@@ -21,6 +21,7 @@ Thumbs.db
 
 # Temporary experimental workspaces
 **/habitat_*_*/
+**/habitat_*_*/
 __pycache__/
 .pytest_cache/
 # Obsidian workspace files (user-specific settings)
