@@ -1,6 +1,7 @@
+---
 name: Summarize new issues
 
-on:
+"on":
   issues:
     types: [opened]
 
@@ -30,6 +31,8 @@ jobs:
 
       - name: Comment with placeholder summary
         run: |
+          gh issue comment $ISSUE_NUMBER \
+            --body '${{ steps.inference.outputs.response }}'
           gh issue comment $ISSUE_NUMBER --body "🤖 AI Summary: This feature requires AI integration setup. See workflow file for details."
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
