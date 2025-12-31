@@ -20,10 +20,12 @@ This document is your home base for navigating the following components:
 
 ### ✅ Core Elements
 - `FOLDER_CATALOG_FINAL.csv` — Canonical list of 16 core project folders, each assigned a symbolic ID (PR01–PR16).
+- `ARCHIVAL_ST4CK_PROJECTS.csv` — Canonical list of 16 core project folders, each assigned a symbolic ID (PR01–PR16).
 - `THREAD_PROJECT_CROSSWALK_TAGGED.csv` — Index of all ChatGPT threads and their assigned folder relationships.
 - `THREAD_DIGESTS.zip` — Per-folder logbook of all related GPT conversations (`PRxx_THREAD_DIGEST.md`).
 - `SYMBOLIC_TREE_MAP.md` — High-level symbolic overview showing folder-thread relationships.
 - `THREADS_REVIEW_REQUIRED.csv` — List of GPT threads not yet matched to a project folder.
+- `CheatCode_LookUp.md` — Central quick-reference system for Instructions, Knowledge Sources, Best Practices, and CookBooks.
 
 ### 🗂 Folder Structure (Example)
 - `PR06__floating_points/`
