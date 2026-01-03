@@ -35,7 +35,6 @@ class ContainmentBoundary:
         
         # Pre-calculate full path to avoid recursion during access
         if parent:
-            self._full_path = f"{parent.get_full_path()}/{name}"
             parent.children.append(self)
             self._full_path = f"{parent.get_full_path()}/{self.name}"
         else:
