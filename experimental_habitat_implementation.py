@@ -15,6 +15,7 @@ import re
 import subprocess
 import tempfile
 import time
+import re
 from datetime import datetime
 from typing import Dict, List, Any, Optional
 import logging
@@ -27,18 +28,73 @@ class ContainmentBoundary:
     """Represents an isolation boundary for experimental systems"""
     
     def __init__(self, name: str, level: int, parent: Optional['ContainmentBoundary'] = None):
-        self.name = name
+        self._name = name
+        self._parent = parent
         self.level = level
-        self.parent = parent
         self.children: List['ContainmentBoundary'] = []
         self.created = datetime.now().isoformat()
         self.active = True
         
+        if self._parent:
+            self._parent.children.append(self)
+
+        self._update_full_path()
+
+    @property
+    def name(self) -> str:
+        return self._name
+        # Pre-calculate full path to avoid recursion during access
         if parent:
+            self._full_path = f"{parent.get_full_path()}/{name}"
             parent.children.append(self)
+            self._full_path = f"{parent.get_full_path()}/{self.name}"
+        else:
+            self._full_path = self.name
     
+    @name.setter
+    def name(self, value: str):
+        self._name = value
+        self._update_full_path()
+        self._update_children_paths()
+
+    @property
+    def parent(self) -> Optional['ContainmentBoundary']:
+        return self._parent
+
+    @parent.setter
+    def parent(self, value: Optional['ContainmentBoundary']):
+        # Remove from old parent if exists
+        if self._parent and self in self._parent.children:
+            self._parent.children.remove(self)
+
+        self._parent = value
+        if self._parent:
+            self._parent.children.append(self)
+
+        self._update_full_path()
+        self._update_children_paths()
+
+    def _update_full_path(self):
+        """Update the cached full path"""
+        if self._parent:
+            self._full_path = f"{self._parent.get_full_path()}/{self._name}"
+        else:
+            self._full_path = self._name
+
+    def _update_children_paths(self):
+        """recursively update paths for all children"""
+        for child in self.children:
+            child._update_full_path()
+            child._update_children_paths()
+
     def get_full_path(self) -> str:
         """Get the full containment path (hat stack)"""
+        return self._full_path
+        # Return cached path if available
+        if hasattr(self, '_full_path'):
+            return self._full_path
+
+        # Fallback for compatibility or if cache is missing
         if self.parent:
             return f"{self.parent.get_full_path()}/{self.name}"
         return self.name
@@ -139,6 +195,8 @@ class ExperimentalHabitat:
         
         # Validate experiment name to prevent path traversal
         self._validate_name(experiment.name)
+        if not re.match(r'^[a-zA-Z0-9_-]+$', experiment.name):
+            raise ValueError(f"Invalid experiment name '{experiment.name}'. Name must contain only alphanumeric characters, underscores, and hyphens.")
 
         # Create containment boundary
         boundary = ContainmentBoundary(
@@ -153,7 +211,13 @@ class ExperimentalHabitat:
         experiment.resource_limits = resource_limits
         
         # Create isolated workspace
-        exp_dir = os.path.join(self.temp_dir, experiment.name)
+        exp_dir = os.path.abspath(os.path.join(self.temp_dir, experiment.name))
+
+        # Security check: Prevent path traversal
+        temp_dir_abs = os.path.abspath(self.temp_dir)
+        if os.path.commonpath([temp_dir_abs]) != os.path.commonpath([temp_dir_abs, exp_dir]):
+            raise ValueError(f"Security violation: Experiment name '{experiment.name}' attempts path traversal.")
+
         os.makedirs(exp_dir, exist_ok=True)
         
         experiment_data = {
