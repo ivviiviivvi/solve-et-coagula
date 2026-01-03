@@ -11,9 +11,11 @@ additional isolation and structure for safe experimentation.
 
 import json
 import os
+import re
 import subprocess
 import tempfile
 import time
+import re
 from datetime import datetime
 from typing import Dict, List, Any, Optional
 import logging
@@ -26,18 +28,73 @@ class ContainmentBoundary:
     """Represents an isolation boundary for experimental systems"""
     
     def __init__(self, name: str, level: int, parent: Optional['ContainmentBoundary'] = None):
-        self.name = name
+        self._name = name
+        self._parent = parent
         self.level = level
-        self.parent = parent
         self.children: List['ContainmentBoundary'] = []
         self.created = datetime.now().isoformat()
         self.active = True
         
+        if self._parent:
+            self._parent.children.append(self)
+
+        self._update_full_path()
+
+    @property
+    def name(self) -> str:
+        return self._name
+        # Pre-calculate full path to avoid recursion during access
         if parent:
+            self._full_path = f"{parent.get_full_path()}/{name}"
             parent.children.append(self)
+            self._full_path = f"{parent.get_full_path()}/{self.name}"
+        else:
+            self._full_path = self.name
     
+    @name.setter
+    def name(self, value: str):
+        self._name = value
+        self._update_full_path()
+        self._update_children_paths()
+
+    @property
+    def parent(self) -> Optional['ContainmentBoundary']:
+        return self._parent
+
+    @parent.setter
+    def parent(self, value: Optional['ContainmentBoundary']):
+        # Remove from old parent if exists
+        if self._parent and self in self._parent.children:
+            self._parent.children.remove(self)
+
+        self._parent = value
+        if self._parent:
+            self._parent.children.append(self)
+
+        self._update_full_path()
+        self._update_children_paths()
+
+    def _update_full_path(self):
+        """Update the cached full path"""
+        if self._parent:
+            self._full_path = f"{self._parent.get_full_path()}/{self._name}"
+        else:
+            self._full_path = self._name
+
+    def _update_children_paths(self):
+        """recursively update paths for all children"""
+        for child in self.children:
+            child._update_full_path()
+            child._update_children_paths()
+
     def get_full_path(self) -> str:
         """Get the full containment path (hat stack)"""
+        return self._full_path
+        # Return cached path if available
+        if hasattr(self, '_full_path'):
+            return self._full_path
+
+        # Fallback for compatibility or if cache is missing
         if self.parent:
             return f"{self.parent.get_full_path()}/{self.name}"
         return self.name
@@ -128,9 +185,19 @@ class ExperimentalHabitat:
         self.temp_dir = tempfile.mkdtemp(prefix=f"habitat_{name}_")
         logger.info(f"Habitat {name} established at {self.temp_dir}")
         
+    def _validate_name(self, name: str) -> None:
+        """Validate that the name contains only safe characters"""
+        if not re.match(r'^[a-zA-Z0-9_-]+$', name):
+            raise ValueError(f"Invalid name '{name}'. Only alphanumeric characters, underscores, and hyphens are allowed.")
+
     def spawn_experiment(self, experiment: ExperimentalSystem, containment_rules: Dict[str, Any]) -> Dict[str, Any]:
         """Spawn a new experimental system within containment boundaries"""
         
+        # Validate experiment name to prevent path traversal
+        self._validate_name(experiment.name)
+        if not re.match(r'^[a-zA-Z0-9_-]+$', experiment.name):
+            raise ValueError(f"Invalid experiment name '{experiment.name}'. Name must contain only alphanumeric characters, underscores, and hyphens.")
+
         # Create containment boundary
         boundary = ContainmentBoundary(
             name=f"boundary_{experiment.name}",
@@ -220,6 +287,8 @@ class ExperimentalHabitat:
     
     def nest_habitat(self, parent_experiment: str, child_name: str) -> 'ExperimentalHabitat':
         """Create a nested habitat within an existing experiment"""
+        self._validate_name(child_name)
+
         if parent_experiment not in self.active_experiments:
             raise ValueError(f"Parent experiment {parent_experiment} not found")
         

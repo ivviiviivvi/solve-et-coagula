@@ -21,8 +21,25 @@ import argparse
 import json
 import os
 import sys
+from typing import Any
+import logging
 from datetime import datetime
 from experimental_habitat_implementation import ExperimentalHabitat, ExperimentalSystem, RecursiveMythEngine
+import habitat_ux
+
+# Configure logging to suppress INFO messages so they don't clutter CLI output
+logging.getLogger().setLevel(logging.ERROR)
+
+class Colors:
+    HEADER = '\033[95m'
+    BLUE = '\033[94m'
+    CYAN = '\033[96m'
+    GREEN = '\033[92m'
+    YELLOW = '\033[93m'
+    RED = '\033[91m'
+    RESET = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
 
 class HabitatManager:
     """Manager for experimental habitat operations"""
@@ -97,7 +114,17 @@ class HabitatManager:
         habitat = self.habitats["main"]
         exp_data = habitat.spawn_experiment(experiment, containment_rules)
         
-        print(f"🧪 Spawned experiment '{name}' in habitat '{habitat.name}'")
+        habitat_ux.print_card(
+            f"Spawned Experiment: {name}",
+            {
+                "Habitat": habitat.name,
+                "Hypothesis": hypothesis,
+                "Containment Level": habitat.isolation_level,
+                "Boundary": experiment.boundary.get_full_path()
+            },
+            icon="🧪"
+        )
+        print(f"{Colors.GREEN}🧪 Spawned experiment '{Colors.BOLD}{name}{Colors.RESET}{Colors.GREEN}' in habitat '{habitat.name}'{Colors.RESET}")
         print(f"   Hypothesis: {hypothesis}")
         print(f"   Containment Level: {habitat.isolation_level}")
         print(f"   Boundary: {experiment.boundary.get_full_path()}")
@@ -110,23 +137,29 @@ class HabitatManager:
         if not habitat:
             raise ValueError(f"Habitat '{habitat_name}' not found")
         
-        print(f"🚀 Running experiment '{name}' in habitat '{habitat_name}'...")
+        print(f"{Colors.BLUE}🚀 Running experiment '{name}' in habitat '{habitat_name}'...{Colors.RESET}")
         
         try:
             result = habitat.run_experiment(name)
-            print(f"✅ Experiment '{name}' completed successfully")
-            print("Result summary:")
+            print(f"{Colors.GREEN}✅ Experiment '{name}' completed successfully{Colors.RESET}")
+            print(f"{Colors.HEADER}Result summary:{Colors.RESET}")
             if isinstance(result, dict):
                 for key, value in result.items():
                     if key != "nested":  # Don't print nested recursion
-                        print(f"   {key}: {value}")
+                        print(f"   {Colors.CYAN}{key}:{Colors.RESET} {value}")
             else:
                 print(f"   {result}")
             return result
         except Exception as e:
-            print(f"❌ Experiment '{name}' failed: {e}")
+            print(f"{Colors.RED}❌ Experiment '{name}' failed: {e}{Colors.RESET}")
             raise
     
+    def _print_kv(self, key: str, value: Any, indent: int = 3):
+        """Helper to print key-value pairs nicely aligned"""
+        padding = " " * indent
+        key_str = f"{key}:"
+        print(f"{padding}{key_str:<25} {value}")
+
     def get_status(self, experiment_name: str = None, habitat_name: str = "main") -> dict:
         """Get habitat or experiment status"""
         habitat = self.habitats.get(habitat_name)
@@ -139,31 +172,65 @@ class HabitatManager:
                 exp_data = habitat.active_experiments[experiment_name]
                 experiment = exp_data['experiment']
                 status = {
-                    'name': experiment_name,
-                    'status': experiment.status,
-                    'hypothesis': experiment.hypothesis,
-                    'created': experiment.created,
-                    'boundary': experiment.boundary.get_full_path() if experiment.boundary else None,
-                    'workspace': exp_data.get('workspace'),
-                    'containment_rules': exp_data.get('containment_rules')
+                    'Status': experiment.status,
+                    'Hypothesis': experiment.hypothesis,
+                    'Created': experiment.created,
+                    'Boundary': experiment.boundary.get_full_path() if experiment.boundary else None,
+                    'Workspace': exp_data.get('workspace'),
+                    'Containment Rules': exp_data.get('containment_rules')
                 }
+                habitat_ux.print_card(f"Experiment: {experiment_name}", status, icon="📊")
                 print(f"📊 Status for experiment '{experiment_name}':")
-                print(json.dumps(status, indent=2))
+                self._print_kv("Status", status['status'])
+                self._print_kv("Hypothesis", status['hypothesis'])
+                self._print_kv("Created", status['created'])
+                self._print_kv("Boundary", status['boundary'])
+                self._print_kv("Workspace", status['workspace'])
+                print(f"{Colors.HEADER}📊 Status for experiment '{Colors.BOLD}{experiment_name}{Colors.RESET}{Colors.HEADER}':{Colors.RESET}")
+                for key, value in status.items():
+                    if key == 'containment_rules' and isinstance(value, dict):
+                        print(f"   {Colors.CYAN}{key.replace('_', ' ').title()}:{Colors.RESET}")
+                        for k, v in value.items():
+                            print(f"     - {k}: {v}")
+                    else:
+                        print(f"   {Colors.CYAN}{key.replace('_', ' ').title()}:{Colors.RESET} {value}")
                 return status
             elif experiment_name in habitat.graduated_patterns:
-                print(f"🎓 Experiment '{experiment_name}' has graduated to Code Forge")
+                print(f"{Colors.GREEN}🎓 Experiment '{experiment_name}' has graduated to Code Forge{Colors.RESET}")
                 return habitat.graduated_patterns[experiment_name]
             elif experiment_name in habitat.failed_experiments:
-                print(f"💀 Experiment '{experiment_name}' has been composted")
+                print(f"{Colors.RED}💀 Experiment '{experiment_name}' has been composted{Colors.RESET}")
                 return habitat.failed_experiments[experiment_name]
             else:
-                print(f"❓ Experiment '{experiment_name}' not found in habitat '{habitat_name}'")
+                print(f"{Colors.YELLOW}❓ Experiment '{experiment_name}' not found in habitat '{habitat_name}'{Colors.RESET}")
                 return {}
         else:
             # Get habitat status
             status = habitat.get_habitat_status()
+            # Clean up status keys for display
+            display_status = {
+                "Isolation Level": status['isolation_level'],
+                "Nesting Depth": status['nesting_depth'],
+                "Active Experiments": status['active_experiments'],
+                "Graduated Patterns": status['graduated_patterns'],
+                "Failed Experiments": status['failed_experiments'],
+                "Workspace": status['workspace']
+            }
+            habitat_ux.print_card(f"Habitat: {habitat_name}", display_status, icon="🏠")
             print(f"🏠 Status for habitat '{habitat_name}':")
-            print(json.dumps(status, indent=2))
+            self._print_kv("Name", status['name'])
+            self._print_kv("Isolation Level", status['isolation_level'])
+            self._print_kv("Nesting Depth", status['nesting_depth'])
+            self._print_kv("Active Experiments", status['active_experiments'])
+            self._print_kv("Graduated Patterns", status['graduated_patterns'])
+            self._print_kv("Failed Experiments", status['failed_experiments'])
+            self._print_kv("Workspace", status['workspace'])
+            print(f"{Colors.HEADER}🏠 Status for habitat '{Colors.BOLD}{habitat_name}{Colors.RESET}{Colors.HEADER}':{Colors.RESET}")
+            for key, value in status.items():
+                if key == 'containment_boundaries' and isinstance(value, list):
+                     print(f"   {Colors.CYAN}{key.replace('_', ' ').title()}:{Colors.RESET} {len(value)} active")
+                else:
+                    print(f"   {Colors.CYAN}{key.replace('_', ' ').title()}:{Colors.RESET} {value}")
             return status
     
     def graduate_experiment(self, name: str, habitat_name: str = "main") -> dict:
@@ -176,11 +243,16 @@ class HabitatManager:
         
         try:
             forge_package = habitat.graduate_to_forge(name)
-            print(f"✅ Experiment '{name}' successfully graduated!")
-            print("Forge package contents:")
-            print(f"   Code patterns: {forge_package['code_patterns']}")
-            print(f"   Symbolic mappings: {forge_package['symbolic_mappings']}")
-            print(f"   Integration hooks: {forge_package['integration_hooks']}")
+            habitat_ux.print_card(
+                f"Graduated: {name}",
+                {
+                    "Status": "Success",
+                    "Code Patterns": forge_package['code_patterns'],
+                    "Symbolic Mappings": forge_package['symbolic_mappings'],
+                    "Integration Hooks": forge_package['integration_hooks']
+                },
+                icon="✅"
+            )
             return forge_package
         except Exception as e:
             print(f"❌ Failed to graduate experiment '{name}': {e}")
@@ -196,10 +268,11 @@ class HabitatManager:
         
         try:
             lessons = habitat.contain_failure(name, reason)
-            print(f"✅ Experiment '{name}' safely composted")
-            print("Lessons learned:")
-            for lesson_type, lesson_data in lessons.items():
-                print(f"   {lesson_type}: {lesson_data}")
+            habitat_ux.print_card(
+                f"Composted: {name}",
+                lessons,
+                icon="✅"
+            )
             return lessons
         except Exception as e:
             print(f"❌ Failed to compost experiment '{name}': {e}")
@@ -219,10 +292,16 @@ class HabitatManager:
             habitat_key = f"{parent_habitat}_{child_name}"
             self.habitats[habitat_key] = nested_habitat
             
-            print(f"✅ Nested habitat '{child_name}' created successfully")
-            print(f"   Nesting depth: {nested_habitat.nesting_depth}")
-            print(f"   Isolation level: {nested_habitat.isolation_level}")
-            print(f"   Access key: {habitat_key}")
+            habitat_ux.print_card(
+                f"Nested Habitat: {child_name}",
+                {
+                    "Parent Experiment": parent_experiment,
+                    "Nesting Depth": nested_habitat.nesting_depth,
+                    "Isolation Level": nested_habitat.isolation_level,
+                    "Access Key": habitat_key
+                },
+                icon="✅"
+            )
             
             return nested_habitat
         except Exception as e:
@@ -231,22 +310,42 @@ class HabitatManager:
     
     def list_habitats(self):
         """List all active habitats"""
-        print("🏠 Active Habitats:")
-        print("=" * 50)
+        habitat_ux.print_header("Active Habitats")
         
         for key, habitat in self.habitats.items():
             status = habitat.get_habitat_status()
-            print(f"📍 {key} ({habitat.name})")
-            print(f"   Isolation Level: {status['isolation_level']}")
-            print(f"   Nesting Depth: {status['nesting_depth']}")
-            print(f"   Active Experiments: {status['active_experiments']}")
-            print(f"   Graduated Patterns: {status['graduated_patterns']}")
-            print(f"   Failed Experiments: {status['failed_experiments']}")
-            print(f"   Workspace: {status['workspace']}")
-            print()
+            display_status = {
+                "Habitat Name": habitat.name,
+                "Isolation Level": status['isolation_level'],
+                "Nesting Depth": status['nesting_depth'],
+                "Active Experiments": status['active_experiments'],
+                "Graduated Patterns": status['graduated_patterns'],
+                "Failed Experiments": status['failed_experiments'],
+                "Workspace": status['workspace']
+            }
+            habitat_ux.print_card(f"Habitat: {key}", display_status, icon="📍")
+        print("🏠 Active Habitats:")
+        print("=" * 60)
+        print(f"{'KEY':<20} {'NAME':<20} {'LVL':<5} {'ACTIVE':<7} {'WORKSPACE'}")
+        print("-" * 60)
+        
+        for key, habitat in self.habitats.items():
+            status = habitat.get_habitat_status()
+            workspace_short = status['workspace']
+            if len(workspace_short) > 30:
+                workspace_short = "..." + workspace_short[-27:]
+
+            print(f"{key:<20} {status['name']:<20} {status['isolation_level']:<5} {status['active_experiments']:<7} {workspace_short}")
+        print("=" * 60)
     
-    def cleanup_all(self):
+    def cleanup_all(self, force: bool = False):
         """Cleanup all habitats"""
+        if not force:
+            response = input("⚠️  Are you sure you want to cleanup all habitats? This cannot be undone. [y/N] ")
+            if response.lower() not in ['y', 'yes']:
+                print("❌ Cleanup cancelled.")
+                return
+
         print("🧹 Cleaning up all habitats...")
         
         for key, habitat in self.habitats.items():
@@ -300,7 +399,8 @@ def main():
     subparsers.add_parser('list-habitats', help='List all habitats')
     
     # Cleanup command
-    subparsers.add_parser('cleanup', help='Cleanup all habitats')
+    cleanup_parser = subparsers.add_parser('cleanup', help='Cleanup all habitats')
+    cleanup_parser.add_argument('-f', '--force', action='store_true', help='Force cleanup without confirmation')
     
     args = parser.parse_args()
     
@@ -334,7 +434,7 @@ def main():
             manager.list_habitats()
             
         elif args.command == 'cleanup':
-            manager.cleanup_all()
+            manager.cleanup_all(args.force)
             
     except Exception as e:
         print(f"❌ Command failed: {e}")
