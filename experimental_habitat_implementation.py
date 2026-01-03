@@ -148,7 +148,7 @@ class ExperimentalHabitat:
         normalized_name = experiment.name.replace('\\', '/')
         
         # Additional check: reject names containing path traversal patterns
-        if '..' in normalized_name or normalized_name.startswith('/') or normalized_name.startswith('\\'):
+        if '..' in normalized_name or normalized_name.startswith('/'):
             raise ValueError(f"Security violation: Experiment name '{experiment.name}' contains invalid path components.")
         
         # Check for Windows drive letters (C:, D:, etc.)
@@ -161,10 +161,11 @@ class ExperimentalHabitat:
         temp_dir_abs = os.path.abspath(self.temp_dir)
         try:
             common = os.path.commonpath([temp_dir_abs, exp_dir])
-            if common != temp_dir_abs:
-                raise ValueError(f"Security violation: Experiment name '{experiment.name}' attempts path traversal.")
-        except ValueError:
+        except ValueError as e:
             # commonpath raises ValueError if paths are on different drives (Windows)
+            raise ValueError(f"Security violation: Experiment name '{experiment.name}' attempts path traversal across drives.")
+        
+        if common != temp_dir_abs:
             raise ValueError(f"Security violation: Experiment name '{experiment.name}' attempts path traversal.")
 
         os.makedirs(exp_dir, exist_ok=True)
