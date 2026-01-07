@@ -209,12 +209,29 @@ class ExperimentalHabitat:
         resource_limits = containment_rules.get('resources', {})
         experiment.resource_limits = resource_limits
         
-        # Create isolated workspace
-        exp_dir = os.path.abspath(os.path.join(self.temp_dir, experiment.name))
+        # Create isolated workspace with enhanced security checks
+        # Normalize path separators to prevent Windows-style traversal
+        normalized_name = experiment.name.replace('\\', '/')
+        
+        # Additional check: reject names containing path traversal patterns
+        if '..' in normalized_name or normalized_name.startswith('/'):
+            raise ValueError(f"Security violation: Experiment name '{experiment.name}' contains invalid path components.")
+        
+        # Check for Windows drive letters (C:, D:, etc.)
+        if len(normalized_name) >= 2 and normalized_name[1] == ':':
+            raise ValueError(f"Security violation: Experiment name '{experiment.name}' contains absolute path with drive letter.")
+        
+        exp_dir = os.path.abspath(os.path.join(self.temp_dir, normalized_name))
 
-        # Security check: Prevent path traversal
+        # Security check: Prevent path traversal using commonpath
         temp_dir_abs = os.path.abspath(self.temp_dir)
-        if os.path.commonpath([temp_dir_abs]) != os.path.commonpath([temp_dir_abs, exp_dir]):
+        try:
+            common = os.path.commonpath([temp_dir_abs, exp_dir])
+        except ValueError as e:
+            # commonpath raises ValueError if paths are on different drives (Windows)
+            raise ValueError(f"Security violation: Experiment name '{experiment.name}' attempts path traversal across drives.")
+        
+        if common != temp_dir_abs:
             raise ValueError(f"Security violation: Experiment name '{experiment.name}' attempts path traversal.")
 
         os.makedirs(exp_dir, exist_ok=True)
