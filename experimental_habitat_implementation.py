@@ -189,13 +189,28 @@ class ExperimentalHabitat:
         if not re.match(r'^[a-zA-Z0-9_-]+$', name):
             raise ValueError(f"Invalid name '{name}'. Only alphanumeric characters, underscores, and hyphens are allowed.")
 
+    def _validate_experiment_name(self, name: str) -> None:
+        """Validate experiment name, allowing safe path characters"""
+        # Allow alphanumeric, underscore, hyphen, dot, and path separators
+        # Note: Backslash is allowed here but will be normalized to forward slash in spawn_experiment
+        if not re.match(r'^[a-zA-Z0-9_./\\-]+$', name):
+            raise ValueError(f"Invalid experiment name '{name}'. Allowed characters: alphanumeric, _, -, ., /, \\")
+
+        # Defense in depth: Explicitly block dangerous patterns
+        if '..' in name:
+            raise ValueError(f"Invalid experiment name '{name}'. '..' sequence not allowed.")
+
+        if name.startswith('/') or name.startswith('\\'):
+            raise ValueError(f"Invalid experiment name '{name}'. Absolute paths not allowed.")
+
+        if ':' in name:
+            raise ValueError(f"Invalid experiment name '{name}'. Drive letters not allowed.")
+
     def spawn_experiment(self, experiment: ExperimentalSystem, containment_rules: Dict[str, Any]) -> Dict[str, Any]:
         """Spawn a new experimental system within containment boundaries"""
         
         # Validate experiment name to prevent path traversal
-        self._validate_name(experiment.name)
-        if not re.match(r'^[a-zA-Z0-9_-]+$', experiment.name):
-            raise ValueError(f"Invalid experiment name '{experiment.name}'. Name must contain only alphanumeric characters, underscores, and hyphens.")
+        self._validate_experiment_name(experiment.name)
 
         # Create containment boundary
         boundary = ContainmentBoundary(
