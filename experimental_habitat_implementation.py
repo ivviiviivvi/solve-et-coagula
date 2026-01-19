@@ -348,18 +348,23 @@ class ExperimentalHabitat:
         
         return exp_data['lessons']
     
-    def get_habitat_status(self) -> Dict[str, Any]:
+    def get_habitat_status(self, include_boundaries: bool = True) -> Dict[str, Any]:
         """Get current habitat status"""
-        return {
+        status = {
             'name': self.name,
             'isolation_level': self.isolation_level,
             'nesting_depth': self.nesting_depth,
             'active_experiments': len(self.active_experiments),
             'graduated_patterns': len(self.graduated_patterns),
             'failed_experiments': len(self.failed_experiments),
-            'containment_boundaries': [b.get_full_path() for b in self.containment_boundaries.values()],
+            'containment_boundary_count': len(self.containment_boundaries),
             'workspace': self.temp_dir
         }
+
+        if include_boundaries:
+            status['containment_boundaries'] = [b.get_full_path() for b in self.containment_boundaries.values()]
+
+        return status
     
     def _extract_patterns(self, exp_data: Dict[str, Any]) -> List[str]:
         """Extract reusable code patterns from experiment"""

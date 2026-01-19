@@ -206,7 +206,7 @@ class HabitatManager:
                 return {}
         else:
             # Get habitat status
-            status = habitat.get_habitat_status()
+            status = habitat.get_habitat_status(include_boundaries=False)
             # Clean up status keys for display
             display_status = {
                 "Isolation Level": status['isolation_level'],
@@ -229,6 +229,8 @@ class HabitatManager:
             for key, value in status.items():
                 if key == 'containment_boundaries' and isinstance(value, list):
                      print(f"   {Colors.CYAN}{key.replace('_', ' ').title()}:{Colors.RESET} {len(value)} active")
+                elif key == 'containment_boundary_count':
+                     print(f"   {Colors.CYAN}Containment Boundaries:{Colors.RESET} {value} active")
                 else:
                     print(f"   {Colors.CYAN}{key.replace('_', ' ').title()}:{Colors.RESET} {value}")
             return status
@@ -327,7 +329,7 @@ class HabitatManager:
         print("=" * 50)
         
         for key, habitat in self.habitats.items():
-            status = habitat.get_habitat_status()
+            status = habitat.get_habitat_status(include_boundaries=False)
             print(f"{Colors.BOLD}📍 {key} ({habitat.name}){Colors.RESET}")
             print(f"   {Colors.CYAN}Isolation Level:{Colors.RESET} {status['isolation_level']}")
             print(f"   {Colors.CYAN}Nesting Depth:{Colors.RESET} {status['nesting_depth']}")
@@ -339,7 +341,7 @@ class HabitatManager:
         habitat_ux.print_header("Active Habitats")
         
         for key, habitat in self.habitats.items():
-            status = habitat.get_habitat_status()
+            status = habitat.get_habitat_status(include_boundaries=False)
             display_status = {
                 "Habitat Name": habitat.name,
                 "Isolation Level": status['isolation_level'],
@@ -356,7 +358,7 @@ class HabitatManager:
         print("-" * 60)
         
         for key, habitat in self.habitats.items():
-            status = habitat.get_habitat_status()
+            status = habitat.get_habitat_status(include_boundaries=False)
             workspace_short = status['workspace']
             if len(workspace_short) > 30:
                 workspace_short = "..." + workspace_short[-27:]
