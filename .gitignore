@@ -51,7 +51,9 @@ dist/
 build/
 
 # Editor files
-.vscode/
+.vscode/*
+!.vscode/
+!.vscode/mcp.json
 *.sublime-*
 
 # Backup files
