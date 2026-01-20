@@ -4,6 +4,13 @@
             "type": "http",
             "url": "https://api.githubcopilot.com/mcp/"
         },
+        "github-pat": {
+            "type": "http",
+            "url": "https://api.githubcopilot.com/mcp/",
+            "headers": {
+                "Authorization": "Bearer ${input:github_mcp_pat}"
+            }
+        },
         "github-local": {
             "command": "docker",
             "args": [
@@ -20,6 +27,12 @@
         }
     },
     "inputs": [
+        {
+            "type": "promptString",
+            "id": "github_mcp_pat",
+            "description": "GitHub Personal Access Token (for github-pat)",
+            "password": true
+        },
         {
             "type": "promptString",
             "id": "github_token",
