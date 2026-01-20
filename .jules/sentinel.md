@@ -18,3 +18,8 @@
 **Vulnerability:** The `spawn_experiment` function in `experimental_habitat_implementation.py` used `experiment.name` directly in `os.path.join(self.temp_dir, experiment.name)`. This allowed creating directories outside the temporary habitat directory by providing an absolute path or path using `..`.
 **Learning:** `os.path.join` does not prevent path traversal if one of the components is an absolute path. It simply returns the absolute path. Even with `os.makedirs`, this can be exploited to write to arbitrary locations where the user has permissions.
 **Prevention:** Always validate user-supplied names that are used for filesystem operations. Ensure they do not contain path separators or resolve to a path outside the intended directory. Using `os.path.basename` or strict character whitelisting is recommended.
+
+## 2026-01-18 - Over-Strict Validation Breaking Functionality
+**Vulnerability:** Strict regex validation `^[a-zA-Z0-9_-]+$` in `spawn_experiment` blocked legitimate nested paths (e.g., `nested/safe/path`) and dots (`test.experiment`), causing operational failures.
+**Learning:** Security controls that are too restrictive will be bypassed or cause denial of service. Input validation must align with business requirements (e.g. nested paths).
+**Prevention:** Use a balanced validation approach: allow necessary characters (like `/` and `.`) for functionality, but explicitly block dangerous patterns (`..`, absolute paths) and verify containment (via `commonpath`) to maintain security. Precision is key.

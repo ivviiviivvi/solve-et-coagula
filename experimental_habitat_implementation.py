@@ -189,13 +189,28 @@ class ExperimentalHabitat:
         if not re.match(r'^[a-zA-Z0-9_-]+$', name):
             raise ValueError(f"Invalid name '{name}'. Only alphanumeric characters, underscores, and hyphens are allowed.")
 
+    def _validate_experiment_name(self, name: str) -> None:
+        """Validate experiment name, allowing safe path characters"""
+        # Allow alphanumeric, underscore, hyphen, dot, and path separators
+        # Note: Backslash is allowed here but will be normalized to forward slash in spawn_experiment
+        if not re.match(r'^[a-zA-Z0-9_./\\-]+$', name):
+            raise ValueError(f"Invalid experiment name '{name}'. Allowed characters: alphanumeric, _, -, ., /, \\")
+
+        # Defense in depth: Explicitly block dangerous patterns
+        if '..' in name:
+            raise ValueError(f"Invalid experiment name '{name}'. '..' sequence not allowed.")
+
+        if name.startswith('/') or name.startswith('\\'):
+            raise ValueError(f"Invalid experiment name '{name}'. Absolute paths not allowed.")
+
+        if ':' in name:
+            raise ValueError(f"Invalid experiment name '{name}'. Drive letters not allowed.")
+
     def spawn_experiment(self, experiment: ExperimentalSystem, containment_rules: Dict[str, Any]) -> Dict[str, Any]:
         """Spawn a new experimental system within containment boundaries"""
         
         # Validate experiment name to prevent path traversal
-        self._validate_name(experiment.name)
-        if not re.match(r'^[a-zA-Z0-9_-]+$', experiment.name):
-            raise ValueError(f"Invalid experiment name '{experiment.name}'. Name must contain only alphanumeric characters, underscores, and hyphens.")
+        self._validate_experiment_name(experiment.name)
 
         # Create containment boundary
         boundary = ContainmentBoundary(
@@ -348,18 +363,23 @@ class ExperimentalHabitat:
         
         return exp_data['lessons']
     
-    def get_habitat_status(self) -> Dict[str, Any]:
+    def get_habitat_status(self, include_boundaries: bool = True) -> Dict[str, Any]:
         """Get current habitat status"""
-        return {
+        status = {
             'name': self.name,
             'isolation_level': self.isolation_level,
             'nesting_depth': self.nesting_depth,
             'active_experiments': len(self.active_experiments),
             'graduated_patterns': len(self.graduated_patterns),
             'failed_experiments': len(self.failed_experiments),
-            'containment_boundaries': [b.get_full_path() for b in self.containment_boundaries.values()],
+            'containment_boundary_count': len(self.containment_boundaries),
             'workspace': self.temp_dir
         }
+
+        if include_boundaries:
+            status['containment_boundaries'] = [b.get_full_path() for b in self.containment_boundaries.values()]
+
+        return status
     
     def _extract_patterns(self, exp_data: Dict[str, Any]) -> List[str]:
         """Extract reusable code patterns from experiment"""
