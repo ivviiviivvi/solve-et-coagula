@@ -55,10 +55,8 @@ class TestContainmentBoundary(unittest.TestCase):
         self.assertEqual(child.get_full_path(), "parent/child")
         self.assertEqual(grandchild.get_full_path(), "parent/child/grandchild")
 
-    def test_breach_detection(self):
-        """Test breach detection (placeholder)"""
-        boundary = ContainmentBoundary("test", level=1)
-        self.assertFalse(boundary.breach_detected())
+    # Note: breach_detected() was removed as it was a placeholder
+    # providing false security claims. See evaluation report for details.
 
 
 class TestExperimentalSystem(unittest.TestCase):

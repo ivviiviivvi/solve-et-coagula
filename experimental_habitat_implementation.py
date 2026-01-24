@@ -42,12 +42,6 @@ class ContainmentBoundary:
     @property
     def name(self) -> str:
         return self._name
-        # Pre-calculate full path to avoid recursion during access
-        if parent:
-            parent.children.append(self)
-            self._full_path = f"{parent.get_full_path()}/{self.name}"
-        else:
-            self._full_path = self.name
     
     @name.setter
     def name(self, value: str):
@@ -88,19 +82,7 @@ class ContainmentBoundary:
     def get_full_path(self) -> str:
         """Get the full containment path (hat stack)"""
         return self._full_path
-        # Return cached path if available
-        if hasattr(self, '_full_path'):
-            return self._full_path
-
-        # Fallback for compatibility or if cache is missing
-        if self.parent:
-            return f"{self.parent.get_full_path()}/{self.name}"
-        return self.name
     
-    def breach_detected(self) -> bool:
-        """Check for containment breaches"""
-        # Placeholder for actual breach detection logic
-        return False
 
 class ExperimentalSystem:
     """Base class for experimental systems"""
@@ -274,9 +256,8 @@ class ExperimentalHabitat:
         exp_data = self.active_experiments[experiment_name]
         experiment = exp_data['experiment']
         
-        # Check containment boundary
-        if experiment.boundary and experiment.boundary.breach_detected():
-            raise RuntimeError(f"Containment breach detected for {experiment_name}")
+        # Note: Containment breach detection is not implemented.
+        # Add actual breach detection logic here if needed in the future.
         
         try:
             # Monitor resource usage during execution
