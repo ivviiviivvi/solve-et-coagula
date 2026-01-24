@@ -15,9 +15,32 @@ This is the unified origin point for Anthony James Padavano's recursive creative
 It serves as the master database for all generated, archived, and active content across media.
 All writing, protocols, myths, digests, and documents begin or pass through this vault.
 
+---
+
+## The Problem
+
+Creative knowledge management systems fragment across tools, lose context over time,
+and lack meaningful organization beyond basic folders and tags.
+
+## The Approach
+
+4_S0VRC3 implements a symbolic operating system using:
+- **Consonant-only UIDs** for semantic naming (UID Constitution)
+- **RE:GE organizational bodies** mapping creative functions to mythic archetypes
+- **Experimental Habitat System** for safe code/content experimentation
+- **SOP framework** with daily/weekly/monthly operational rhythms
+
+## The Outcome
+
+A unified vault that serves as master database for all creative work—
+writing, protocols, myths, and documentation—with built-in knowledge transfer,
+emergency recovery procedures, and clear pathways for experimentation to production.
+
+---
+
 ## 🔍 Meaning
 
-"4_S0VRC3" is read as “A Source.”
+"4_S0VRC3" is read as "A Source."
 It is both a symbolic node and a practical sandbox.
 
 **Canonical Path:**
@@ -60,6 +83,12 @@ It is both a symbolic node and a practical sandbox.
 - `PROJECT_MANAGEMENT/CHANGELOG.md` — structural history
 - `PROJECT_MANAGEMENT/COMPLETION_SUMMARY.md` — current progress overview
 
+### Guides & Policies
+
+- `docs/guides/GLOSSARY.md` — RE:GE:OS symbolic terminology glossary
+- `docs/guides/EMERGENCY_ACCESS.md` — token recovery and emergency rebuild procedures
+- `docs/policies/ARCHIVE_BACKUP_POLICY.md` — external backup strategy for gitignored content
+
 ## 💬 Community
 
 Join our [GitHub Discussions](https://github.com/4-b100m/4_S0VRC3/discussions) to:
@@ -81,3 +110,4 @@ Run `python scripts/commit_agent.py` to review commit messages, or `python scrip
 
 Naming logic frozen as of `2025-05-04`
 Vault version: `v1.0`
+Last updated: `2026-01-24`

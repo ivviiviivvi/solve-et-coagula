@@ -14,7 +14,7 @@ tags:
 
 **Status:** v1.0 Active
 **Maintainer:** Anthony James Padavano (AJP)
-**Last Updated:** 2025-01-18
+**Last Updated:** 2026-01-24
 
 ---
 
@@ -44,6 +44,11 @@ tags:
   - [ ] Configure .gitignore for sensitive/personal content
   - [ ] Establish branch protection for main branch
   - [ ] Document Git workflow in contribution guide
+
+#### Security & Path Fixes (Completed 2026-01-24)
+- [x] **Security Fix** – Remove breach_detected() placeholder and associated dead code ✅
+- [x] **Path Normalization** – Rename directories with special characters ("; M1R•R0R ; MR•01 ;" → MIRROR_MR01) ✅
+- [x] **SOP Path Corrections** – Update SOP_SYSTEM_OVERVIEW.md with correct script paths (scripts/vault_utils/) ✅
 
 #### Documentation Baseline
 - [ ] **Update Core Documentation**
@@ -89,11 +94,19 @@ tags:
   - [ ] Sync setup (Obsidian Sync vs. alternatives)
   - [ ] Mobile configuration (iOS/Android)
   - [ ] Git integration setup
-- [ ] **Glossary**
-  - [ ] Definitions of all UIDs (RG01, PR05, etc.)
-  - [ ] Symbolic abbreviations and codes
-  - [ ] RE:GE:OS terminology
-  - [ ] Project-specific jargon
+- [x] **Glossary** (Completed 2026-01-24) ✅
+  - [x] Definitions of all UIDs (RG01, PR05, etc.)
+  - [x] Symbolic abbreviations and codes
+  - [x] RE:GE:OS terminology
+  - [x] Project-specific jargon
+  - Created at `docs/guides/GLOSSARY.md`
+- [x] **Emergency Access Guide** (Completed 2026-01-24) ✅
+  - [x] Token recovery procedures
+  - [x] Emergency rebuild documentation
+  - Created at `docs/guides/EMERGENCY_ACCESS.md`
+- [x] **Archive Backup Policy** (Completed 2026-01-24) ✅
+  - [x] External backup strategy for gitignored RC-VK_*/ directories
+  - Created at `docs/policies/ARCHIVE_BACKUP_POLICY.md`
 
 #### Knowledge Organization
 - [ ] **Enhanced Thread ↔ Project Linking**
@@ -407,8 +420,8 @@ This roadmap is a living document. Update it:
 - **When Vision Shifts** – Reflect changes in project direction or scope
 - **Community Input** – Integrate feedback and feature requests
 
-**Last Review:** 2025-01-18
-**Next Review:** 2025-02-18
+**Last Review:** 2026-01-24
+**Next Review:** 2026-02-24
 
 ---
 
