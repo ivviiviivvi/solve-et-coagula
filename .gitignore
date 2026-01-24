@@ -96,3 +96,16 @@ security/
 # Duplicates (macOS copy artifacts)
 **/*\ 2/
 **/*\ 2.md
+
+# Working queue directories (never track)
+SORT_NOW/
+EMPTY_FOLDER_STRUCTURE/
+
+# Archive directories (large backup collections)
+RC-VK_*/
+
+# Large archive bundles at root (review individually)
+*.zip
+
+# POV engagement directories (external)
+POV-ENGAGEMENT_*/
