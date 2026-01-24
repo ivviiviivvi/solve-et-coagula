@@ -1,0 +1,58 @@
+Shortcut Name: GPT_Prompt_Picker
+
+Purpose: Choose from a categorized list of pre-written GPT prompts. Copy selected prompt to clipboard.
+
+Structure:
+- Input: Manual selection
+- Output: Clipboard copy (optional display)
+
+Prompt List:
+1. Summarize this in a single sentence.
+2. Extract 5 core insights from this.
+3. What’s the key conflict driving this?
+4. Reframe this as a user instruction manual.
+5. Bullet point version, then expand each bullet.
+6. What would a beginner need to understand this?
+7. Tag this with metadata and file structure logic.
+8. You are an educator. Turn this into a teaching module.
+9. You are a systems architect. Map the backend functions.
+10. You are an artist. Render this as visual symbolism.
+11. You are an executive. Explain this for investor alignment.
+12. You are a skeptic. What’s wrong with this?
+13. You are me, in 2035. What would you change?
+14. Format this in Markdown with headers + bullet logic.
+15. Turn this into a JSON object with labeled fields.
+16. Rewrite this as a slide deck outline.
+17. Inject this into a Notion database template.
+18. Convert this into code-comment form.
+19. Frame this as a creative brief.
+20. Play devil’s advocate: what's the flaw here?
+21. Offer 3 steel man versions of this argument.
+22. What is this trying to avoid?
+23. Deconstruct this like it’s a dream.
+24. What’s the real fear underneath this idea?
+25. Map this into a recursive system.
+26. Tag this with project phase + dependency logic.
+27. Break this into modular blocks with clear input/output.
+28. Refactor this into reusable templates.
+29. Define entities, objects, and symbolic mappings.
+30. Summarize how this fits into the full OS stack.
+31. Translate this into a metaphor-rich stanza.
+32. What archetype is hidden here?
+33. Rewrite this as a prayer, curse, or spell.
+34. Inject this with synesthetic cues (sound, color, shape).
+35. How would Borges describe this?
+36. Use Joyce or Woolf style on this fragment.
+37. Open this like a tarot reading.
+38. Begin a recursive loop starting from this input.
+39. Use this as the seed of a game mechanic.
+40. Roll a d20. What happens next in the narrative?
+41. What would a mirror version of this look like?
+42. Glitch this—make it beautifully broken.
+43. Turn this into a ritual command or invocation.
+
+Actions:
+1. “Choose from List” → List above
+2. “Set Variable” → PromptChoice
+3. “Copy to Clipboard” → PromptChoice
+4. (Optional) “Show Result” → Copied: PromptChoice

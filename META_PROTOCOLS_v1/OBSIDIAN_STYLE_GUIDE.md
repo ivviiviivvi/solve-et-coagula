@@ -1,3 +1,0 @@
-# OBSIDIAN STYLE GUIDE
-
-Placeholder content for OBSIDIAN_STYLE_GUIDE.md.

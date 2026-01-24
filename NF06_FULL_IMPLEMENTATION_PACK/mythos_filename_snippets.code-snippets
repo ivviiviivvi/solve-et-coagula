@@ -1,9 +1,0 @@
-{
-  "MythOS Filename": {
-    "prefix": "myn",
-    "body": [
-      "${1:FUNC}-${2:SCOPE}-${3:FORMAT}_${4:LANG}-${5:ID}-${6:VERSION}.${7:RITUAL}_${8:slug1+slug2+slug3}_${9:YYYY-MM-DD}.${10:TAG}.${11:HASH}"
-    ],
-    "description": "Generate a MythOS canonical filename"
-  }
-}
