@@ -50,19 +50,32 @@ python scripts/check_env_vars.py        # Verify environment variables
 
 ## Architecture
 
-### Core System: RE:GE:OS
+### Folder Structure
 
-The vault uses **4-letter consonant-only UID prefixes** to organize content into domains:
+The vault uses a simplified naming convention with 4-letter suffix codes:
 
-| Prefix | Domain | Purpose |
-|--------|--------|---------|
-| `SS-TM` | system-core | Core OS, symbolic laws, 22 organizational bodies |
-| `XP-PR` | experiments-live | Experimental Habitat containment |
-| `CR-TV` | creative-systems | Mythic, visual, sonic infrastructure |
-| `GT-WK` | gateway-inputs | External ingestion points |
-| `RC-VK` | archives | Backups and frozen states (gitignored) |
-| `PD-GG` | guidance-protocols | SOPs and feedback systems |
-| `PB-RC` | public-records | Publications and essays |
+| Folder | Purpose |
+|--------|---------|
+| `REGEOS_RG01/` | Core RE:GE:OS logic, symbolic laws, 22 organizational bodies |
+| `ARCHIVE_RK01/` | Long-term archival storage (gitignored) |
+| `MIRROR_MR01/` | Shadow self, reflection systems |
+| `TEMPLATES_TP01/` | Seed files, note templates |
+| `TAGS_TA01/` | Tag and symbol management |
+| `SYSTEM_MAP_SM01/` | System architecture maps, experiments |
+| `ARCHIVAL_STACK/` | Project thread digests |
+| `DOCUMENTATION/` | Vault guides, SOPs, policies, standards |
+| `PROJECT_MANAGEMENT/` | Manifests, changelogs, meta-operations |
+| `CATALOGS_AND_INDEXES/` | Master indexes, observation logs |
+| `Users/` | User-specific content |
+| `GATEWAY_GT01/` | External ingestion points |
+| `ANOMALIES_FL01/` | Anomaly tracking |
+| `FRAGMENTS_FR01/` | Fragment and memory collection |
+| `NARRATIVES_NR01/` | Narrative content |
+| `GAMEDESIGN_GD01/` | Game design materials |
+| `WORKSHOPS_WR01/` | Workshop content |
+| `scripts/` | Python automation (CLI entry points) |
+| `tests/` | Test suite (pytest integration) |
+| `security/` | Recovery keys (sensitive, isolated) |
 
 ### Experimental Habitat System
 
@@ -86,7 +99,7 @@ habitat.cleanup()
 - `habitat_manager.py` - CLI management interface
 - `SOP_SYSTEM_OVERVIEW.md` - Complete operations manual
 - `UIDS_MASTER_INDEX.md` - Master UID lookup
-- `docs/guides/GLOSSARY.md` - Symbolic terminology
+- `DOCUMENTATION/guides/GLOSSARY.md` - Symbolic terminology
 
 ## Working with Special Characters
 
