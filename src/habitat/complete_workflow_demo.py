@@ -14,7 +14,7 @@ showcasing all major features:
 This demonstrates a realistic use case of the habitat system.
 """
 
-from experimental_habitat_implementation import (
+from .experimental_habitat_implementation import (
     ExperimentalHabitat,
     ExperimentalSystem,
     RecursiveMythEngine

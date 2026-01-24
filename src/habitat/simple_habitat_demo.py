@@ -9,9 +9,8 @@ experimental systems.
 
 import sys
 import os
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from experimental_habitat_implementation import ExperimentalHabitat, RecursiveMythEngine, ExperimentalSystem
+from .experimental_habitat_implementation import ExperimentalHabitat, RecursiveMythEngine, ExperimentalSystem
 import json
 
 def main():

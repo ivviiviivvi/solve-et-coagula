@@ -56,16 +56,17 @@ The vault uses a simplified naming convention with 4-letter suffix codes:
 
 | Folder | Purpose |
 |--------|---------|
+| `src/habitat/` | Python package for Experimental Habitat System |
 | `REGEOS_RG01/` | Core RE:GE:OS logic, symbolic laws, 22 organizational bodies |
-| `ARCHIVE_RK01/` | Long-term archival storage (gitignored) |
+| `ARCHIVE_RK01/` | Long-term archival storage (gitignored), distributions |
 | `MIRROR_MR01/` | Shadow self, reflection systems |
 | `TEMPLATES_TP01/` | Seed files, note templates |
 | `TAGS_TA01/` | Tag and symbol management |
 | `SYSTEM_MAP_SM01/` | System architecture maps, experiments |
 | `ARCHIVAL_STACK/` | Project thread digests |
-| `DOCUMENTATION/` | Vault guides, SOPs, policies, standards |
-| `PROJECT_MANAGEMENT/` | Manifests, changelogs, meta-operations |
-| `CATALOGS_AND_INDEXES/` | Master indexes, observation logs |
+| `DOCUMENTATION/` | Vault guides, SOPs, policies, standards, reference docs |
+| `PROJECT_MANAGEMENT/` | Manifests, changelogs, meta-operations, reports |
+| `CATALOGS_AND_INDEXES/` | Master indexes, observation logs, UIDs |
 | `Users/` | User-specific content |
 | `GATEWAY_GT01/` | External ingestion points |
 | `ANOMALIES_FL01/` | Anomaly tracking |
@@ -73,7 +74,7 @@ The vault uses a simplified naming convention with 4-letter suffix codes:
 | `NARRATIVES_NR01/` | Narrative content |
 | `GAMEDESIGN_GD01/` | Game design materials |
 | `WORKSHOPS_WR01/` | Workshop content |
-| `scripts/` | Python automation (CLI entry points) |
+| `scripts/` | Python automation (CLI entry points, utils, analysis) |
 | `tests/` | Test suite (pytest integration) |
 | `security/` | Recovery keys (sensitive, isolated) |
 
@@ -82,7 +83,7 @@ The vault uses a simplified naming convention with 4-letter suffix codes:
 Safe, isolated containment for experimental code with resource limits:
 
 ```python
-from experimental_habitat_implementation import ExperimentalHabitat, ExperimentalSystem
+from habitat import ExperimentalHabitat, ExperimentalSystem
 
 habitat = ExperimentalHabitat("lab_name", isolation_level=3)
 experiment = ExperimentalSystem("test_name", "hypothesis")
@@ -95,10 +96,10 @@ habitat.cleanup()
 
 ### Key Files
 
-- `experimental_habitat_implementation.py` - Core containment system
-- `habitat_manager.py` - CLI management interface
-- `SOP_SYSTEM_OVERVIEW.md` - Complete operations manual
-- `UIDS_MASTER_INDEX.md` - Master UID lookup
+- `src/habitat/experimental_habitat_implementation.py` - Core containment system
+- `src/habitat/habitat_manager.py` - CLI management interface
+- `DOCUMENTATION/sops/SOP_SYSTEM_OVERVIEW.md` - Complete operations manual
+- `CATALOGS_AND_INDEXES/uids/UIDS_MASTER_INDEX.md` - Master UID lookup
 - `DOCUMENTATION/guides/GLOSSARY.md` - Symbolic terminology
 
 ## Working with Special Characters

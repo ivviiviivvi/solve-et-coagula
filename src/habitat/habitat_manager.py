@@ -24,13 +24,13 @@ import sys
 from typing import Any
 import logging
 from datetime import datetime
-from experimental_habitat_implementation import (
+from .experimental_habitat_implementation import (
     ExperimentalHabitat,
     ExperimentalSystem,
     RecursiveMythEngine,
 )
-import habitat_ux
-from habitat_ux import Colors
+from . import habitat_ux
+from .habitat_ux import Colors
 
 # Configure logging to suppress INFO messages so they don't clutter CLI output
 logging.getLogger().setLevel(logging.ERROR)

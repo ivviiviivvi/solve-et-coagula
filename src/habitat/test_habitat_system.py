@@ -17,8 +17,8 @@ Or with pytest: pytest test_habitat_system.py -v
 
 import unittest
 import os
-import habitat_ux
-from experimental_habitat_implementation import (
+from . import habitat_ux
+from .experimental_habitat_implementation import (
     ExperimentalHabitat,
     ExperimentalSystem,
     RecursiveMythEngine,

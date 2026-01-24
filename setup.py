@@ -3,7 +3,7 @@
 Setup script for the Experimental Habitat System
 """
 
-from setuptools import setup
+from setuptools import setup, find_packages
 import os
 
 # Read the README for long description
@@ -18,22 +18,16 @@ setup(
     name='experimental-habitat',
     version='1.0.0',
     description='A safe, isolated containment system for experimental code',
-    long_description=read_file('HABITAT_README.md'),
+    long_description=read_file('DOCUMENTATION/guides/HABITAT_README.md'),
     long_description_content_type='text/markdown',
     author='Anthony James Padavano',
     author_email='4-b100m@users.noreply.github.com',
     url='https://github.com/4-b100m/solve-et-coagula',
     license='MIT',
 
-    # Package discovery
-    py_modules=[
-        'experimental_habitat_implementation',
-        'habitat_manager',
-        'interactive_habitat',
-        'simple_habitat_demo',
-        'complete_workflow_demo',
-        'test_habitat_system'
-    ],
+    # Package discovery - use src layout
+    packages=find_packages(where="src"),
+    package_dir={"": "src"},
 
     # Python version requirement
     python_requires='>=3.7',
@@ -54,10 +48,10 @@ setup(
     # Entry points for command-line scripts
     entry_points={
         'console_scripts': [
-            'habitat-manager=habitat_manager:main',
-            'habitat-interactive=interactive_habitat:main',
-            'habitat-demo=simple_habitat_demo:main',
-            'habitat-workflow=complete_workflow_demo:main',
+            'habitat-manager=habitat.habitat_manager:main',
+            'habitat-interactive=habitat.interactive_habitat:main',
+            'habitat-demo=habitat.simple_habitat_demo:main',
+            'habitat-workflow=habitat.complete_workflow_demo:main',
         ],
     },
 

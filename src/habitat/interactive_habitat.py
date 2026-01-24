@@ -13,12 +13,12 @@ Usage:
 import cmd
 import json
 import sys
-from experimental_habitat_implementation import (
+from .experimental_habitat_implementation import (
     ExperimentalHabitat,
     ExperimentalSystem,
     RecursiveMythEngine,
 )
-import habitat_ux
+from . import habitat_ux
 
 # Use shared colors
 Colors = habitat_ux.Colors
