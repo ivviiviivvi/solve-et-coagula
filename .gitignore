@@ -10,6 +10,9 @@
 !.obsidian/plugins/obsidian-git/**
 .obsidian/workspace*
 .obsidian/workspaces.json
+.obsidian/copilot-index-chunk-*.json
+.obsidian/bookmarks.json
+.obsidian/icons/
 
 # System files
 .DS_Store
@@ -81,3 +84,15 @@ __pycache__/
 
 # Temporary experimental workspaces
 **/habitat_*_*/
+
+# Tool tracking files
+**/_gemini_visit_*.json
+.smart-env/
+.space/context.mdb
+
+# Security (never commit)
+security/
+
+# Duplicates (macOS copy artifacts)
+**/*\ 2/
+**/*\ 2.md
