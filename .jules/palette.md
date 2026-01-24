@@ -1,11 +1,11 @@
-## 2024-05-23 - [CLI Visual Hierarchy]
-**Learning:** Terminal outputs often lack visual hierarchy, making it hard to scan information quickly.
-**Action:** Implement a "Card Pattern" using box-drawing characters to group related information and improve scanability.
-# Palette's Journal - UX & Accessibility Learnings
+## 2026-01-17 - Unifying CLI Styling
+**Learning:** Inconsistent UI patterns (emojis vs cards, hardcoded vs shared colors) create a disjointed user experience even in CLI tools. Centralizing styling logic (`habitat_ux`) early prevents drift.
+**Action:** When auditing CLI tools, look for "rogue" print statements that bypass the established UX module and refactor them to use shared components (`print_card`, `Colors`).
 
-## 2025-12-16 - CLI Output Formatting
-**Learning:** Raw JSON dumps in CLI tools are functionally complete but cognitively overloading for users. Simple tabular alignment and columnar layouts significantly improve scannability without sacrificing data density.
-**Action:** When building CLIs, always wrap JSON/dict outputs with a structured formatter (like `_print_kv` or table view) for the default human-readable mode, while keeping the return value programmatic.
-## 2025-12-15 - [Safety Confirmation]
-**Learning:** Destructive CLI actions like `cleanup` should always require explicit confirmation to prevent accidental data loss.
-**Action:** Implement `input()` check before proceeding with `cleanup_all`, and add a `--force` flag for scripts.
+## 2026-01-17 - The Cost of Hardcoded Strings
+**Learning:** Hardcoded "intro" strings in Python's `cmd` module limit dynamic styling opportunities (like ANSI colors).
+**Action:** Use the `preloop` hook to render dynamic, styled headers instead of relying on the static `intro` attribute.
+
+## 2026-01-20 - Feedback in Ephemeral CLI Tools
+**Learning:** Even in stateless or ephemeral CLI tools, users expect immediate visual feedback for blocking operations. A simple spinner reduces uncertainty about whether the tool has hung.
+**Action:** Implement threading-based spinners for any CLI operation expected to take more than 500ms, ensuring they clean up their own ANSI artifacts.

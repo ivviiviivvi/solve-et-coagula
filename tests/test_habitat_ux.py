@@ -1,10 +1,25 @@
+#!/usr/bin/env python3
+"""
+TEST_HABITAT_UX.py
+
+Unit tests for habitat_ux utilities.
+"""
+
 import unittest
 import sys
+import os
 import io
 import time
+from unittest.mock import patch
+
+# Add project root to path
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from habitat_ux import Spinner, Colors
 
-class TestHabitatUX(unittest.TestCase):
+
+class TestSpinner(unittest.TestCase):
+    """Test Spinner class"""
 
     def test_spinner_output(self):
         """Test that spinner writes to stdout and cleans up."""
@@ -28,6 +43,22 @@ class TestHabitatUX(unittest.TestCase):
         # Should contain carriage returns
         self.assertIn("\r", output)
 
+    def test_spinner_context_manager(self):
+        """Test that Spinner works as a context manager"""
+        with patch('sys.stdout', new=io.StringIO()) as fake_out:
+            with Spinner("Testing..."):
+                time.sleep(0.1)
+
+            output = fake_out.getvalue()
+            # It should have printed the message and some spinner characters
+            self.assertIn("Testing...", output)
+            # It should have cleaned up the line
+            self.assertIn("\r", output)
+
+
+class TestColors(unittest.TestCase):
+    """Test Colors class"""
+
     def test_colors_exist(self):
         """Test that Colors class has expected attributes."""
         self.assertTrue(hasattr(Colors, 'HEADER'))
@@ -39,6 +70,7 @@ class TestHabitatUX(unittest.TestCase):
         self.assertTrue(hasattr(Colors, 'RESET'))
         self.assertTrue(hasattr(Colors, 'BOLD'))
         self.assertTrue(hasattr(Colors, 'UNDERLINE'))
+
 
 if __name__ == '__main__':
     unittest.main()
