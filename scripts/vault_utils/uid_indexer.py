@@ -2,7 +2,6 @@ import os
 import re
 from collections import defaultdict
 from datetime import datetime
-import pandas as pd
 
 UID_PATTERN = re.compile(r"[A-Z]{2}-[A-Z]{2}_\d{2}-\d{2}", re.IGNORECASE)
 
