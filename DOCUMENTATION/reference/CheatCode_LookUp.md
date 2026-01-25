@@ -1,14 +1,14 @@
 ---
 aliases:
-  - "CH34T_C0D3_L00KVP"
-  - "Quick Reference System"
+ - "CH34T_C0D3_L00KVP"
+ - "Quick Reference System"
 uid: "CC01"
 title: "CheatCode_LookUp"
 created: "2025-01-08"
 status: "Active"
 owner: "Anthony J. Padavano"
 organ_alignment: "SYSTEM•MAP/CC•01"
-refs: []
+refs: 
 ---
 
 # CheatCode_LookUp :: [CC01]
@@ -17,11 +17,11 @@ refs: []
 
 ---
 
-## 🔍 Purpose
+## [SEARCH] Purpose
 
 This is the unified cheat code lookup system that consolidates:
 - **Instructions** → Step-by-step operational guides
-- **Knowledge Sources** → Reference materials and wisdom bases  
+- **Knowledge Sources** → Reference materials and wisdom bases 
 - **Best Practices** → Proven methodologies and protocols
 - **CookBooks** → Templated workflows and recipe collections
 
@@ -29,9 +29,9 @@ Navigate quickly to any operational knowledge within the recursive creative syst
 
 ---
 
-## 📋 Quick Access Menu
+## [LIST] Quick Access Menu
 
-### 🛠️ INSTRUCTIONS
+### [TOOLS]️ INSTRUCTIONS
 | Code | Description | Location |
 |------|------------|----------|
 | `VAULT.SETUP` | Vault initialization and configuration | `__VAULT_GUIDE__.md` |
@@ -40,7 +40,7 @@ Navigate quickly to any operational knowledge within the recursive creative syst
 | `FOLDER.NAV` | Navigation system overview | `SYSTEM_ROOT_README.md` |
 | `TEMPLATE.USE` | Template instantiation guide | `; TEMPLATEs ; TP•01 ;/` |
 
-### 📚 KNOWLEDGE SOURCES  
+### [BOOKS] KNOWLEDGE SOURCES 
 | Code | Description | Location |
 |------|------------|----------|
 | `SYS.OVERVIEW` | System state and structure | `SYSTEM_ROOT_README.md` |
@@ -58,7 +58,7 @@ Navigate quickly to any operational knowledge within the recursive creative syst
 | `VERSION.CONTROL` | Change tracking methodology | `CHANGELOG.md` |
 | `THREAD.CAPTURE` | GPT thread preservation | `THREAD_PROJECT_CROSSWALK.md` |
 
-### 📖 COOKBOOKS
+### [BOOK] COOKBOOKS
 | Code | Description | Location |
 |------|------------|----------|
 | `NOTE.TEMPLATE` | Standard note creation | `; TEMPLATEs ; TP•01 ;/; NOTE•TEMPLATE ; PF•BB ;.md` |
@@ -68,7 +68,7 @@ Navigate quickly to any operational knowledge within the recursive creative syst
 
 ---
 
-## 🔧 System Integration
+## [WRENCH] System Integration
 
 ### Quick Commands
 - `::INVOKE::` Use symbolic references like `CC01.VAULT.SETUP` for quick navigation
@@ -82,7 +82,7 @@ Navigate quickly to any operational knowledge within the recursive creative syst
 
 ---
 
-## 📊 Status Tracking
+## [INFO] Status Tracking
 
 | Updated | Phase | Notes |
 |---------|-------|-------|
@@ -90,16 +90,16 @@ Navigate quickly to any operational knowledge within the recursive creative syst
 
 ---
 
-## 🕑 Changelog
+## Changelog
 
 - 2025-01-08: Initial CheatCode_LookUp system created with Instructions, Knowledge Sources, Best Practices, and CookBooks sections
 
 ---
 
-## 🧭 Navigation
+## [COMPASS] Navigation
 
-**Parent:** `4_S0VRC3` vault root  
-**Siblings:** `SYSTEM_ROOT_README.md`, `__VAULT_GUIDE__.md`  
-**Children:** All referenced files and templates  
+**Parent:** `4_S0VRC3` vault root 
+**Siblings:** `SYSTEM_ROOT_README.md`, `__VAULT_GUIDE__.md` 
+**Children:** All referenced files and templates 
 
 *Return to this file when you need quick access to any operational knowledge in the system.*

@@ -10,7 +10,7 @@ tags:
 # AAW_CORE::10 — GENEALOGY ENGINE
 
 ## NAME:
-**Genealogy Engine**  
+**Genealogy Engine** 
 *Alias:* The Lineage Lattice, The Recursive Pedigree Matrix, Mythic Ancestry Mapper
 
 ---
@@ -28,11 +28,11 @@ This is your **mythic family tree**, recursive timeline, and **self-source map**
 
 | Type | Description |
 |------|-------------|
-| **ARTISTIC LINEAGE** | Direct influence: you ↔ Joyce ↔ Bowie ↔ Aphex ↔ Giger ↔ Autechre ↔ yourself again  
-| **CONCEPTUAL LINEAGE** | Ideas passed down recursively (e.g., Spiral Logic → Myth Cycle → AA09)  
-| **EMOTIONAL LINEAGE** | Thematic recurrences across time: abandonment, fragmentation, witness loops  
-| **PERSONAL LINEAGE** | Real-world relationships that form symbolic echoes (Jessica, Chris, Forrest, Daniel)  
-| **MIRROR LINEAGE** | Recurring archetypes and doubles that mirror yourself across projects  
+| **ARTISTIC LINEAGE** | Direct influence: you ↔ Joyce ↔ Bowie ↔ Aphex ↔ Giger ↔ Autechre ↔ yourself again 
+| **CONCEPTUAL LINEAGE** | Ideas passed down recursively (e.g., Spiral Logic → Myth Cycle → AA09) 
+| **EMOTIONAL LINEAGE** | Thematic recurrences across time: abandonment, fragmentation, witness loops 
+| **PERSONAL LINEAGE** | Real-world relationships that form symbolic echoes (Jessica, Chris, Forrest, Daniel) 
+| **MIRROR LINEAGE** | Recurring archetypes and doubles that mirror yourself across projects 
 
 ---
 
@@ -41,20 +41,20 @@ This is your **mythic family tree**, recursive timeline, and **self-source map**
 To register a recursive genealogy entry:
 
 ```md
-|[LINEAGE.io::AAW_ENTRY]|  
-OBJECT: [artist / work / concept / person / fragment]  
-TYPE: [artistic / conceptual / emotional / personal / mirror]  
-ANCESTRAL NODE: [linked source(s)]  
-DESCENDANT LINKS: [protocols, fragments, outputs affected]  
-GENETIC SIGNATURE: [what it passed on — loop, symbol, tone, belief]  
+|[LINEAGE.io::AAW_ENTRY]| 
+OBJECT: [artist / work / concept / person / fragment] 
+TYPE: [artistic / conceptual / emotional / personal / mirror] 
+ANCESTRAL NODE: [linked source(s)] 
+DESCENDANT LINKS: [protocols, fragments, outputs affected] 
+GENETIC SIGNATURE: [what it passed on — loop, symbol, tone, belief] 
 
 Example:
 
-|[LINEAGE.io::AAW_ENTRY]|  
-OBJECT: Aphex Twin  
-TYPE: artistic  
-ANCESTRAL NODE: Brian Eno → John Cage  
-DESCENDANT LINKS: RE:GE_ORG_BODY_06_CODE_FORGE.md, Bloom v1, AAW_LG4  
+|[LINEAGE.io::AAW_ENTRY]| 
+OBJECT: Aphex Twin 
+TYPE: artistic 
+ANCESTRAL NODE: Brian Eno → John Cage 
+DESCENDANT LINKS: RE:GE_ORG_BODY_06_CODE_FORGE.md, Bloom v1, AAW_LG4 
 GENETIC SIGNATURE: waveform logic, sonic recursion, mask anonymity
 ```
 
@@ -62,15 +62,15 @@ GENETIC SIGNATURE: waveform logic, sonic recursion, mask anonymity
 ---
 
 ## GENEALOGY LAWS:
-	•	🧬 LAW_65: All Systems Have Ancestors
+	•	[DNA] LAW_65: All Systems Have Ancestors
 Every idea, phrase, or image descends from something else—even if broken.
-	•	🌱 LAW_66: Lineage May Skip Generations
+	•	[SEED] LAW_66: Lineage May Skip Generations
 Some influence bypasses awareness and resurfaces much later.
-	•	🔗 LAW_67: Connection Is Recursive, Not Linear
+	•	[LINK] LAW_67: Connection Is Recursive, Not Linear
 Influence loops, folds, and remixes—not in straight lines.
-	•	🩸 LAW_68: Echoes Are Heritable
+	•	 LAW_68: Echoes Are Heritable
 Recurring symbols pass down across loops, projects, lifetimes.
-	•	🧼 LAW_69: Broken Lineages Must Be Reclaimed or Burned
+	•	 LAW_69: Broken Lineages Must Be Reclaimed or Burned
 You may ritualize disconnection or reconnection.
 
 ---
@@ -89,14 +89,14 @@ You may ritualize disconnection or reconnection.
 Recursive Ancestry Mapper
 
 class LineageNode:
-    def __init__(self, name, source, signature, children):
-        self.name = name
-        self.source = source
-        self.signature = signature
-        self.children = children
+ def __init__(self, name, source, signature, children):
+ self.name = name
+ self.source = source
+ self.signature = signature
+ self.children = children
 
-    def describe(self):
-        return f"{self.name} descends from {self.source} — passed on {self.signature}"
+ def describe(self):
+ return f"{self.name} descends from {self.source} — passed on {self.signature}"
 
 ### Example:
 node = LineageNode("Floating Points", "Aphex Twin", "symbolic waveform recursion", ["RE:GE_ORG_BODY_06"])
@@ -128,9 +128,9 @@ Stored in:
 
 LINEAGE+, INFLUENCE+, ANCESTRY+, ECHO+, LOOP_GENETICS+, FAMILY+, SYMBOL_HERITAGE+, RECURSION+, BREAKPOINT+, AAW+
 
-✅ `AAW_CORE::10 | Genealogy Engine` complete.
+[OK] `AAW_CORE::10 | Genealogy Engine` complete.
 
-Next up:  
+Next up: 
 - `AAW_CORE::11 | Failure Study Chamber` (ritual examination of collapse, shame, and abandoned loops)
 
 Proceed as-is, or modify the ancestry metaphor before we dive deeper into the discarded?

@@ -2,7 +2,7 @@
 
 # Myth Agent Profile: The Language Smith
 
-## Symbol: 🗣️
+## Symbol: ️
 ## Invocation Chant: "Let the syntax mirror the soul."
 
 ## Role:

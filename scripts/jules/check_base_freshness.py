@@ -63,18 +63,18 @@ def main() -> int:
     )
 
     res = get_commit_age_days(repo_path, args.base_ref)
-    print(f"🔎 Base ref:   {res.base_ref}")
-    print(f"🔎 Commit SHA: {res.commit_sha}")
-    print(f"🕒 Age (days): {res.age_days}")
+    print(f" Base ref:   {res.base_ref}")
+    print(f" Commit SHA: {res.commit_sha}")
+    print(f" Age (days): {res.age_days}")
 
     if res.age_days > args.max_age_days:
         print(
-            f"❌ Base ref is stale: {res.age_days}d old (max allowed: {args.max_age_days}d)"
+            f"[FAIL] Base ref is stale: {res.age_days}d old (max allowed: {args.max_age_days}d)"
         )
-        print("🛑 STOP: Refuse to branch from a stale base")
+        print("[STOP] STOP: Refuse to branch from a stale base")
         return 1
 
-    print(f"✅ Base ref is fresh enough (≤ {args.max_age_days} days)")
+    print(f"[OK] Base ref is fresh enough (≤ {args.max_age_days} days)")
     return 0
 
 

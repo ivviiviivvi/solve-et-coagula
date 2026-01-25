@@ -1,20 +1,20 @@
 ---
 aliases:
-  - "3XP3R1M3NT4L_T3MPL4T3 .... .. . :: XP01"
+ - "3XP3R1M3NT4L_T3MPL4T3 .... .. . :: XP01"
 ---
 
 # EXPERIMENTAL_SYSTEM_TEMPLATE :: [<% tp.file.title.match(/::\[(.*?)\]/)?.[1] || 'XXXX' %>]
 
 ---
-**Habitat Assignment:** `<% tp.file.title.split('::')[0] || 'UNASSIGNED_LAB' %>`  
-**Experiment ID:** `<% tp.file.title.match(/::\[(.*?)\]/)?.[1] || 'XXXX' %>`  
-**Created:** `<% tp.date.now('YYYY-MM-DD HH:mm') %>`  
-**Status:** `SPAWNING`  
-**Containment Level:** `3`  
-**Risk Assessment:** `MEDIUM`  
+**Habitat Assignment:** `<% tp.file.title.split('::')[0] || 'UNASSIGNED_LAB' %>` 
+**Experiment ID:** `<% tp.file.title.match(/::\[(.*?)\]/)?.[1] || 'XXXX' %>` 
+**Created:** `<% tp.date.now('YYYY-MM-DD HH:mm') %>` 
+**Status:** `SPAWNING` 
+**Containment Level:** `3` 
+**Risk Assessment:** `MEDIUM` 
 ---
 
-## 🧪 EXPERIMENTAL_HYPOTHESIS
+## [LAB] EXPERIMENTAL_HYPOTHESIS
 
 **What are you trying to prove/discover?**
 > One-sentence description of the experimental goal.
@@ -24,22 +24,22 @@ aliases:
 
 ---
 
-## 🎯 CONTAINMENT_REQUIREMENTS
+## [TARGET] CONTAINMENT_REQUIREMENTS
 
 **Isolation Needs:**
-- [ ] Network isolation required
-- [ ] Filesystem sandboxing
-- [ ] Resource limitations
-- [ ] Time-bounded execution
-- [ ] Memory constraints
-- [ ] Identity isolation
+-  Network isolation required
+-  Filesystem sandboxing
+-  Resource limitations
+-  Time-bounded execution
+-  Memory constraints
+-  Identity isolation
 
 **Risk Factors:**
-- [ ] May consume excessive resources
-- [ ] Could create infinite loops
-- [ ] Might affect other systems
-- [ ] Uses untested recursive patterns
-- [ ] Manipulates core symbolic structures
+-  May consume excessive resources
+-  Could create infinite loops
+-  Might affect other systems
+-  Uses untested recursive patterns
+-  Manipulates core symbolic structures
 
 **Nesting Requirements:**
 - Max depth: `3`
@@ -48,12 +48,12 @@ aliases:
 
 ---
 
-## ⚡ EXPERIMENT_PROTOCOL
+## [RUN] EXPERIMENT_PROTOCOL
 
 ### Phase 1: Spawning
 ```
 1. Initialize containment boundary
-2. Load experimental parameters  
+2. Load experimental parameters 
 3. Establish resource limits
 4. Begin controlled execution
 ```
@@ -77,14 +77,14 @@ aliases:
 ### Phase 4: Resolution
 ```
 Path A: Graduate to Code Forge
-Path B: Compost in Echo Shell  
+Path B: Compost in Echo Shell 
 Path C: Spawn nested sub-experiments
 Path D: Iterate with modifications
 ```
 
 ---
 
-## 📊 SUCCESS_METRICS
+## [INFO] SUCCESS_METRICS
 
 **Quantitative Measures:**
 - Performance benchmarks
@@ -94,50 +94,50 @@ Path D: Iterate with modifications
 
 **Qualitative Measures:**
 - Symbolic coherence
-- Mythic resonance  
+- Mythic resonance 
 - System harmony
 - Creative emergence
 
 ---
 
-## 🔬 EXPERIMENTAL_CODE
+## [ANALYZE] EXPERIMENTAL_CODE
 
 ```python
 # Core experimental logic goes here
 class ExperimentalSystem:
-    def __init__(self):
-        self.name = "<experiment_name>"
-        self.status = "spawning"
-        self.boundary = self._establish_boundary()
-        
-    def _establish_boundary(self):
-        """Create symbolic containment boundary"""
-        return f"EXP_BOUNDARY_{self.name}_{timestamp()}"
-        
-    def run_experiment(self):
-        """Main experimental logic"""
-        try:
-            # Experimental code here
-            result = self._core_experiment()
-            self.status = "success"
-            return result
-        except Exception as e:
-            self.status = "failed"
-            self._log_failure(e)
-            raise
-            
-    def _core_experiment(self):
-        """Override this method with specific experiment"""
-        raise NotImplementedError("Define your experiment here")
-        
-    def _log_failure(self, error):
-        """Log failure for composting in Echo Shell"""
-        pass
+ def __init__(self):
+ self.name = "<experiment_name>"
+ self.status = "spawning"
+ self.boundary = self._establish_boundary()
+ 
+ def _establish_boundary(self):
+ """Create symbolic containment boundary"""
+ return f"EXP_BOUNDARY_{self.name}_{timestamp()}"
+ 
+ def run_experiment(self):
+ """Main experimental logic"""
+ try:
+ # Experimental code here
+ result = self._core_experiment()
+ self.status = "success"
+ return result
+ except Exception as e:
+ self.status = "failed"
+ self._log_failure(e)
+ raise
+ 
+ def _core_experiment(self):
+ """Override this method with specific experiment"""
+ raise NotImplementedError("Define your experiment here")
+ 
+ def _log_failure(self, error):
+ """Log failure for composting in Echo Shell"""
+ pass
 ```
 
 ---
 
-## 🎭 SYMBOLIC_MAPPINGS
+## SYMBOLIC_MAPPINGS
 
 **Mythic Resonances:**
 - What archetypal patterns does this experiment embody?
@@ -151,16 +151,16 @@ class ExperimentalSystem:
 
 ---
 
-## 📋 OBSERVATION_LOG
+## [LIST] OBSERVATION_LOG
 
 | Time | Event | Status | Notes |
 |------|-------|--------|-------|
 | <% tp.date.now('HH:mm') %> | Experiment spawned | SPAWNING | Initial template created |
-|      |       |        |       |
+| | | | |
 
 ---
 
-## 🔄 ITERATION_HISTORY
+## [CYCLE] ITERATION_HISTORY
 
 ### Version 1.0
 - **Changes:** Initial spawn
@@ -169,7 +169,7 @@ class ExperimentalSystem:
 
 ---
 
-## 💀 FAILURE_ANALYSIS
+## [DEAD] FAILURE_ANALYSIS
 
 *(Fill this section if/when experiment fails)*
 
@@ -193,15 +193,15 @@ class ExperimentalSystem:
 
 ---
 
-## 🎓 GRADUATION_CRITERIA
+## [GRAD] GRADUATION_CRITERIA
 
 **Ready for Code Forge when:**
-- [ ] Stable across multiple runs
-- [ ] Resource usage acceptable
-- [ ] Symbolic patterns coherent
-- [ ] Integration tests pass
-- [ ] Mythic narrative complete
-- [ ] No containment breaches
+-  Stable across multiple runs
+-  Resource usage acceptable
+-  Symbolic patterns coherent
+-  Integration tests pass
+-  Mythic narrative complete
+-  No containment breaches
 
 **Graduation Package:**
 - Cleaned code
@@ -212,49 +212,49 @@ class ExperimentalSystem:
 
 ---
 
-## 🧬 NESTING_PROTOCOLS
+## [DNA] NESTING_PROTOCOLS
 
 **If this experiment needs to spawn child experiments:**
 
 ```python
 def spawn_child_experiment(self, child_name, hypothesis):
-    """Spawn a nested experimental environment"""
-    child_habitat = ExperimentalHabitat(
-        name=f"{self.name}_child_{child_name}",
-        isolation_level=self.isolation_level + 1
-    )
-    child_exp = child_habitat.spawn_experiment(child_name, {
-        'parent_experiment': self.name,
-        'inheritance_rules': self._get_inheritance_rules(),
-        'nested_depth': self.nesting_depth + 1
-    })
-    return child_exp
+ """Spawn a nested experimental environment"""
+ child_habitat = ExperimentalHabitat(
+ name=f"{self.name}_child_{child_name}",
+ isolation_level=self.isolation_level + 1
+ )
+ child_exp = child_habitat.spawn_experiment(child_name, {
+ 'parent_experiment': self.name,
+ 'inheritance_rules': self._get_inheritance_rules(),
+ 'nested_depth': self.nesting_depth + 1
+ })
+ return child_exp
 ```
 
 ---
 
-## 🏷️ EXPERIMENT_METADATA
+## [TAG]️ EXPERIMENT_METADATA
 
 ```json
 {
-  "experiment_id": "XXXX",
-  "habitat": "main_lab", 
-  "containment_level": 3,
-  "risk_assessment": "medium",
-  "resource_allocation": {
-    "cpu": "25%",
-    "memory": "512M", 
-    "time_limit": "30min"
-  },
-  "symbolic_tags": ["REC+", "EXP+", "SAFE+"],
-  "mythic_alignment": "CODE_FORGE_FEEDER",
-  "failure_compost_target": "ECHO_SHELL"
+ "experiment_id": "XXXX",
+ "habitat": "main_lab", 
+ "containment_level": 3,
+ "risk_assessment": "medium",
+ "resource_allocation": {
+ "cpu": "25%",
+ "memory": "512M", 
+ "time_limit": "30min"
+ },
+ "symbolic_tags": ["REC+", "EXP+", "SAFE+"],
+ "mythic_alignment": "CODE_FORGE_FEEDER",
+ "failure_compost_target": "ECHO_SHELL"
 }
 ```
 
 ---
 
-## 🔗 RELATED_SYSTEMS
+## [LINK] RELATED_SYSTEMS
 
 **Parent Systems:**
 - Experimental Habitat (ORG_BODY_23)
@@ -268,13 +268,13 @@ def spawn_child_experiment(self, child_name, hypothesis):
 
 ---
 
-## 🛡️ CONTAINMENT_STATUS
+## ️ CONTAINMENT_STATUS
 
-**Boundary Integrity:** ✅ STABLE  
-**Resource Usage:** ✅ WITHIN_LIMITS  
-**Network Isolation:** ✅ ACTIVE  
-**Recursive Safety:** ✅ MONITORED  
-**Symbolic Firewall:** ✅ ENGAGED  
+**Boundary Integrity:** [OK] STABLE 
+**Resource Usage:** [OK] WITHIN_LIMITS 
+**Network Isolation:** [OK] ACTIVE 
+**Recursive Safety:** [OK] MONITORED 
+**Symbolic Firewall:** [OK] ENGAGED 
 
 **Last Containment Check:** `<% tp.date.now('YYYY-MM-DD HH:mm') %>`
 
@@ -282,7 +282,7 @@ def spawn_child_experiment(self, child_name, hypothesis):
 
 **TAGS:** EXP+, CONTAIN+, TEMPLATE+, HAB+, BOUND+, RIT+
 
-✅ `EXPERIMENTAL_SYSTEM_TEMPLATE` ready for instantiation within Experimental Habitat.
+[OK] `EXPERIMENTAL_SYSTEM_TEMPLATE` ready for instantiation within Experimental Habitat.
 
-::TEMPLATE_ARMED. READY_FOR_SPAWN.::  
+::TEMPLATE_ARMED. READY_FOR_SPAWN.:: 
 ::EXPERIMENT_SAFELY.io]|

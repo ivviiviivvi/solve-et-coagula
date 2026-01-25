@@ -150,7 +150,7 @@ class ContainmentValidator:
     
     def run_validation(self) -> bool:
         """Run all validation checks."""
-        print("🔍 Running containment validation...")
+        print("[SEARCH] Running containment validation...")
         print(f"Repository: {self.repo_path}")
         print()
         
@@ -160,31 +160,31 @@ class ContainmentValidator:
         self.validate_symlinks()
         
         # Report results
-        print("📋 Validation Results:")
+        print("[LIST] Validation Results:")
         print("=" * 50)
         
         if self.errors:
-            print(f"❌ ERRORS ({len(self.errors)}):")
+            print(f"[FAIL] ERRORS ({len(self.errors)}):")
             for error in self.errors:
                 print(f"  • {error}")
             print()
             
         if self.warnings:
-            print(f"⚠️  WARNINGS ({len(self.warnings)}):")
+            print(f"[WARN]️  WARNINGS ({len(self.warnings)}):")
             for warning in self.warnings:
                 print(f"  • {warning}")
             print()
             
         if not self.errors and not self.warnings:
-            print("✅ All containment checks passed!")
+            print("[OK] All containment checks passed!")
             print()
             
         # Summary
         total_issues = len(self.errors) + len(self.warnings)
         if total_issues > 0:
-            print(f"📊 Summary: {len(self.errors)} errors, {len(self.warnings)} warnings")
+            print(f"[INFO] Summary: {len(self.errors)} errors, {len(self.warnings)} warnings")
         else:
-            print("📊 Summary: No issues detected")
+            print("[INFO] Summary: No issues detected")
             
         return len(self.errors) == 0
 

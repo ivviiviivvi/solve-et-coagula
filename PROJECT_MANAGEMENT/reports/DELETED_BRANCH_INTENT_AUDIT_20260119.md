@@ -59,12 +59,12 @@ These clusters are exactly what you’d expect from Jules “retry storms”: ma
 - 12 × `sentinel-fix-path-traversal-*`
 
 **Evidence it landed in `main`** (merged PRs)
-- PR #66 — 🛡️ Sentinel: [CRITICAL] Fix Path Traversal in ExperimentalHabitat
-  - https://github.com/ivviiviivvi/solve-et-coagula/pull/66
+- PR #66 — ️ Sentinel: [CRITICAL] Fix Path Traversal in ExperimentalHabitat
+ - https://github.com/ivviiviivvi/solve-et-coagula/pull/66
 - PR #69 — Shield: Fix path traversal vulnerability in experiment spawning
-  - https://github.com/ivviiviivvi/solve-et-coagula/pull/69
+ - https://github.com/ivviiviivvi/solve-et-coagula/pull/69
 - PR #73 — Fix path traversal in experiment creation
-  - https://github.com/ivviiviivvi/solve-et-coagula/pull/73
+ - https://github.com/ivviiviivvi/solve-et-coagula/pull/73
 - (plus follow-on hardening/docs PRs later: e.g., #78, #81)
 
 **Conclusion**
@@ -77,11 +77,11 @@ These clusters are exactly what you’d expect from Jules “retry storms”: ma
 
 **Evidence it landed in `main`** (merged PRs)
 - PR #65 — Optimize ContainmentBoundary.get_full_path with caching
-  - https://github.com/ivviiviivvi/solve-et-coagula/pull/65
-- PR #68 — ⚡ Bolt: Optimize ContainmentBoundary path generation
-  - https://github.com/ivviiviivvi/solve-et-coagula/pull/68
-- PR #71 — ⚡ Bolt: Optimize ContainmentBoundary.get_full_path caching
-  - https://github.com/ivviiviivvi/solve-et-coagula/pull/71
+ - https://github.com/ivviiviivvi/solve-et-coagula/pull/65
+- PR #68 — [RUN] Bolt: Optimize ContainmentBoundary path generation
+ - https://github.com/ivviiviivvi/solve-et-coagula/pull/68
+- PR #71 — [RUN] Bolt: Optimize ContainmentBoundary.get_full_path caching
+ - https://github.com/ivviiviivvi/solve-et-coagula/pull/71
 
 **Conclusion**
 - The bolt optimization intent is preserved.
@@ -96,13 +96,13 @@ These clusters are exactly what you’d expect from Jules “retry storms”: ma
 
 **Evidence it landed in `main`** (merged PRs)
 - PR #67 — feat(cli): enhance habitat manager output with colors…
-  - https://github.com/ivviiviivvi/solve-et-coagula/pull/67
+ - https://github.com/ivviiviivvi/solve-et-coagula/pull/67
 - PR #70 — feat(cli): add confirmation to cleanup command
-  - https://github.com/ivviiviivvi/solve-et-coagula/pull/70
+ - https://github.com/ivviiviivvi/solve-et-coagula/pull/70
 - PR #72 — feat: improve CLI output formatting for better readability
-  - https://github.com/ivviiviivvi/solve-et-coagula/pull/72
+ - https://github.com/ivviiviivvi/solve-et-coagula/pull/72
 - PR #76 — feat(ux): implement CLI Card Pattern for clearer output
-  - https://github.com/ivviiviivvi/solve-et-coagula/pull/76
+ - https://github.com/ivviiviivvi/solve-et-coagula/pull/76
 
 **Conclusion**
 - The palette UX intent is preserved.
@@ -112,16 +112,16 @@ These clusters are exactly what you’d expect from Jules “retry storms”: ma
 These stem clusters appear in the deleted branch list but do **not** clearly map to a merged PR by name/title alone:
 
 - `sentinel-ansi-sanitization-*` / `sentinel-terminal-injection-fix-*` / `sentinel-fix-ansi-injection-*`
-  - Potential “ANSI escape injection” hardening.
-  - I did not find obvious ANSI sanitization code in `*.py` via search; that *may* mean:
-    - the repo doesn’t emit untrusted ANSI sequences (so nothing to fix), or
-    - the work never merged.
-  - Recommendation: treat as a **security review item**, not an automatic “lost work” item.
+ - Potential “ANSI escape injection” hardening.
+ - I did not find obvious ANSI sanitization code in `*.py` via search; that *may* mean:
+ - the repo doesn’t emit untrusted ANSI sequences (so nothing to fix), or
+ - the work never merged.
+ - Recommendation: treat as a **security review item**, not an automatic “lost work” item.
 
 - `bolt-regex-optimization-*`, `bolt-recursion-fix-*`
-  - Likely performance/refactor experiments.
-  - May be redundant with existing optimizations already merged (but without preserved tip SHAs, we cannot confirm).
-  - Recommendation: only revisit if you have a performance regression or known hotspot.
+ - Likely performance/refactor experiments.
+ - May be redundant with existing optimizations already merged (but without preserved tip SHAs, we cannot confirm).
+ - Recommendation: only revisit if you have a performance regression or known hotspot.
 
 ## D. Is it illogical to “review all deleted branches”?
 

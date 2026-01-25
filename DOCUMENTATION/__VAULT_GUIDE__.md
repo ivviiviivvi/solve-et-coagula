@@ -11,14 +11,14 @@ tags:
 ---
 
 # __VAULT_GUIDE__.md
-🧭 **Welcome to `4_S0VRC3` — The AJP Creative Operating Vault**
+[COMPASS] **Welcome to `4_S0VRC3` — The AJP Creative Operating Vault**
 
-This vault is the active root of all recursive creative systems by Anthony James Padavano.  
+This vault is the active root of all recursive creative systems by Anthony James Padavano. 
 It contains protocols, symbolic systems, long-term projects, templates, and real-time synced documents.
 
 ---
 
-## 🗝 Core Principles
+## Core Principles
 
 - `4` = Signature numeral for recursion, identity, motion
 - `SOURCE` = The originating node of all downstream content
@@ -26,7 +26,7 @@ It contains protocols, symbolic systems, long-term projects, templates, and real
 
 ---
 
-## 🔄 How to Use
+## [CYCLE] How to Use
 
 - Everything begins here. New threads, project starts, creative systems, digests.
 - Notes outside this vault should be migrated in or mirrored as needed.
@@ -36,20 +36,20 @@ It contains protocols, symbolic systems, long-term projects, templates, and real
 
 ---
 
-## 🧬 Key Subfolders
+## [DNA] Key Subfolders
 
-| Folder           | Purpose                                      |
+| Folder | Purpose |
 |------------------|----------------------------------------------|
-| `REGEOS/`         | Recursive Generative Operating System logic |
-| `PROJECTS/`       | All multimedia, narrative, and system builds|
-| `TEMPLATES/`      | Seeds and reusable structures               |
-| `THREAD_DIGESTS/` | Archived GPT sessions + versioned insight   |
-| `4JP/`            | Internal logs, identity notes, symbolic ref |
-| `ARCHIVAL_STACK/`| Deprecated or frozen materials               |
+| `REGEOS/` | Recursive Generative Operating System logic |
+| `PROJECTS/` | All multimedia, narrative, and system builds|
+| `TEMPLATES/` | Seeds and reusable structures |
+| `THREAD_DIGESTS/` | Archived GPT sessions + versioned insight |
+| `4JP/` | Internal logs, identity notes, symbolic ref |
+| `ARCHIVAL_STACK/`| Deprecated or frozen materials |
 
 ---
 
-## ✅ Confirmed Setup
+## [OK] Confirmed Setup
 
 - Sync: Obsidian Sync (no iCloud)
 - Path: `~/Documents/4_S0VRC3/`

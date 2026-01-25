@@ -1,48 +1,48 @@
 # EXPERIMENTAL_CONTAINMENT_SYSTEM_GUIDE.md
 
-## 🎩 "A HAT ON A HAT ON A" - Experimental Environment Containment Guide
+## "A HAT ON A HAT ON A" - Experimental Environment Containment Guide
 
 This document describes the complete experimental containment system built for the 4_S0VRC3 repository, addressing the issue "How do we build an environment to contain experimental systems?"
 
 ---
 
-## 🔍 System Overview
+## [SEARCH] System Overview
 
 The "Hat on a Hat" containment system provides **nested, isolated environments** for safely running experimental systems without contaminating the core RE:GE:OS infrastructure. Each "hat" represents a layer of containment with increasing isolation and decreasing resource allocation.
 
 ### Core Components Created:
 
 1. **RE:GE_ORG_BODY_23_EXPERIMENTAL_HABITAT.md** - The mythic/symbolic definition
-2. **EXPERIMENTAL_SYSTEM_TEMPLATE.md** - Template for creating new experiments  
+2. **EXPERIMENTAL_SYSTEM_TEMPLATE.md** - Template for creating new experiments 
 3. **experimental_habitat_implementation.py** - Working Python implementation
 4. **habitat_manager.py** - Command-line management interface
 5. **simple_habitat_demo.py** - Complete demonstration script
 
 ---
 
-## 🏗️ Architecture
+## ️ Architecture
 
 ```
 Layer 1: Base Habitat (Isolation Level 1)
-  ├─ Experiment A (Contained)
-  │
-  └─ Layer 2: Nested Habitat (Isolation Level 2)  
-      ├─ Experiment B (Double-contained)
-      │
-      └─ Layer 3: Deep Habitat (Isolation Level 3)
-          └─ Experiment C (Triple-contained)
+ ├─ Experiment A (Contained)
+ │
+ └─ Layer 2: Nested Habitat (Isolation Level 2) 
+ ├─ Experiment B (Double-contained)
+ │
+ └─ Layer 3: Deep Habitat (Isolation Level 3)
+ └─ Experiment C (Triple-contained)
 ```
 
 **Each layer provides:**
 - Progressive isolation boundaries
-- Reduced resource allocation  
+- Reduced resource allocation 
 - Enhanced monitoring
 - Safe failure containment
 - Graduation pathways upward
 
 ---
 
-## 🎯 Key Features
+## [TARGET] Key Features
 
 ### Containment Boundaries
 - **Symbolic Firewalls** - Mythic pattern isolation
@@ -64,7 +64,7 @@ Layer 1: Base Habitat (Isolation Level 1)
 
 ---
 
-## 🚀 Usage Examples
+## [LAUNCH] Usage Examples
 
 ### Basic Usage (Python API)
 
@@ -77,9 +77,9 @@ lab = ExperimentalHabitat("test_lab", isolation_level=3)
 # Spawn experiment
 experiment = RecursiveMythEngine()
 containment_rules = {
-    'resources': {'cpu': '50%', 'memory': '512M'},
-    'network_isolation': True,
-    'time_limit': 1800
+ 'resources': {'cpu': '50%', 'memory': '512M'},
+ 'network_isolation': True,
+ 'time_limit': 1800
 }
 lab.spawn_experiment(experiment, containment_rules)
 
@@ -88,9 +88,9 @@ result = lab.run_experiment(experiment.name)
 
 # Graduate or compost based on results
 if experiment.status == 'completed':
-    lab.graduate_to_forge(experiment.name)
+ lab.graduate_to_forge(experiment.name)
 else:
-    lab.contain_failure(experiment.name, "execution_failed")
+ lab.contain_failure(experiment.name, "execution_failed")
 ```
 
 ### Command Line Interface
@@ -102,7 +102,7 @@ python3 habitat_manager.py spawn "test_experiment" --hypothesis "Testing recursi
 # Run experiment
 python3 habitat_manager.py run "test_experiment"
 
-# Check status  
+# Check status 
 python3 habitat_manager.py status "test_experiment"
 
 # Graduate successful experiment
@@ -121,7 +121,7 @@ python3 simple_habitat_demo.py
 
 ---
 
-## 🔗 Integration with RE:GE:OS
+## [LINK] Integration with RE:GE:OS
 
 The Experimental Habitat integrates seamlessly with existing RE:GE:OS components:
 
@@ -130,7 +130,7 @@ The Experimental Habitat integrates seamlessly with existing RE:GE:OS components
 - **Pattern Recognition**: Experimental patterns feed symbolic compilers
 - **Ritual Integration**: Experiments become ritualized functions
 
-### Connection to Echo Shell (ORG_BODY_09)  
+### Connection to Echo Shell (ORG_BODY_09) 
 - **Failure Composting**: Failed experiments decay safely in Echo Shell
 - **Wisdom Extraction**: Failure lessons become system knowledge
 - **Pattern Archaeology**: Echo Shell preserves experimental history
@@ -142,14 +142,14 @@ The Experimental Habitat integrates seamlessly with existing RE:GE:OS components
 
 ---
 
-## 🧪 Experiment Types Supported
+## [LAB] Experiment Types Supported
 
 ### 1. Recursive Myth Engines
 - **Purpose**: Generate self-referential narrative patterns
 - **Risk Level**: Medium (infinite recursion potential)
 - **Containment**: Depth limits, time boundaries
 
-### 2. Symbolic Pattern Analyzers  
+### 2. Symbolic Pattern Analyzers 
 - **Purpose**: Extract patterns from experimental outputs
 - **Risk Level**: Low (analysis-only, no generation)
 - **Containment**: Resource limits, read-only access
@@ -166,7 +166,7 @@ The Experimental Habitat integrates seamlessly with existing RE:GE:OS components
 
 ---
 
-## ⚙️ Configuration Options
+## ️ Configuration Options
 
 ### Isolation Levels
 
@@ -175,7 +175,7 @@ The Experimental Habitat integrates seamlessly with existing RE:GE:OS components
 - Resource limits
 - Basic logging
 
-**Level 2: Enhanced Isolation**  
+**Level 2: Enhanced Isolation** 
 - Network restrictions
 - Filesystem sandboxing
 - Advanced monitoring
@@ -194,25 +194,25 @@ The Experimental Habitat integrates seamlessly with existing RE:GE:OS components
 
 ```json
 {
-  "resources": {
-    "cpu": "50%",           // CPU allocation limit
-    "memory": "512M",       // Memory allocation limit  
-    "disk": "1G",          // Disk space limit
-    "time_limit": 1800,    // Maximum runtime (seconds)
-    "network_bandwidth": "1M" // Network throughput limit
-  },
-  "containment": {
-    "network_isolation": true,    // Block external network
-    "filesystem_boundary": "/tmp/exp", // Sandbox directory
-    "recursive_depth_limit": 5,   // Max nesting depth
-    "symbolic_firewall": true     // Enable mythic containment
-  }
+ "resources": {
+ "cpu": "50%", // CPU allocation limit
+ "memory": "512M", // Memory allocation limit 
+ "disk": "1G", // Disk space limit
+ "time_limit": 1800, // Maximum runtime (seconds)
+ "network_bandwidth": "1M" // Network throughput limit
+ },
+ "containment": {
+ "network_isolation": true, // Block external network
+ "filesystem_boundary": "/tmp/exp", // Sandbox directory
+ "recursive_depth_limit": 5, // Max nesting depth
+ "symbolic_firewall": true // Enable mythic containment
+ }
 }
 ```
 
 ---
 
-## 🔍 Monitoring and Observability
+## [SEARCH] Monitoring and Observability
 
 ### Real-time Metrics
 - **Resource Usage**: CPU, memory, disk, network consumption
@@ -228,18 +228,18 @@ The Experimental Habitat integrates seamlessly with existing RE:GE:OS components
 
 ### Visual Status Display
 ```
-🏠 Habitat: main_lab (Level 3)
-├── 🧪 recursive_myth_v1 [RUNNING] (CPU: 45%, MEM: 312M)
-│   └── 🪆 nested_analysis (Level 4)  
-│       └── 🧪 pattern_extract [COMPLETED]
-├── 🧪 symbolic_test_v2 [SPAWNING]
-└── 🎓 graduated_patterns: 3
-    💀 composted_failures: 1
+[HOME] Habitat: main_lab (Level 3)
+├── [LAB] recursive_myth_v1 [RUNNING] (CPU: 45%, MEM: 312M)
+│ └── [NEST] nested_analysis (Level 4) 
+│ └── [LAB] pattern_extract [COMPLETED]
+├── [LAB] symbolic_test_v2 [SPAWNING]
+└── [GRAD] graduated_patterns: 3
+ [DEAD] composted_failures: 1
 ```
 
 ---
 
-## 🚨 Safety Protocols
+## [ALERT] Safety Protocols
 
 ### Automatic Containment Triggers
 - **Resource Exhaustion**: Auto-terminate on limit breach
@@ -261,7 +261,7 @@ The Experimental Habitat integrates seamlessly with existing RE:GE:OS components
 
 ---
 
-## 📈 Performance Characteristics
+## [STATS] Performance Characteristics
 
 ### Scalability
 - **Concurrent Experiments**: 10+ per habitat (resource-dependent)
@@ -277,11 +277,11 @@ The Experimental Habitat integrates seamlessly with existing RE:GE:OS components
 
 ---
 
-## 🔮 Future Enhancements
+## [FUTURE] Future Enhancements
 
 ### Planned Features
 - **GPU Containment**: Support for ML/AI experiments
-- **Distributed Habitats**: Cross-machine experimental environments  
+- **Distributed Habitats**: Cross-machine experimental environments 
 - **Time-based Isolation**: Temporal containment for time-sensitive experiments
 - **Blockchain Integration**: Immutable experiment audit trails
 
@@ -293,7 +293,7 @@ The Experimental Habitat integrates seamlessly with existing RE:GE:OS components
 
 ---
 
-## 📚 Related Documentation
+## [BOOKS] Related Documentation
 
 - **RE:GE_ORG_BODY_06_CODE_FORGE.md** - Pattern compilation and ritualization
 - **RE:GE_ORG_BODY_09_ECHO_SHELL.md** - Failure containment and composting
@@ -303,16 +303,16 @@ The Experimental Habitat integrates seamlessly with existing RE:GE:OS components
 
 ---
 
-## 🏷️ Tags
+## [TAG]️ Tags
 
 EXPERIMENTAL+, CONTAINMENT+, HAT_STACK+, NESTED+, SAFE+, ISOLATION+, RECURSIVE+, HABITAT+, BOUNDARY+, FORGE_FEEDER+
 
 ---
 
-**Status**: ✅ ACTIVE - System operational and ready for experimental use  
-**Last Updated**: 2025-08-09  
-**Version**: 1.0  
+**Status**: [OK] ACTIVE - System operational and ready for experimental use 
+**Last Updated**: 2025-08-09 
+**Version**: 1.0 
 **Maintainer**: RE:GE:OS Experimental Division
 
-::CONTAINMENT_SYSTEM_OPERATIONAL::  
+::CONTAINMENT_SYSTEM_OPERATIONAL:: 
 ::READY_FOR_EXPERIMENTS.io]|

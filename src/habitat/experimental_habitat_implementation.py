@@ -409,7 +409,7 @@ class ExperimentalHabitat:
 
 def demonstrate_experimental_habitat():
     """Demonstrate the experimental habitat system"""
-    print("🧪 EXPERIMENTAL HABITAT DEMONSTRATION")
+    print("[LAB] EXPERIMENTAL HABITAT DEMONSTRATION")
     print("=" * 50)
     
     # Create main habitat

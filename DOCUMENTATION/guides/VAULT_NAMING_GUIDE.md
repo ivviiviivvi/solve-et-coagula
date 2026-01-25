@@ -5,20 +5,20 @@ Should the symbolic vault folder itself have a UID-style name?
 ---
 
 ## SHORT ANSWER:
-**No — it’s not required.**  
+**No — it’s not required.** 
 But **yes** — it is recommended **when cloning, publishing, or freezing.**
 
 ---
 
 ## LOGIC GRID:
 
-| Situation                                  | Should Use UID Name? | Example                          |
+| Situation | Should Use UID Name? | Example |
 |-------------------------------------------|-----------------------|----------------------------------|
-| Private, single-user vault                | No                    | `4_S0VRC3/`                      |
-| Daily creative writing only               | No                    | `myth-lab/`                      |
-| Recursively structured symbolic system    | ✅                    | `SS-ST_00-00_4_S0VRC3_v2a/`      |
-| Cloning for ENG201, new semester, etc.    | ✅                    | `PD-GG_00-01_ENG201_FA24/`       |
-| Preparing archive or GitHub repo          | ✅                    | `SY-OS_01-00_mirror_export/`     |
+| Private, single-user vault | No | `4_S0VRC3/` |
+| Daily creative writing only | No | `myth-lab/` |
+| Recursively structured symbolic system | [OK] | `SS-ST_00-00_4_S0VRC3_v2a/` |
+| Cloning for ENG201, new semester, etc. | [OK] | `PD-GG_00-01_ENG201_FA24/` |
+| Preparing archive or GitHub repo | [OK] | `SY-OS_01-00_mirror_export/` |
 
 ---
 
@@ -39,10 +39,10 @@ But **yes** — it is recommended **when cloning, publishing, or freezing.**
 
 ## STRATEGY
 
-Start loose.  
+Start loose. 
 UID only when sealing, archiving, or scaling.
 
-**Everything within the vault should obey UID law.**  
+**Everything within the vault should obey UID law.** 
 **The vault folder itself is a container — not the system.**
 
 But: Naming the container makes the system immortal.

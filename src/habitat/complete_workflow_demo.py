@@ -118,11 +118,11 @@ def main():
     # ===================================================================
     print_section("PHASE 1: Environment Setup")
 
-    print("\n🏗️  Creating main experimental habitat...")
+    print("\n️  Creating main experimental habitat...")
     main_habitat = ExperimentalHabitat("primary_research_lab", isolation_level=3)
-    print(f"✅ Habitat '{main_habitat.name}' established")
-    print(f"   📍 Workspace: {main_habitat.temp_dir}")
-    print(f"   🔒 Isolation Level: {main_habitat.isolation_level}")
+    print(f"[OK] Habitat '{main_habitat.name}' established")
+    print(f"   [PIN] Workspace: {main_habitat.temp_dir}")
+    print(f"   [LOCKED] Isolation Level: {main_habitat.isolation_level}")
 
     # ===================================================================
     # PHASE 2: Spawning Multiple Experiments
@@ -142,7 +142,7 @@ def main():
     }
     main_habitat.spawn_experiment(myth_engine, containment_high)
     experiments.append(("myth_engine", myth_engine, "success"))
-    print(f"✅ Spawned: {myth_engine.name}")
+    print(f"[OK] Spawned: {myth_engine.name}")
     print(f"   Containment: {myth_engine.boundary.get_full_path()}")
 
     print_subsection("Experiment 2: Pattern Matcher")
@@ -154,7 +154,7 @@ def main():
     }
     main_habitat.spawn_experiment(pattern_matcher, containment_medium)
     experiments.append(("pattern_matcher", pattern_matcher, "success"))
-    print(f"✅ Spawned: {pattern_matcher.name}")
+    print(f"[OK] Spawned: {pattern_matcher.name}")
 
     print_subsection("Experiment 3: Resource Intensive Test")
     resource_test = ResourceIntensiveExperiment()
@@ -166,7 +166,7 @@ def main():
     }
     main_habitat.spawn_experiment(resource_test, containment_resource)
     experiments.append(("resource_test", resource_test, "success"))
-    print(f"✅ Spawned: {resource_test.name}")
+    print(f"[OK] Spawned: {resource_test.name}")
 
     print_subsection("Experiment 4: Failing Experiment (for composting demo)")
     failing_exp = FailingExperiment()
@@ -177,21 +177,21 @@ def main():
     }
     main_habitat.spawn_experiment(failing_exp, containment_low)
     experiments.append(("failing_test", failing_exp, "fail"))
-    print(f"✅ Spawned: {failing_exp.name}")
+    print(f"[OK] Spawned: {failing_exp.name}")
 
     # ===================================================================
     # PHASE 3: Nested Habitat Creation
     # ===================================================================
     print_section("PHASE 3: Creating Nested Habitats")
 
-    print("\n🪆 Creating nested habitat within myth_engine experiment...")
+    print("\n[NEST] Creating nested habitat within myth_engine experiment...")
     nested_habitat = main_habitat.nest_habitat("recursive_myth_engine", "analysis_sublayer")
-    print(f"✅ Nested habitat created: {nested_habitat.name}")
-    print(f"   📊 Nesting depth: {nested_habitat.nesting_depth}")
-    print(f"   🔒 Isolation level: {nested_habitat.isolation_level}")
+    print(f"[OK] Nested habitat created: {nested_habitat.name}")
+    print(f"   [INFO] Nesting depth: {nested_habitat.nesting_depth}")
+    print(f"   [LOCKED] Isolation level: {nested_habitat.isolation_level}")
 
     # Spawn experiment in nested habitat
-    print("\n🧪 Spawning experiment in nested habitat...")
+    print("\n[LAB] Spawning experiment in nested habitat...")
     nested_analyzer = PatternMatcher()
     nested_analyzer.name = "nested_pattern_analyzer"
     nested_containment = {
@@ -200,8 +200,8 @@ def main():
         'parent_dependency': 'recursive_myth_engine'
     }
     nested_habitat.spawn_experiment(nested_analyzer, nested_containment)
-    print(f"✅ Nested experiment spawned: {nested_analyzer.name}")
-    print(f"   🔗 Parent dependency: recursive_myth_engine")
+    print(f"[OK] Nested experiment spawned: {nested_analyzer.name}")
+    print(f"   [LINK] Parent dependency: recursive_myth_engine")
 
     # ===================================================================
     # PHASE 4: Running Experiments
@@ -218,18 +218,18 @@ def main():
             result = main_habitat.run_experiment(exp_obj.name)
             duration = time.time() - start
 
-            print(f"✅ Completed in {duration:.3f}s")
+            print(f"[OK] Completed in {duration:.3f}s")
             print(f"   Result: {json.dumps(result, indent=6)[:200]}...")
             results.append((exp_name, "success", result))
 
         except Exception as e:
-            print(f"❌ Failed: {e}")
+            print(f"[FAIL] Failed: {e}")
             results.append((exp_name, "failed", str(e)))
 
     # Run nested experiment
     print_subsection("Running: nested_pattern_analyzer")
     nested_result = nested_habitat.run_experiment(nested_analyzer.name)
-    print(f"✅ Nested experiment completed")
+    print(f"[OK] Nested experiment completed")
     print(f"   Patterns found: {nested_result['pattern_list']}")
 
     # ===================================================================
@@ -237,11 +237,11 @@ def main():
     # ===================================================================
     print_section("PHASE 5: Status Monitoring")
 
-    print("\n📊 Main Habitat Status:")
+    print("\n[INFO] Main Habitat Status:")
     main_status = main_habitat.get_habitat_status()
     print(json.dumps(main_status, indent=2))
 
-    print("\n📊 Nested Habitat Status:")
+    print("\n[INFO] Nested Habitat Status:")
     nested_status = nested_habitat.get_habitat_status()
     print(json.dumps(nested_status, indent=2))
 
@@ -257,15 +257,15 @@ def main():
         if status == "success" and exp_name != "failing_test":
             try:
                 forge_package = main_habitat.graduate_to_forge(exp_name)
-                print(f"🎓 Graduated: {exp_name}")
+                print(f"[GRAD] Graduated: {exp_name}")
                 print(f"   Code patterns: {forge_package['code_patterns']}")
             except Exception as e:
-                print(f"⚠️  Could not graduate {exp_name}: {e}")
+                print(f"[WARN]️  Could not graduate {exp_name}: {e}")
 
     # Graduate nested experiment
-    print("\n🎓 Graduating nested experiment...")
+    print("\n[GRAD] Graduating nested experiment...")
     nested_package = nested_habitat.graduate_to_forge(nested_analyzer.name)
-    print(f"✅ Nested experiment graduated")
+    print(f"[OK] Nested experiment graduated")
     print(f"   Code patterns: {nested_package['code_patterns']}")
 
     # Compost failed experiment
@@ -276,7 +276,7 @@ def main():
             "failing_test",
             "Intentional failure for demonstration purposes"
         )
-        print(f"♻️  Composted: failing_test")
+        print(f"[RECYCLE]️  Composted: failing_test")
         print(f"   Lessons learned:")
         for key, value in lessons.items():
             if isinstance(value, list) and value:
@@ -284,36 +284,36 @@ def main():
             elif not isinstance(value, list):
                 print(f"      {key}: {value}")
     except Exception as e:
-        print(f"⚠️  Composting note: {e}")
+        print(f"[WARN]️  Composting note: {e}")
 
     # ===================================================================
     # PHASE 7: Final Summary
     # ===================================================================
     print_section("PHASE 7: Final Summary")
 
-    print("\n📈 Experiment Results Summary:")
+    print("\n[STATS] Experiment Results Summary:")
     print(f"   Total experiments spawned: {len(experiments) + 1}")  # +1 for nested
     print(f"   Successful completions: {sum(1 for _, s, _ in results if s == 'success')}")
     print(f"   Failed experiments: {sum(1 for _, s, _ in results if s == 'failed')}")
     print(f"   Graduated to Code Forge: {len(main_habitat.graduated_patterns) + len(nested_habitat.graduated_patterns)}")
     print(f"   Safely composted: {len(main_habitat.failed_experiments)}")
 
-    print("\n🏆 Graduated Patterns:")
+    print("\n[SUCCESS] Graduated Patterns:")
     for name in main_habitat.graduated_patterns.keys():
-        print(f"   ✓ {name}")
+        print(f"    {name}")
     for name in nested_habitat.graduated_patterns.keys():
-        print(f"   ✓ {name} (nested)")
+        print(f"    {name} (nested)")
 
-    print("\n📚 System Capabilities Demonstrated:")
+    print("\n[BOOKS] System Capabilities Demonstrated:")
     capabilities = [
-        "✓ Multi-experiment spawning with different configurations",
-        "✓ Nested habitat creation (hat on a hat on a)",
-        "✓ Resource-aware containment boundaries",
-        "✓ Safe experiment execution and monitoring",
-        "✓ Successful pattern graduation to Code Forge",
-        "✓ Failed experiment composting and lesson extraction",
-        "✓ Complete lifecycle management",
-        "✓ State tracking and status reporting"
+        " Multi-experiment spawning with different configurations",
+        " Nested habitat creation (hat on a hat on a)",
+        " Resource-aware containment boundaries",
+        " Safe experiment execution and monitoring",
+        " Successful pattern graduation to Code Forge",
+        " Failed experiment composting and lesson extraction",
+        " Complete lifecycle management",
+        " State tracking and status reporting"
     ]
     for cap in capabilities:
         print(f"   {cap}")
@@ -323,15 +323,15 @@ def main():
     # ===================================================================
     print_section("PHASE 8: Cleanup")
 
-    print("\n🧹 Cleaning up experimental environments...")
+    print("\n[CLEANUP] Cleaning up experimental environments...")
     main_habitat.cleanup()
-    print(f"✅ Main habitat cleaned: {main_habitat.name}")
+    print(f"[OK] Main habitat cleaned: {main_habitat.name}")
 
     nested_habitat.cleanup()
-    print(f"✅ Nested habitat cleaned: {nested_habitat.name}")
+    print(f"[OK] Nested habitat cleaned: {nested_habitat.name}")
 
     print("\n" + "=" * 70)
-    print("🎉 COMPLETE WORKFLOW DEMONSTRATION FINISHED SUCCESSFULLY!")
+    print("[DONE] COMPLETE WORKFLOW DEMONSTRATION FINISHED SUCCESSFULLY!")
     print("=" * 70)
     print("\nThe Experimental Habitat system successfully demonstrated:")
     print("  • Safe, isolated execution of experimental code")
@@ -339,7 +339,7 @@ def main():
     print("  • Pattern extraction and graduation workflow")
     print("  • Failure handling and knowledge retention")
     print("  • Complete lifecycle management from spawn to cleanup")
-    print("\nSystem ready for production use! 🚀")
+    print("\nSystem ready for production use! [LAUNCH]")
     print()
 
 

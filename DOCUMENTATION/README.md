@@ -1,22 +1,22 @@
-# 📋 Template System & Structure Protocols  
-**Domain:** TEMPLATEs  
-**UID:** TP•01  
-**Type:** Structure Generation System  
+# [LIST] Template System & Structure Protocols 
+**Domain:** TEMPLATEs 
+**UID:** TP•01 
+**Type:** Structure Generation System 
 **Status:** Active
 
 ---
 
-## 🎯 Domain Purpose
+## [TARGET] Domain Purpose
 The TEMPLATEs domain provides **repeatable structures and seed files** for the 4_S0VRC3 recursive creative system. It maintains:
 
 - **Document Templates**: Standardized formats for consistent creation
-- **Structure Protocols**: Repeatable organizational patterns  
+- **Structure Protocols**: Repeatable organizational patterns 
 - **Seed Files**: Starting points for new creative projects
 - **Format Standards**: Symbolic naming and metadata conventions
 
 ---
 
-## 🗂️ Template Categories
+## [INDEX]️ Template Categories
 
 ### Core Templates
 - **NOTE•TEMPLATE**: Standard note format with YAML front matter
@@ -24,7 +24,7 @@ The TEMPLATEs domain provides **repeatable structures and seed files** for the 4
 - **THREAD•DIGEST**: GPT conversation processing format
 - **SYMBOLIC•MANIFEST**: Domain/folder documentation template
 
-### Specialized Templates  
+### Specialized Templates 
 - **CHARACTER•PROFILE**: Archetypal entity documentation
 - **SYSTEM•PROTOCOL**: Technical process documentation
 - **RITUAL•SCRIPT**: Ceremonial/invocation templates
@@ -32,31 +32,31 @@ The TEMPLATEs domain provides **repeatable structures and seed files** for the 4
 
 ---
 
-## 🧬 Template Structure
+## [DNA] Template Structure
 
 ### Standard Components
 ```yaml
 ---
-uid: "XXXX"                    # 4-character identifier
-title: "Functional;Creative"    # Dual-purpose naming
-created: "YYYY-MM-DD"          # Creation timestamp
+uid: "XXXX" # 4-character identifier
+title: "Functional;Creative" # Dual-purpose naming
+created: "YYYY-MM-DD" # Creation timestamp
 status: "Active|Frozen|Public" # Lifecycle status
-owner: "Anthony J. Padavano"   # Maintainer
-organ_alignment: ""            # System integration path
-refs: []                       # External references
+owner: "Anthony J. Padavano" # Maintainer
+organ_alignment: "" # System integration path
+refs:  # External references
 ---
 ```
 
 ### Template Sections
-1. **🔖 README**: Purpose and context
-2. **📊 STATUS**: Lifecycle tracking  
-3. **🗺️ SYMBOL_MAP**: Symbolic relationships
-4. **📝 CONTENT**: Main working area
-5. **🕑 CHANGELOG**: Evolution history
+1. ** README**: Purpose and context
+2. **[INFO] STATUS**: Lifecycle tracking 
+3. **[MAP]️ SYMBOL_MAP**: Symbolic relationships
+4. **[NOTE] CONTENT**: Main working area
+5. ** CHANGELOG**: Evolution history
 
 ---
 
-## 🔄 Usage Protocols
+## [CYCLE] Usage Protocols
 
 ### Template Instantiation
 1. **Select Template**: Choose appropriate base structure
@@ -73,9 +73,9 @@ refs: []                       # External references
 
 ---
 
-## 📌 Symbolic Tags
+## [PIN] Symbolic Tags
 - `TEMP+` — Template operations
-- `STRUCT+` — Structure generation  
+- `STRUCT+` — Structure generation 
 - `SEED+` — Initialization functions
 - `FORMAT+` — Standardization protocols
 - `META+` — Metadata management
@@ -83,7 +83,7 @@ refs: []                       # External references
 
 ---
 
-## 🛠️ Template Files
+## [TOOLS]️ Template Files
 
 ### Active Templates
 - **`; NOTE•TEMPLATE ; PF•BB ;.md`** — Standard note format
@@ -97,7 +97,7 @@ refs: []                       # External references
 
 ---
 
-## 🔗 Integration Systems
+## [LINK] Integration Systems
 - **RE•GE•OS**: Core system integration
 - **SYSTEM•MAP**: Navigation framework
 - **ARK•LIV**: Archive integration

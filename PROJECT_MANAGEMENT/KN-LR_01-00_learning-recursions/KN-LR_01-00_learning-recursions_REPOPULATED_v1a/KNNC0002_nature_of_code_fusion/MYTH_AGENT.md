@@ -2,7 +2,7 @@
 
 # Myth Agent Profile: W4V3L0RD
 
-## Symbol: 🌊
+## Symbol: 
 ## Invocation Chant: "Motion is the root of memory."
 
 ## Role:

@@ -2,7 +2,7 @@
 
 # Paradigms Norvig Ai – The Language Smith
 ## UID: KNNO0001
-## Agent Symbol: 🗣️
+## Agent Symbol: ️
 ## Role in System: SYMBOLIC_VOCODER
 
 This module is a knowledge agent responsible for embodying and teaching the logic behind:

@@ -104,10 +104,10 @@ def _all_patterns_present(patterns: Iterable[str], content: str) -> bool:
 def check_task_complete(task_type: str, repo_path: Path, ref: str) -> bool:
     sig = _fuzzy_match_signature(task_type)
     if not sig:
-        print(f"ℹ️  Unknown task type: {task_type}")
+        print(f"[i]️  Unknown task type: {task_type}")
         return False
 
-    print(f"🔍 Checking for: {sig.description}")
+    print(f"[SEARCH] Checking for: {sig.description}")
     print(f"   Task type: {task_type}")
     print(f"   Repo path: {repo_path}")
     print(f"   Ref:       {ref}")
@@ -123,11 +123,11 @@ def check_task_complete(task_type: str, repo_path: Path, ref: str) -> bool:
             continue
 
         if _all_patterns_present(sig.patterns, content):
-            print(f"✅ Task '{sig.description}' already complete")
+            print(f"[OK] Task '{sig.description}' already complete")
             print(f"   Found in: {source}")
             return True
 
-    print("❌ Task not complete")
+    print("[FAIL] Task not complete")
     return False
 
 
@@ -156,10 +156,10 @@ def main() -> int:
 
     complete = check_task_complete(args.task_type, repo_path, args.ref)
     if complete:
-        print("\n🛑 STOP: Task already complete — skipping branch creation")
+        print("\n[STOP] STOP: Task already complete — skipping branch creation")
         return 1
 
-    print("\n✅ PROCEED: Task not complete — Jules may run")
+    print("\n[OK] PROCEED: Task not complete — Jules may run")
     return 0
 
 

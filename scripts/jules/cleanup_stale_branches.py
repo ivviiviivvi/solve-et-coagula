@@ -140,10 +140,10 @@ def main() -> int:
         branches, remote=args.remote, prefixes=prefixes, max_age_days=args.max_age_days
     )
 
-    print(f"🔍 Remote: {args.remote}")
-    print(f"🔍 Prefixes: {', '.join(prefixes)}")
-    print(f"🕒 Max age: {args.max_age_days} days")
-    print(f"📌 Found {len(stale)} stale branches")
+    print(f"[SEARCH] Remote: {args.remote}")
+    print(f"[SEARCH] Prefixes: {', '.join(prefixes)}")
+    print(f" Max age: {args.max_age_days} days")
+    print(f"[PIN] Found {len(stale)} stale branches")
 
     if not stale:
         return 0
@@ -153,17 +153,17 @@ def main() -> int:
         print(f"  - {short} ({b.age_days} days old)")
 
     if args.dry_run:
-        print("\n🧪 Dry run enabled: no branches deleted")
+        print("\n[LAB] Dry run enabled: no branches deleted")
         return 2
 
     deleted = 0
     for b in stale:
         short = b.name[len(f"{args.remote}/") :]
-        print(f"🗑️  Deleting {short}...")
+        print(f"️  Deleting {short}...")
         delete_remote_branch(repo_path, args.remote, short)
         deleted += 1
 
-    print(f"\n✅ Deleted {deleted} branches")
+    print(f"\n[OK] Deleted {deleted} branches")
     return 0
 
 

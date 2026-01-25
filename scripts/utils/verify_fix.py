@@ -25,7 +25,7 @@ class TestExperiment(ExperimentalSystem):
 def test_path_traversal_prevention():
     """Test that path traversal attacks are properly prevented"""
     
-    print("🛡️ VERIFYING PATH TRAVERSAL SECURITY FIX")
+    print("️ VERIFYING PATH TRAVERSAL SECURITY FIX")
     print("=" * 70)
     print()
     
@@ -56,7 +56,7 @@ def test_path_traversal_prevention():
     failed_tests = 0
     
     for experiment_name, should_be_blocked, description in test_cases:
-        print(f"📝 Testing: {description}")
+        print(f"[NOTE] Testing: {description}")
         print(f"   Input: '{experiment_name}'")
         
         # Create temporary habitat for testing
@@ -74,26 +74,26 @@ def test_path_traversal_prevention():
             
             # If we get here, the experiment was allowed
             if should_be_blocked:
-                print(f"   ❌ FAIL: Malicious path was NOT blocked!")
+                print(f"   [FAIL] FAIL: Malicious path was NOT blocked!")
                 print(f"   Created at: {exp_data['workspace']}")
                 failed_tests += 1
             else:
-                print(f"   ✅ PASS: Valid experiment name accepted")
+                print(f"   [OK] PASS: Valid experiment name accepted")
                 passed_tests += 1
                 
         except ValueError as e:
             # ValueError indicates the security check caught the attempt
             if should_be_blocked:
-                print(f"   ✅ PASS: Malicious path blocked correctly")
+                print(f"   [OK] PASS: Malicious path blocked correctly")
                 print(f"   Error: {str(e)}")
                 passed_tests += 1
             else:
-                print(f"   ❌ FAIL: Valid experiment name was incorrectly blocked!")
+                print(f"   [FAIL] FAIL: Valid experiment name was incorrectly blocked!")
                 print(f"   Error: {str(e)}")
                 failed_tests += 1
                 
         except Exception as e:
-            print(f"   ⚠️  UNEXPECTED ERROR: {type(e).__name__}: {e}")
+            print(f"   [WARN]️  UNEXPECTED ERROR: {type(e).__name__}: {e}")
             failed_tests += 1
             
         finally:
@@ -107,28 +107,28 @@ def test_path_traversal_prevention():
     
     # Print summary
     print("=" * 70)
-    print("📊 VERIFICATION SUMMARY")
+    print("[INFO] VERIFICATION SUMMARY")
     print("=" * 70)
     print(f"Total Tests: {total_tests}")
-    print(f"✅ Passed: {passed_tests}")
-    print(f"❌ Failed: {failed_tests}")
+    print(f"[OK] Passed: {passed_tests}")
+    print(f"[FAIL] Failed: {failed_tests}")
     print(f"Success Rate: {(passed_tests/total_tests)*100:.1f}%")
     print()
     
     if failed_tests == 0:
-        print("🎉 SUCCESS: All security tests passed!")
-        print("✅ Path traversal vulnerability is properly mitigated.")
+        print("[DONE] SUCCESS: All security tests passed!")
+        print("[OK] Path traversal vulnerability is properly mitigated.")
         return 0
     else:
-        print("⚠️  FAILURE: Some security tests failed!")
-        print("❌ Path traversal vulnerability may still exist.")
+        print("[WARN]️  FAILURE: Some security tests failed!")
+        print("[FAIL] Path traversal vulnerability may still exist.")
         return 1
 
 
 def test_workspace_isolation():
     """Test that experiment workspaces are properly isolated"""
     
-    print("🔒 VERIFYING WORKSPACE ISOLATION")
+    print("[LOCKED] VERIFYING WORKSPACE ISOLATION")
     print("=" * 70)
     print()
     
@@ -147,37 +147,37 @@ def test_workspace_isolation():
         workspace1 = exp1_data['workspace']
         workspace2 = exp2_data['workspace']
         
-        print(f"✅ Experiment 1 workspace: {workspace1}")
-        print(f"✅ Experiment 2 workspace: {workspace2}")
+        print(f"[OK] Experiment 1 workspace: {workspace1}")
+        print(f"[OK] Experiment 2 workspace: {workspace2}")
         print()
         
         # Verify workspaces are different
         if workspace1 != workspace2:
-            print("✅ PASS: Experiments have separate workspaces")
+            print("[OK] PASS: Experiments have separate workspaces")
         else:
-            print("❌ FAIL: Experiments share the same workspace")
+            print("[FAIL] FAIL: Experiments share the same workspace")
             return 1
         
         # Verify both are within habitat temp directory
         if workspace1.startswith(habitat.temp_dir) and workspace2.startswith(habitat.temp_dir):
-            print("✅ PASS: All workspaces are within habitat boundary")
+            print("[OK] PASS: All workspaces are within habitat boundary")
         else:
-            print("❌ FAIL: Some workspaces are outside habitat boundary")
+            print("[FAIL] FAIL: Some workspaces are outside habitat boundary")
             return 1
         
         # Verify workspaces exist
         if os.path.exists(workspace1) and os.path.exists(workspace2):
-            print("✅ PASS: All workspaces exist on filesystem")
+            print("[OK] PASS: All workspaces exist on filesystem")
         else:
-            print("❌ FAIL: Some workspaces don't exist")
+            print("[FAIL] FAIL: Some workspaces don't exist")
             return 1
         
         print()
-        print("🎉 SUCCESS: Workspace isolation verified!")
+        print("[DONE] SUCCESS: Workspace isolation verified!")
         return 0
         
     except Exception as e:
-        print(f"❌ FAIL: Unexpected error: {e}")
+        print(f"[FAIL] FAIL: Unexpected error: {e}")
         return 1
         
     finally:
@@ -187,7 +187,7 @@ def test_workspace_isolation():
 def main():
     """Run all verification tests"""
     
-    print("🔐 EXPERIMENTAL HABITAT SECURITY VERIFICATION")
+    print("[SECURE] EXPERIMENTAL HABITAT SECURITY VERIFICATION")
     print("=" * 70)
     print("Verifying path traversal fix in spawn_experiment method")
     print()
@@ -204,24 +204,24 @@ def main():
         # Overall result
         if result1 == 0 and result2 == 0:
             print("=" * 70)
-            print("🎉 ALL VERIFICATION TESTS PASSED!")
+            print("[DONE] ALL VERIFICATION TESTS PASSED!")
             print("=" * 70)
-            print("✅ The path traversal vulnerability has been successfully fixed.")
-            print("✅ Workspace isolation is properly implemented.")
-            print("✅ ExperimentalHabitat is secure for production use.")
+            print("[OK] The path traversal vulnerability has been successfully fixed.")
+            print("[OK] Workspace isolation is properly implemented.")
+            print("[OK] ExperimentalHabitat is secure for production use.")
             return 0
         else:
             print("=" * 70)
-            print("⚠️  SOME VERIFICATION TESTS FAILED!")
+            print("[WARN]️  SOME VERIFICATION TESTS FAILED!")
             print("=" * 70)
-            print("❌ Security issues remain. Do not use in production.")
+            print("[FAIL] Security issues remain. Do not use in production.")
             return 1
             
     except KeyboardInterrupt:
-        print("\n⚠️  Verification interrupted by user")
+        print("\n[WARN]️  Verification interrupted by user")
         return 1
     except Exception as e:
-        print(f"\n❌ Verification failed with unexpected error: {e}")
+        print(f"\n[FAIL] Verification failed with unexpected error: {e}")
         import traceback
         traceback.print_exc()
         return 1

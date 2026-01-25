@@ -1,12 +1,12 @@
-# 🏷️ Tagging & Categorization System
-**Domain:** TAGs  
-**UID:** TA•01  
-**Type:** Classification & Discovery Framework  
+# [TAG]️ Tagging & Categorization System
+**Domain:** TAGs 
+**UID:** TA•01 
+**Type:** Classification & Discovery Framework 
 **Status:** Active
 
 ---
 
-## 🎯 Domain Purpose
+## [TARGET] Domain Purpose
 The TAGs domain provides **categorization and discovery systems** for the 4_S0VRC3 recursive creative environment. It maintains:
 
 - **Symbolic Tags**: Meaning-based classification systems
@@ -16,7 +16,7 @@ The TAGs domain provides **categorization and discovery systems** for the 4_S0VR
 
 ---
 
-## 🏷️ Tag Categories
+## [TAG]️ Tag Categories
 
 ### Core Symbolic Tags
 - **`GEN+`** — Generative/creative operations
@@ -40,7 +40,7 @@ The TAGs domain provides **categorization and discovery systems** for the 4_S0VR
 
 ---
 
-## 🔍 Discovery Protocols
+## [SEARCH] Discovery Protocols
 
 ### Tag-Based Search
 - **Single Tag**: Find all items with specific tag
@@ -56,7 +56,7 @@ The TAGs domain provides **categorization and discovery systems** for the 4_S0VR
 
 ---
 
-## 🧬 Tagging Protocols
+## [DNA] Tagging Protocols
 
 ### Tag Structure
 ```
@@ -78,7 +78,7 @@ TAG_NAME? = Experimental or uncertain function
 
 ---
 
-## 📊 Tag Management
+## [INFO] Tag Management
 
 ### Tag Registry
 - **Active Tags**: Currently used classification terms
@@ -94,16 +94,16 @@ TAG_NAME? = Experimental or uncertain function
 
 ---
 
-## 📌 Meta Tags for System Health
+## [PIN] Meta Tags for System Health
 - **`COMPLETE+`** — Fully developed content
-- **`PARTIAL+`** — In-progress or incomplete content  
+- **`PARTIAL+`** — In-progress or incomplete content 
 - **`STUB+`** — Placeholder or minimal content
 - **`REVIEW+`** — Content needing examination or revision
 - **`LINK+`** — Items requiring better cross-referencing
 
 ---
 
-## 🔄 Integration Points
+## [CYCLE] Integration Points
 - **Obsidian Tags**: Native tag system integration
 - **YAML Processing**: Metadata-based tag automation
 - **Search Indices**: Tag-based content discovery
@@ -111,7 +111,7 @@ TAG_NAME? = Experimental or uncertain function
 
 ---
 
-## 🗂️ Tag Documentation Files
+## [INDEX]️ Tag Documentation Files
 - **Tag Registry**: Complete list of active tags and meanings
 - **Usage Guidelines**: How to apply tags consistently
 - **Evolution Log**: History of tag changes and updates

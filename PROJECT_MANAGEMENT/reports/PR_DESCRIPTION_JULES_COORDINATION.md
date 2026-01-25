@@ -1,4 +1,4 @@
-# 🤖 Add Jules Branch Coordination Infrastructure
+# [BOT] Add Jules Branch Coordination Infrastructure
 
 ## Problem Statement
 
@@ -20,19 +20,19 @@ Jules creates **hundreds of duplicate branches** solving the same problems:
 Add **3-layer coordination system** to existing Jules infrastructure:
 
 ### 1️⃣ Prevention Layer (Week 1)
-- ✅ Check if task already complete on main
-- ✅ Limit to 5 branches per task type
-- ✅ Ensure branching from fresh main (< 7 days)
+- [OK] Check if task already complete on main
+- [OK] Limit to 5 branches per task type
+- [OK] Ensure branching from fresh main (< 7 days)
 
 ### 2️⃣ Cleanup Layer (Week 2)
-- ✅ Auto-delete branches older than 30 days
-- ✅ Weekly scheduled cleanup
-- ✅ Safe with backup tags
+- [OK] Auto-delete branches older than 30 days
+- [OK] Weekly scheduled cleanup
+- [OK] Safe with backup tags
 
 ### 3️⃣ Tournament Layer (Future)
-- 🔄 Compare competing branches
-- 🔄 Auto-select winner
-- 🔄 Delete inferior solutions
+- [CYCLE] Compare competing branches
+- [CYCLE] Auto-select winner
+- [CYCLE] Delete inferior solutions
 
 ## Changes
 
@@ -40,31 +40,31 @@ Add **3-layer coordination system** to existing Jules infrastructure:
 
 ```
 scripts/jules/
-├── check_task_completion.py      # Detect if solution exists on main
-├── check_base_freshness.py       # Ensure fresh base branch
-├── branch_tournament.py          # Compare competing branches
-├── cleanup_stale_branches.py     # Delete old branches
-└── README.md                     # Documentation
+├── check_task_completion.py # Detect if solution exists on main
+├── check_base_freshness.py # Ensure fresh base branch
+├── branch_tournament.py # Compare competing branches
+├── cleanup_stale_branches.py # Delete old branches
+└── README.md # Documentation
 
 .jules/
-└── COORDINATION.md               # Branch coordination guide
+└── COORDINATION.md # Branch coordination guide
 
 .github/workflows/
-├── jules-cleanup.yml             # Weekly cleanup workflow
-└── jules-tournament.yml          # Branch competition (future)
+├── jules-cleanup.yml # Weekly cleanup workflow
+└── jules-tournament.yml # Branch competition (future)
 
 workflow-templates/
-└── jules-coordinator.yml         # For consumer repos
+└── jules-coordinator.yml # For consumer repos
 
 docs/jules/
-├── BRANCH_MANAGEMENT.md          # How it works
-├── INTEGRATION_GUIDE.md          # Adopting in repos
-└── TROUBLESHOOTING.md            # Common issues
+├── BRANCH_MANAGEMENT.md # How it works
+├── INTEGRATION_GUIDE.md # Adopting in repos
+└── TROUBLESHOOTING.md # Common issues
 ```
 
 ### Modified Files
 
-- ✏️ `.github/workflows/jules.yml` - Add pre-flight checks
+- ️ `.github/workflows/jules.yml` - Add pre-flight checks
 
 ### File Details
 
@@ -96,19 +96,19 @@ docs/jules/
 ### Before (Current State)
 ```
 solve-et-coagula:
-  - 182 branches (bolt-*, sentinel-*, palette-*)
-  - Average age: 4 months
-  - All solve same 3 problems
-  - 170 commits in 5 hours (Jan 19)
+ - 182 branches (bolt-*, sentinel-*, palette-*)
+ - Average age: 4 months
+ - All solve same 3 problems
+ - 170 commits in 5 hours (Jan 19)
 ```
 
 ### After (Expected)
 ```
 All repos:
-  - <20 active Jules branches
-  - <5 branches per task type
-  - Average age: <7 days
-  - 95% reduction in duplicates
+ - <20 active Jules branches
+ - <5 branches per task type
+ - Average age: <7 days
+ - 95% reduction in duplicates
 ```
 
 ### Success Metrics
@@ -140,8 +140,8 @@ git branch -r | grep -E 'bolt-|sentinel-|palette-' | wc -l
 ```bash
 # Test task completion detection
 python scripts/jules/check_task_completion.py \
-  --task-type bolt-optimize-containment \
-  --repo-path /path/to/solve-et-coagula
+ --task-type bolt-optimize-containment \
+ --repo-path /path/to/solve-et-coagula
 
 # Test on new Jules invocation
 # Should skip if solution already on main
@@ -170,9 +170,9 @@ git revert <commit-sha>
 ## Documentation
 
 ### For Repository Maintainers
-- 📖 `docs/jules/INTEGRATION_GUIDE.md` - How to adopt
-- 🔧 `.jules/COORDINATION.md` - How it works
-- 🚨 `docs/jules/TROUBLESHOOTING.md` - Common issues
+- [BOOK] `docs/jules/INTEGRATION_GUIDE.md` - How to adopt
+- [WRENCH] `.jules/COORDINATION.md` - How it works
+- [ALERT] `docs/jules/TROUBLESHOOTING.md` - Common issues
 
 ### For Jules Operators
 - Pre-flight checks are automatic
@@ -200,16 +200,16 @@ git revert <commit-sha>
 
 ## Security Considerations
 
-✅ **Permissions**:
+[OK] **Permissions**:
 - Cleanup workflow requires `contents: write`
 - Same permissions Jules already has
 
-✅ **Safety**:
+[OK] **Safety**:
 - Backup tags created before deletion
 - Dry-run mode available
 - 30-day grace period default
 
-✅ **Audit Trail**:
+[OK] **Audit Trail**:
 - All deletions logged in workflow runs
 - Backup tags track what was deleted
 - Can restore from tags if needed
@@ -219,10 +219,10 @@ git revert <commit-sha>
 - [x] Code follows repository style guide
 - [x] Documentation added/updated
 - [x] Tested locally on solve-et-coagula
-- [ ] Dry-run successful in CI
-- [ ] Manual review by @[maintainer]
-- [ ] Integration guide reviewed
-- [ ] Ready for trial deployment
+-  Dry-run successful in CI
+-  Manual review by @[maintainer]
+-  Integration guide reviewed
+-  Ready for trial deployment
 
 ## Next Steps
 
@@ -250,11 +250,11 @@ $ git branch -r | grep -E 'bolt-|sentinel-|palette-' | wc -l
 ### Task Completion Detection
 ```
 $ python scripts/jules/check_task_completion.py --task-type bolt-optimize-containment
-🔍 Checking for: Path caching optimization
-✅ Task 'Path caching optimization' already complete
-   Found in: experimental_habitat_implementation.py
+[SEARCH] Checking for: Path caching optimization
+[OK] Task 'Path caching optimization' already complete
+ Found in: experimental_habitat_implementation.py
 
-🛑 STOP: Task already complete - skipping branch creation
+[STOP] STOP: Task already complete - skipping branch creation
 ```
 
 ---

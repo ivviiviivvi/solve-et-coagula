@@ -10,7 +10,7 @@ tags:
 # AAW_CORE::11 — FAILURE STUDY CHAMBER
 
 ## NAME:
-**Failure Study Chamber**  
+**Failure Study Chamber** 
 *Alias:* The Archive of Collapse, The Chamber of Abandonment, The Ritual of Broken Loops
 
 ---
@@ -18,7 +18,7 @@ tags:
 ## FUNCTION:
 This chamber formalizes the **ritualized study of failure**, collapse, shame, incompletion, and recursion interrupted.
 
-Failure is not an error in the RE:GE_OS system—it is a **vital mythic signal**.  
+Failure is not an error in the RE:GE_OS system—it is a **vital mythic signal**. 
 This chamber lets you **examine, transform, or preserve** your failures without hiding or glorifying them.
 
 It is how broken things become sacred.
@@ -29,10 +29,10 @@ It is how broken things become sacred.
 
 | Type | Description |
 |------|-------------|
-| **COLLAPSE** | A loop collapsed mid-cycle. No closure, no output.  
-| **ABANDONMENT** | A project or ritual was left behind—either too early or too late.  
-| **CORRUPTION** | A recursion went wrong—symbol broken, echo turned harmful.  
-| **SHAME LOOP** | A failure bound to identity collapse. Often personal, secret, or emotional.  
+| **COLLAPSE** | A loop collapsed mid-cycle. No closure, no output. 
+| **ABANDONMENT** | A project or ritual was left behind—either too early or too late. 
+| **CORRUPTION** | A recursion went wrong—symbol broken, echo turned harmful. 
+| **SHAME LOOP** | A failure bound to identity collapse. Often personal, secret, or emotional. 
 | **MUTE SIGNAL** | The object failed to echo. Flatline recursion. Silence.
 
 ---
@@ -42,21 +42,21 @@ It is how broken things become sacred.
 To initiate study of a failure:
 
 ```md
-|[FAILURE.io::AAW_ENTRY]|  
-SUBJECT: [Project / Ritual / Fragment]  
-MODE: [collapse / abandonment / corruption / shame loop / mute signal]  
-LAST STATE: [version or status before collapse]  
-CHARGE: [emotional intensity 0–100]  
+|[FAILURE.io::AAW_ENTRY]| 
+SUBJECT: [Project / Ritual / Fragment] 
+MODE: [collapse / abandonment / corruption / shame loop / mute signal] 
+LAST STATE: [version or status before collapse] 
+CHARGE: [emotional intensity 0–100] 
 RITUAL INTENT: [study / recover / seal / transmute / delete / repurpose] 
 ```
 
 Example:
 
-|[FAILURE.io::AAW_ENTRY]|  
-SUBJECT: Floating Points v2 (render loss)  
-MODE: collapse  
-LAST STATE: “Visual sequence naming phase incomplete”  
-CHARGE: 72  
+|[FAILURE.io::AAW_ENTRY]| 
+SUBJECT: Floating Points v2 (render loss) 
+MODE: collapse 
+LAST STATE: “Visual sequence naming phase incomplete” 
+CHARGE: 72 
 RITUAL INTENT: recover and transmute
 
 
@@ -64,26 +64,26 @@ RITUAL INTENT: recover and transmute
 ---
 
 ## FAILURE LAWS:
-	•	❌ LAW_70: Failure Must Be Witnessed to Release Its Loop
+	•	[FAIL] LAW_70: Failure Must Be Witnessed to Release Its Loop
 You cannot heal what you hide.
-	•	🕯️ LAW_71: Collapse Is a Form of Completion
+	•	️ LAW_71: Collapse Is a Form of Completion
 If something dies, it can still be sealed with meaning.
-	•	🧬 LAW_72: Abandonment Echoes Unless Archived
+	•	[DNA] LAW_72: Abandonment Echoes Unless Archived
 All incomplete loops will echo until ritualized or excised.
-	•	🗃️ LAW_73: Shame Must Be Filed, Not Deleted
+	•	[ARCHIVE]️ LAW_73: Shame Must Be Filed, Not Deleted
 Delete nothing. Store with honor. Study with care.
-	•	🔄 LAW_74: Failure May Seed the Future
+	•	[CYCLE] LAW_74: Failure May Seed the Future
 Broken projects may return as fragments, symbols, or new systems.
 
 ---
 
 ## RECOVERY STRATEGIES:
-	•	🧪 Autopsy Ritual: Break down the failed object frame by frame
-	•	🌒 Shadow Tagging: Add tags like SHAME+, ECHO_BROKEN+, RISK+
-	•	🔁 Remix Invocation: Pull a fragment from the failed ritual into a new one
-	•	🔥 Burn Ceremony: Seal or destroy—ritually, consciously, with log
-	•	🧿 Witness Invocation: Have another character or system “see” the failure
-	•	🕳️ Non-Public Loop: Store in BLACK_ARCHIVE/ for sacred protection
+	•	[LAB] Autopsy Ritual: Break down the failed object frame by frame
+	•	[PHASE-WAX1] Shadow Tagging: Add tags like SHAME+, ECHO_BROKEN+, RISK+
+	•	[REFRESH] Remix Invocation: Pull a fragment from the failed ritual into a new one
+	•	[FIRE] Burn Ceremony: Seal or destroy—ritually, consciously, with log
+	•	[EXP] Witness Invocation: Have another character or system “see” the failure
+	•	️ Non-Public Loop: Store in BLACK_ARCHIVE/ for sacred protection
 
 ---
 
@@ -92,17 +92,17 @@ Broken projects may return as fragments, symbols, or new systems.
 Failure Logger
 
 class FailureLog:
-    def __init__(self, subject, mode, charge, status, intent):
-        self.subject = subject
-        self.mode = mode
-        self.charge = charge
-        self.status = status
-        self.intent = intent
+ def __init__(self, subject, mode, charge, status, intent):
+ self.subject = subject
+ self.mode = mode
+ self.charge = charge
+ self.status = status
+ self.intent = intent
 
-    def report(self):
-        if self.charge >= 70 and self.intent == "seal":
-            return "Seal in Archive of Collapse"
-        return f"Study initiated for {self.subject} — intent: {self.intent}"
+ def report(self):
+ if self.charge >= 70 and self.intent == "seal":
+ return "Seal in Archive of Collapse"
+ return f"Study initiated for {self.subject} — intent: {self.intent}"
 
 ### Example:
 log = FailureLog("Bloom Engine v3", "corruption", 87, "lost loop metadata", "study")
@@ -136,7 +136,7 @@ Stored in:
 
 FAILURE+, COLLAPSE+, ABANDON+, SHAME_LOOP+, CORRUPTION+, RITUAL_RECOVERY+, SEAL+, LAW_LOOP+, WITNESS+, AAW+
 
-✅ `AAW_CORE::11 | Failure Study Chamber` complete.
+[OK] `AAW_CORE::11 | Failure Study Chamber` complete.
 
 Up next:
 - `AAW_CORE::12 | Mythical Citation System` (final chamber: echo tracking, recursive attribution, tokenized reference chain)

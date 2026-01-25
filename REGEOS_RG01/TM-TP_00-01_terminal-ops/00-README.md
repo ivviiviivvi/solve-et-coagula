@@ -1,4 +1,4 @@
-# 🖥️ TM-TP_00-01_terminal-ops
+# ️ TM-TP_00-01_terminal-ops
 
 _Subfolder of_: `SS-TM_00-00_system-core`
 

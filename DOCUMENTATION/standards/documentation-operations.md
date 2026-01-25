@@ -2,9 +2,9 @@
 title: Documentation Operations Standards
 summary: Repeatable conventions for naming, metadata, and organisation that keep the knowledge base portable and easy to maintain.
 tags:
-  - governance
-  - documentation
-  - information-architecture
+ - governance
+ - documentation
+ - information-architecture
 status: active
 created: 2025-05-05
 updated: 2025-05-05
@@ -31,8 +31,8 @@ Every Markdown document under `docs/` must begin with YAML front matter that pro
 title: Short, human-readable page title
 summary: One-sentence overview that fits within 160 characters.
 tags:
-  - topic-one
-  - topic-two
+ - topic-one
+ - topic-two
 status: draft | active | deprecated | archived
 created: 2025-05-05
 updated: 2025-05-05
@@ -51,22 +51,22 @@ updated: 2025-05-05
 Adopt a layered structure that separates evergreen standards from topical content. The example below shows the recommended taxonomy.
 
 ```text
-📦 repository-root/
+[PACKAGE] repository-root/
 ├── docs/
-│   ├── guides/              # How-to and onboarding material
-│   ├── standards/           # Policies, conventions, and governance
-│   └── templates/           # Reusable content scaffolds
+│ ├── guides/ # How-to and onboarding material
+│ ├── standards/ # Policies, conventions, and governance
+│ └── templates/ # Reusable content scaffolds
 ├── projects/
-│   └── {project-name}/
-│       ├── briefs/
-│       ├── decisions/
-│       └── research/
-├── archives/                # Immutable historical snapshots
-├── scripts/                 # Automation and helper tooling
-├── tests/                   # Automated regression coverage
+│ └── {project-name}/
+│ ├── briefs/
+│ ├── decisions/
+│ └── research/
+├── archives/ # Immutable historical snapshots
+├── scripts/ # Automation and helper tooling
+├── tests/ # Automated regression coverage
 └── .github/
-    ├── workflows/           # CI/CD automation
-    └── ISSUE_TEMPLATE/      # Optional issue templates
+ ├── workflows/ # CI/CD automation
+ └── ISSUE_TEMPLATE/ # Optional issue templates
 ```
 
 When introducing a new folder, document its purpose with a short `README.md` that follows the same front matter pattern. Archive deprecated material instead of deleting it to preserve decision history.
@@ -76,9 +76,9 @@ When introducing a new folder, document its purpose with a short `README.md` tha
 1. **Branch hygiene** — Use topic branches named `feature/subject` or `chore/task`. Delete branches once merged.
 2. **Commit format** — Follow `type: concise summary` where `type` is `feat`, `fix`, `docs`, `chore`, or `test`. Write body text when context is not obvious from the diff.
 3. **Pull requests** — Include:
-   - A summary of the change and its intent.
-   - References to issues or discussion threads (`Resolves #123`).
-   - Testing evidence (commands, screenshots, or reasoning when tests are impractical).
+ - A summary of the change and its intent.
+ - References to issues or discussion threads (`Resolves #123`).
+ - Testing evidence (commands, screenshots, or reasoning when tests are impractical).
 4. **Reviews** — Request at least one peer review. Allow automation (reviewdog, metadata guard, markdownlint) to run before requesting human review.
 5. **Documentation upkeep** — When behaviour or workflows change, update the relevant guide in the same branch to keep docs and code in sync.
 6. **Release notes** — Maintain a living `CHANGELOG.md` that follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) formatting for traceability.

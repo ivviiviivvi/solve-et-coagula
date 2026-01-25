@@ -11,10 +11,10 @@ tags:
 
 # Disable Canvas Tool
 
-**User:** Anthony Padavano (padavano.anthony@gmail.com)  
-**Created:** 5/3/2025 10:25  
-**Updated:** 5/4/2025 14:23  
-**Exported:** 5/4/2025 19:22  
+**User:** Anthony Padavano (padavano.anthony@gmail.com) 
+**Created:** 5/3/2025 10:25 
+**Updated:** 5/4/2025 14:23 
+**Exported:** 5/4/2025 19:22 
 
 ## Prompt:
 trying to make more efficient and effective my gpt layout, here is the most revised layout suggested in another thread:
@@ -33,25 +33,25 @@ Using the RE-GE\_OS structure as your backbone (ORG\_BODY\_xx, CORE\_xx), your c
 
 #### A. **Merge / Absorb**
 
-| CURRENT FOLDER                                   | RECOMMENDED ACTION                                                  | REASONING                                                                         |
+| CURRENT FOLDER | RECOMMENDED ACTION | REASONING |
 | ------------------------------------------------ | ------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| ::::CHR0N0S::                                  | Absorb into ::::RE:GE_OS:: or tag within CHR0N_EVENTS           | Time-based logic is already handled in RE-GE_ORG_BODY_17_TIME_RULES_ENGINE      |
-| ::::SY.ST3MS::                                 | Fold into ::::RE:GE_OS:: as subfolder or tag                      | It houses protocol logic, already covered by RE-GE_CORE and PROCESS_MONETIZER |
-| ::::ARCH1VE:: + ::::SORT_ME:: + ::::T3MP:: | Merge into a meta-folder ::::INTR4__Z0N3:: with status tags       | All three are transitional states — simplify into one staging + triage space      |
-| ::::UNF1L7R3D::                                | Tag within INTR4__Z0N3:: or archive raw assets in local drive     | Raw data often needs manual audit—don’t let it stand as a top-level node          |
-| ::::GR4NT::PR0P0S3::                           | Merge with ::::RE:GE_OS:: or keep as subfolder ::FUND__M0DULE:: | Better reflects CHAMBER_OF_COMMERCE and PUBLISHING_TEMPLE structure           |
+| ::::CHR0N0S:: | Absorb into ::::RE:GE_OS:: or tag within CHR0N_EVENTS | Time-based logic is already handled in RE-GE_ORG_BODY_17_TIME_RULES_ENGINE |
+| ::::SY.ST3MS:: | Fold into ::::RE:GE_OS:: as subfolder or tag | It houses protocol logic, already covered by RE-GE_CORE and PROCESS_MONETIZER |
+| ::::ARCH1VE:: + ::::SORT_ME:: + ::::T3MP:: | Merge into a meta-folder ::::INTR4__Z0N3:: with status tags | All three are transitional states — simplify into one staging + triage space |
+| ::::UNF1L7R3D:: | Tag within INTR4__Z0N3:: or archive raw assets in local drive | Raw data often needs manual audit—don’t let it stand as a top-level node |
+| ::::GR4NT::PR0P0S3:: | Merge with ::::RE:GE_OS:: or keep as subfolder ::FUND__M0DULE:: | Better reflects CHAMBER_OF_COMMERCE and PUBLISHING_TEMPLE structure |
 
 ---
 
 #### B. **Rename for Clarity + Alignment**
 
-| CURRENT NAME                                       | BETTER ALIGNED NAME                                       | CONTEXTUAL ALIGNMENT                                                        |
+| CURRENT NAME | BETTER ALIGNED NAME | CONTEXTUAL ALIGNMENT |
 | -------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------------------------- |
-| ::::SPELLB00K::                                  | ::::N4M1NG__SPELLS::                                    | Clearer purpose; aligns with RITUAL_COURT, NAMING ENGINE, MASK_ENGINE |
-| ::::L3NS__CRIT::                                 | ::::THEORY__CR1T:: or ::SEM1OT1C__L3NS::              | More intuitively readable in function vs aesthetic                          |
-| ::::CHR4CT3R_N0DES::                             | ::::CH4R_ENGINE::                                       | Syncs with MASK_ENGINE, ECHO_SHELL, GENEALOGY_ENGINE naming style     |
-| ::::CHR0N_EVENTS::                               | ::::C4N0N_TIM3L1NE::                                    | Brings it in line with HEART_OF_CANON and MYTHIC SENATE                 |
-| ::::LOCREANCE::, ::::GRINDER::, ::::Q_V33R:: | Group into ::::PR0J__BR4NDS:: with subfolders per brand | Easier to scale and manage externally-facing verticals                      |
+| ::::SPELLB00K:: | ::::N4M1NG__SPELLS:: | Clearer purpose; aligns with RITUAL_COURT, NAMING ENGINE, MASK_ENGINE |
+| ::::L3NS__CRIT:: | ::::THEORY__CR1T:: or ::SEM1OT1C__L3NS:: | More intuitively readable in function vs aesthetic |
+| ::::CHR4CT3R_N0DES:: | ::::CH4R_ENGINE:: | Syncs with MASK_ENGINE, ECHO_SHELL, GENEALOGY_ENGINE naming style |
+| ::::CHR0N_EVENTS:: | ::::C4N0N_TIM3L1NE:: | Brings it in line with HEART_OF_CANON and MYTHIC SENATE |
+| ::::LOCREANCE::, ::::GRINDER::, ::::Q_V33R:: | Group into ::::PR0J__BR4NDS:: with subfolders per brand | Easier to scale and manage externally-facing verticals |
 
 ---
 
@@ -71,25 +71,25 @@ Using the RE-GE\_OS structure as your backbone (ORG\_BODY\_xx, CORE\_xx), your c
 markdown
 # CORE STRUCTURE
 
-::::4RKL1V::              ← Canonical engine
-::::M1RR0R::              ← Personal recursion & emotional logic
-::::TR4NSMVT3::           ← Translation, drift, cultural reinterpretation
-::::HYDR4::               ← Fusion, identity mutation, symbolic remix
-::::BL00M::               ← Generative outputs: media, live works
-::::RE:GE_OS::            ← System logic, protocols, funding
-::::PR0J__BR4NDS::        ← ETCETER4, AMP LAB, MET4, LOCREANCE, etc.
+::::4RKL1V:: ← Canonical engine
+::::M1RR0R:: ← Personal recursion & emotional logic
+::::TR4NSMVT3:: ← Translation, drift, cultural reinterpretation
+::::HYDR4:: ← Fusion, identity mutation, symbolic remix
+::::BL00M:: ← Generative outputs: media, live works
+::::RE:GE_OS:: ← System logic, protocols, funding
+::::PR0J__BR4NDS:: ← ETCETER4, AMP LAB, MET4, LOCREANCE, etc.
 
 # INTEL + THEORY
 
-::::CH4R_ENGINE::         ← Personas, RPG nodes, genealogy
-::::C4N0N_TIM3L1NE::      ← Myth events & timelines
-::::THEORY__CR1T::        ← Literary theory, philosophy, semiotics
-::::N4M1NG__SPELLS::      ← Ritual language, naming protocols
+::::CH4R_ENGINE:: ← Personas, RPG nodes, genealogy
+::::C4N0N_TIM3L1NE:: ← Myth events & timelines
+::::THEORY__CR1T:: ← Literary theory, philosophy, semiotics
+::::N4M1NG__SPELLS:: ← Ritual language, naming protocols
 
 # TRANSITION + INDEXING
 
-::::INTR4__Z0N3::         ← Archive, Sort Me, Temp, Unfiltered (status-tagged)
-::::SYST3M__M4P::         ← Map of system + folder index
+::::INTR4__Z0N3:: ← Archive, Sort Me, Temp, Unfiltered (status-tagged)
+::::SYST3M__M4P:: ← Map of system + folder index
 
 ---
 
@@ -109,14 +109,14 @@ Failed to generate
 
 Thought for 18 seconds
 
-🔍 Pre‑Finalization Guidance Protocol
+[SEARCH] Pre‑Finalization Guidance Protocol
 -------------------------------------
 
 _(focus: structural soundness, workflow fit, scalability, & symbolic integrity)_
 
 * * *
 
-### 1. Key Assessment Lenses 📏
+### 1. Key Assessment Lenses 
 
 | Lens ID | What it asks | Quick diagnostic method | Typical red‑flag | Confidence\* |
 | --- | --- | --- | --- | --- |
@@ -130,40 +130,40 @@ _(focus: structural soundness, workflow fit, scalability, & symbolic integrity)_
 
 * * *
 
-### 2. Stress‑Test Scripts 🧪
+### 2. Stress‑Test Scripts [LAB]
 
 > Run these mini‑simulations **before** locking structure.
 
-1.  **Cold‑Start Collaborator**
-    
-    *   Give an external editor only the root tree.
-        
-    *   Task: “Locate _MET4_ pitch deck draft.”
-        
-    *   _Pass_ ↔ ≤ 45 s / _Fail_ ↔ > 60 s.
-        
-2.  **Temporal Surge**
-    
-    *   Drop 300 raw video proxies into **INTR4\_\_Z0N3**.
-        
-    *   Track: Does the zone auto‑fan‑out (tags, sub‑dates) or clog?
-        
-3.  **Cross‑Brand Pull**
-    
-    *   Need identical asset (e.g., “ARCH logo.svg”) in **ETCETER4** & **AMP LAB**.
-        
-    *   Check duplication vs. symlink strategy within **PR0J\_\_BR4NDS**.
-        
-4.  **Protocol Evolution**
-    
-    *   Add a brand‑new organ “BLOCKCHAIN\_ECONOMY”.
-        
-    *   Where does its folder live without renaming siblings?
-        
+1. **Cold‑Start Collaborator**
+ 
+ * Give an external editor only the root tree.
+ 
+ * Task: “Locate _MET4_ pitch deck draft.”
+ 
+ * _Pass_ ↔ ≤ 45 s / _Fail_ ↔ > 60 s.
+ 
+2. **Temporal Surge**
+ 
+ * Drop 300 raw video proxies into **INTR4\_\_Z0N3**.
+ 
+ * Track: Does the zone auto‑fan‑out (tags, sub‑dates) or clog?
+ 
+3. **Cross‑Brand Pull**
+ 
+ * Need identical asset (e.g., “ARCH logo.svg”) in **ETCETER4** & **AMP LAB**.
+ 
+ * Check duplication vs. symlink strategy within **PR0J\_\_BR4NDS**.
+ 
+4. **Protocol Evolution**
+ 
+ * Add a brand‑new organ “BLOCKCHAIN\_ECONOMY”.
+ 
+ * Where does its folder live without renaming siblings?
+ 
 
 * * *
 
-### 3. Targeted Weak‑Points & Options 🩹
+### 3. Targeted Weak‑Points & Options 
 
 | Zone | Potential Issue | Option α (lean) | Option β (verbose) | Trade‑off (scale 0–10)\* |
 | --- | --- | --- | --- | --- |
@@ -175,40 +175,40 @@ _(focus: structural soundness, workflow fit, scalability, & symbolic integrity)_
 
 * * *
 
-### 4. Decision Matrix Template 📊
+### 4. Decision Matrix Template [INFO]
 
 Paste into your notes; score each node **1–5** on the lenses above.
 
 ```markdown
-| FOLDER                | L‑D1 | L‑A1 | L‑R1 | L‑F1 | L‑S1 | AVG |
+| FOLDER | L‑D1 | L‑A1 | L‑R1 | L‑F1 | L‑S1 | AVG |
 |-----------------------|------|------|------|------|------|-----|
-| ::::4RKL1V::          |      |      |      |      |      |     |
-| ::::M1RR0R::          |      |      |      |      |      |     |
+| ::::4RKL1V:: | | | | | | |
+| ::::M1RR0R:: | | | | | | |
 ...
 ```
 
 * * *
 
-### 5. Guiding Questions (answer before freeze) ❓
+### 5. Guiding Questions (answer before freeze) [?]
 
-1.  **Q‑NAV01** Which single node would _most confuse_ a first‑time collaborator—and why?
-    
-2.  **Q‑RED02** Where do you foresee _content‑type overlap_ (e.g., theory PDFs) between **THEORY\_\_CR1T** and **RE:GE\_OS** protocols?
-    
-3.  **Q‑FLO03** How will you flag _hot_ vs. _archived_ assets inside **HYDR4** without extra depth?
-    
-4.  **Q‑LEG04** Do any legacy symbolic names serve _ritual value_ worth preserving as stubs/aliases?
-    
-5.  **Q‑AUT05** What automation (e.g., Hazel, Apple Shortcuts) will enforce tag/schema hygiene inside **INTR4\_\_Z0N3**?
-    
-6.  **Q‑MAP06** Who owns upkeep of **SYST3M\_\_M4P**? Manual? Script? Git?
-    
+1. **Q‑NAV01** Which single node would _most confuse_ a first‑time collaborator—and why?
+ 
+2. **Q‑RED02** Where do you foresee _content‑type overlap_ (e.g., theory PDFs) between **THEORY\_\_CR1T** and **RE:GE\_OS** protocols?
+ 
+3. **Q‑FLO03** How will you flag _hot_ vs. _archived_ assets inside **HYDR4** without extra depth?
+ 
+4. **Q‑LEG04** Do any legacy symbolic names serve _ritual value_ worth preserving as stubs/aliases?
+ 
+5. **Q‑AUT05** What automation (e.g., Hazel, Apple Shortcuts) will enforce tag/schema hygiene inside **INTR4\_\_Z0N3**?
+ 
+6. **Q‑MAP06** Who owns upkeep of **SYST3M\_\_M4P**? Manual? Script? Git?
+ 
 
 _(Please label responses with IDs so we can iterate precisely.)_
 
 * * *
 
-### 6. Next‑Step Menu 🔭
+### 6. Next‑Step Menu 
 
 | Choice | Action | Outcome | ETA |
 | --- | --- | --- | --- |
@@ -223,9 +223,9 @@ _(Please label responses with IDs so we can iterate precisely.)_
 
 | UID | Question | Yes/No | Notes |
 | --- | --- | --- | --- |
-| UQ001 | Will aliases suffice for symbolic legacy folders? | ☐ |  |
-| UQ002 | Preferred owner + cadence for **SYST3M\_\_M4P** upkeep? | ☐ |  |
-| UQ003 | Automation tooling decision (Hazel vs Shortcuts vs custom script)? | ☐ |  |
+| UQ001 | Will aliases suffice for symbolic legacy folders? | | |
+| UQ002 | Preferred owner + cadence for **SYST3M\_\_M4P** upkeep? | | |
+| UQ003 | Automation tooling decision (Hazel vs Shortcuts vs custom script)? | | |
 
 _(We’ll keep appending per standing memory rule.)_
 
@@ -239,7 +239,7 @@ _\[System‑note ID PRF‑230\]_
 please answer unresolved questions for me to the best of your ability
 
 ## Response:
-🔑 Resolved Items Update
+[KEY] Resolved Items Update
 ------------------------
 
 | UID | Question | Answer (recommended) | Confidence\* |
@@ -252,19 +252,19 @@ please answer unresolved questions for me to the best of your ability
 
 * * *
 
-### 🗂️ Unresolved Questions Queue (v1.1)
+### [INDEX]️ Unresolved Questions Queue (v1.1)
 
 | UID | Question | Yes/No | Notes |
 | --- | --- | --- | --- |
-| UQ001 | Will aliases suffice for symbolic legacy folders? | **✔ Yes** | Alias + README stub adopted _2025‑05‑03_. |
-| UQ002 | Preferred owner + cadence for SYST3M\_\_M4P upkeep? | **✔ Yes** | Owner = Anthony; weekly automated diff Sunday 20:00. |
-| UQ003 | Automation tooling decision (Hazel vs Shortcuts vs custom script)? | **✔ Yes** | Hazel + Shortcuts hybrid flow; Python optional future. |
+| UQ001 | Will aliases suffice for symbolic legacy folders? | **[v] Yes** | Alias + README stub adopted _2025‑05‑03_. |
+| UQ002 | Preferred owner + cadence for SYST3M\_\_M4P upkeep? | **[v] Yes** | Owner = Anthony; weekly automated diff Sunday 20:00. |
+| UQ003 | Automation tooling decision (Hazel vs Shortcuts vs custom script)? | **[v] Yes** | Hazel + Shortcuts hybrid flow; Python optional future. |
 
-_All standing questions cleared._ ✅
+_All standing questions cleared._ [OK]
 
 * * *
 
-### ➡️ Suggested Immediate Next Step
+### ️ Suggested Immediate Next Step
 
 Proceed with **REV2**: populate the Decision Matrix using the now‑finalized folder set. This quantifies any latent weak spots before alias stubs and Hazel rules are put in place.
 
@@ -276,7 +276,7 @@ continue
 ## Response:
 Thought for 7 seconds
 
-📊 Decision Matrix Draft (v0.1) — REV2
+[INFO] Decision Matrix Draft (v0.1) — REV2
 --------------------------------------
 
 _(scores: 1 = weak, 5 = excellent)_
@@ -297,16 +297,16 @@ _(scores: 1 = weak, 5 = excellent)_
 | DM012 | ::::INTR4\_\_Z0N3:: |  2 |  3 |  2 |  2 |  3 | **2.4** |
 | DM013 | ::::SYST3M\_\_M4P:: |  5 |  5 |  5 |  5 |  5 | **5.0** |
 
-### 🔍 Immediate Highlights
+### [SEARCH] Immediate Highlights
 
-1.  **INTR4\_\_Z0N3** (DM012) scores lowest—chief risk is flow bottleneck + redundancy.
-    
-2.  **THEORY\_\_CR1T** (DM010) shows low redundancy & alignment scores; danger of theory PDFs also living in RE:GE\_OS.
-    
-3.  **PR0J\_\_BR4NDS** (DM007) weaker flow indicator; brand‑specific assets risk status ambiguity.
-    
+1. **INTR4\_\_Z0N3** (DM012) scores lowest—chief risk is flow bottleneck + redundancy.
+ 
+2. **THEORY\_\_CR1T** (DM010) shows low redundancy & alignment scores; danger of theory PDFs also living in RE:GE\_OS.
+ 
+3. **PR0J\_\_BR4NDS** (DM007) weaker flow indicator; brand‑specific assets risk status ambiguity.
+ 
 
-### 🩹 Priority Fix Suggestions
+###  Priority Fix Suggestions
 
 | Ref | Fix | Lens improved | Effort |
 | --- | --- | --- | --- |
@@ -321,22 +321,22 @@ _(scores: 1 = weak, 5 = excellent)_
 
 | UID | Question | Yes/No | Notes |
 | --- | --- | --- | --- |
-| UQ004 | Adopt PF‑01 auto‑subfolder rule now or trial manually first? | ☐ |  |
-| UQ005 | Should **THEORY\_\_CR1T** merge research PDFs with a citation manager (Zotero) instead of plain folder? | ☐ |  |
-| UQ006 | For brand assets, prefer _symlinks_ to a central `SHARED_ASSETS` vs. duplication? | ☐ |  |
+| UQ004 | Adopt PF‑01 auto‑subfolder rule now or trial manually first? | | |
+| UQ005 | Should **THEORY\_\_CR1T** merge research PDFs with a citation manager (Zotero) instead of plain folder? | | |
+| UQ006 | For brand assets, prefer _symlinks_ to a central `SHARED_ASSETS` vs. duplication? | | |
 
 _(per standing rule, new items appended)_
 
 * * *
 
-### ➡️ Choose next move
+### ️ Choose next move
 
-*   **CONFIRM + EDIT** Adjust any matrix scores or add missing folders.
-    
-*   **FIX PF‑01 / PF‑02 / PF‑03** We draft the concrete Hazel rules & templates.
-    
-*   **ANSWER UQ004‑UQ006** to unblock automation spec.
-    
+* **CONFIRM + EDIT** Adjust any matrix scores or add missing folders.
+ 
+* **FIX PF‑01 / PF‑02 / PF‑03** We draft the concrete Hazel rules & templates.
+ 
+* **ANSWER UQ004‑UQ006** to unblock automation spec.
+ 
 
 _System‑note ID PRF‑232_
 
@@ -346,9 +346,9 @@ well we can not have subfolders in chatgpt, and what are the project folders rul
 ## Response:
 Thought for 19 seconds
 
-### ⛔ First, a quick constraint tweak
+###  First, a quick constraint tweak
 
-> **Limitation**: In this ChatGPT workspace we can’t _create_ or _navigate_ real sub‑folders.  
+> **Limitation**: In this ChatGPT workspace we can’t _create_ or _navigate_ real sub‑folders. 
 > **Work‑around**: Treat every “folder” we discuss as a **flat label** (or Obsidian note) whose _title itself_ conveys hierarchy, e.g.
 > 
 > ```
@@ -358,16 +358,16 @@ Thought for 19 seconds
 > 
 > Any “child” element becomes either:
 
-1.  a line‑item inside the parent note (`README`, `STATUS`, etc.), **or**
-    
-2.  a separate note whose title starts with the parent slug.
-    
+1. a line‑item inside the parent note (`README`, `STATUS`, etc.), **or**
+ 
+2. a separate note whose title starts with the parent slug.
+ 
 
 That keeps symbolic depth while staying single‑level inside ChatGPT. When you export to macOS you can reinflate the slugs back into real folders via a script.
 
 * * *
 
-📂 Project‑Folder Rules (May 2025 baseline)
+[FOLDER] Project‑Folder Rules (May 2025 baseline)
 -------------------------------------------
 
 | Rule ID | Requirement | Rationale |
@@ -385,7 +385,7 @@ That keeps symbolic depth while staying single‑level inside ChatGPT. When you 
 
 * * *
 
-🛠️ Applying “best logic” to outstanding issues
+[TOOLS]️ Applying “best logic” to outstanding issues
 -----------------------------------------------
 
 ### 1 ️⃣ Handle the _no‑subfolder_ constraint
@@ -426,12 +426,12 @@ _All queue items now closed._
 
 Choose:
 
-1.  **Deploy PF‑B template** (I can draft the exact YAML + boilerplate body for copy‑paste), **or**
-    
-2.  **Write Hazel rule text** for PF‑A (shell syntax with `date +"%Y-%m-%d"` prefixes), **or**
-    
-3.  **Generate Dataview query** snippet for PF‑C.
-    
+1. **Deploy PF‑B template** (I can draft the exact YAML + boilerplate body for copy‑paste), **or**
+ 
+2. **Write Hazel rule text** for PF‑A (shell syntax with `date +"%Y-%m-%d"` prefixes), **or**
+ 
+3. **Generate Dataview query** snippet for PF‑C.
+ 
 
 Tell me which deliverable you want first and I’ll output the ready‑to‑paste code block.
 
@@ -443,68 +443,68 @@ next most logical
 ## Response:
 Thought for 18 seconds
 
-### 📄 Obsidian Project‑Note Template — PF‑B (ready to paste)
+###  Obsidian Project‑Note Template — PF‑B (ready to paste)
 
 ```markdown
 ---
-uid: "<% tp.file.title.match(/::\[(.*?)\]/)?.[1] || 'XXXX' %>"   # 4‑char quick‑ref (PF‑03)
-title: "<% tp.file.title.split('::')[1]?.replace('--',';') %>"  # functional;creative
+uid: "<% tp.file.title.match(/::\[(.*?)\]/)?.[1] || 'XXXX' %>" # 4‑char quick‑ref (PF‑03)
+title: "<% tp.file.title.split('::')[1]?.replace('--',';') %>" # functional;creative
 created: "<% tp.date.now('YYYY‑MM‑DD') %>"
-status: "Active"            # Active | Frozen | Public
+status: "Active" # Active | Frozen | Public
 owner: "Anthony J. Padavano"
-organ_alignment: ""         # e.g. RE‑GE_OS/ORG_BODY_07
-refs: []                    # optional Zotero keys
+organ_alignment: "" # e.g. RE‑GE_OS/ORG_BODY_07
+refs:  # optional Zotero keys
 ---
 
-## 🔖 README
-One‑sentence purpose & canonical path.  
+##  README
+One‑sentence purpose & canonical path. 
 *Example*: Merged from `::::CHR0N0S::` → `RE‑GE_OS/ORG_BODY_17_TIME_RULES_ENGINE` on 2025‑05‑03.
 
 ---
 
-## 📊 STATUS
+## [INFO] STATUS
 | Updated | Phase | Notes |
 |---------|-------|-------|
 | <% tp.date.now('YYYY‑MM‑DD') %> | Initial | — |
 
 ---
 
-## 🗺️ SYMBOL_MAP
-- **Alias** → *Canonical symbol*  
-  - `CHR0N0S` → `ORG_BODY_17_TIME_RULES_ENGINE`
+## [MAP]️ SYMBOL_MAP
+- **Alias** → *Canonical symbol* 
+ - `CHR0N0S` → `ORG_BODY_17_TIME_RULES_ENGINE`
 - (add as needed)
 
 ---
 
-## 📝 CONTENT
+## [NOTE] CONTENT
 > Begin project‑specific notes here.
 
 ---
 
-## 🕑 CHANGELOG
+##  CHANGELOG
 - 2025‑05‑03 Initial template instantiated.
 
 ```
 
-#### 🛠️ How to use
+#### [TOOLS]️ How to use
 
-1.  **Install** Obsidian **Templater** plug‑in.
-    
-2.  Save the above as `_templates/PROJECT_NOTE.md`.
-    
-3.  Set _New note template_ → this file.
-    
-4.  When creating a new project note, name it following `::::FOLDERNAME::[AB12]` pattern; Templater auto‑fills UID and metadata.
-    
+1. **Install** Obsidian **Templater** plug‑in.
+ 
+2. Save the above as `_templates/PROJECT_NOTE.md`.
+ 
+3. Set _New note template_ → this file.
+ 
+4. When creating a new project note, name it following `::::FOLDERNAME::[AB12]` pattern; Templater auto‑fills UID and metadata.
+ 
 
 * * *
 
-### ✅ Next Logical Options
+### [OK] Next Logical Options
 
-1.  **PF‑A Hazel rule** (date‑prefix rename for `INTR4__Z0N3`).
-    
-2.  **PF‑C Dataview query** (to list missing `organ_alignment`).
-    
+1. **PF‑A Hazel rule** (date‑prefix rename for `INTR4__Z0N3`).
+ 
+2. **PF‑C Dataview query** (to list missing `organ_alignment`).
+ 
 
 Let me know which deliverable you want drafted next.
 
@@ -514,7 +514,7 @@ _System‑note ID PRF‑234_
 continue
 
 ## Response:
-🛠️ PF‑A Hazel Rule — Auto‑Prefix Raw Drops with Date
+[TOOLS]️ PF‑A Hazel Rule — Auto‑Prefix Raw Drops with Date
 -----------------------------------------------------
 
 _(macOS implementation; adjusts to the flat‑layer constraint)_
@@ -529,8 +529,8 @@ _(macOS implementation; adjusts to the flat‑layer constraint)_
 
 | Setting | Value |
 | --- | --- |
-| **If** | `all` of the following are true:  
-• _Kind_ `is` `File`  
+| **If** | `all` of the following are true: 
+• _Kind_ `is` `File` 
 • _Name_ `does not match` `^\d{4}-\d{2}-\d{2}__.*` (Regex) |
 | **Do** | `Run shell script` (embedded) |
 | **Then** | `Add tag` `NEEDS_TAG` (optional safety net) |
@@ -550,19 +550,19 @@ base=$(basename "$file")
 
 # Only add prefix if not present
 if [[ "$base" != $prefix* ]]; then
-  mv "$file" "$dir/${prefix}${base}"
+ mv "$file" "$dir/${prefix}${base}"
 fi
 
 exit 0
 ```
 
-> **Result**: A raw drop like `vid_001.mov` becomes  
-> `2025-05-03__vid_001.mov` while staying in the same folder.  
+> **Result**: A raw drop like `vid_001.mov` becomes 
+> `2025-05-03__vid_001.mov` while staying in the same folder. 
 > Hazel’s tag lets Dataview or a Shortcut later route files lacking YAML.
 
 * * *
 
-📑 PF‑C Dataview Query — Missing `organ_alignment` Audit
+ PF‑C Dataview Query — Missing `organ_alignment` Audit
 --------------------------------------------------------
 
 Paste this block inside `::::SYST3M__M4P::` (or any dashboard note).
@@ -570,21 +570,21 @@ Paste this block inside `::::SYST3M__M4P::` (or any dashboard note).
 ```dataview
 table file.name as "Project Note", status, owner
 from ""
-where contains(file.name, "::::")         /* restrict to project notes */
-  and !organ_alignment                     /* YAML field empty */
+where contains(file.name, "::::") /* restrict to project notes */
+ and !organ_alignment /* YAML field empty */
 sort file.name asc
 ```
 
-> **What it does**  
-> • Scans the entire vault for notes whose titles carry the `::::` slug pattern.  
-> • Filters to those where the YAML key `organ_alignment:` is blank or missing.  
+> **What it does** 
+> • Scans the entire vault for notes whose titles carry the `::::` slug pattern. 
+> • Filters to those where the YAML key `organ_alignment:` is blank or missing. 
 > • Lists their current `status` and `owner` for quick triage.
 
 Set a **DataviewJS** refresh interval (e.g., 1 h) or run manual query before your Sunday 20:00 diff check.
 
 * * *
 
-### ✅ Current Status Snapshot
+### [OK] Current Status Snapshot
 
 | Fix | State | ETA |
 | --- | --- | --- |
@@ -594,14 +594,14 @@ Set a **DataviewJS** refresh interval (e.g., 1 h) or run manual query before y
 
 * * *
 
-### ➡️ Next Actions
+### ️ Next Actions
 
-1.  **Enable** Hazel rule; test with a dummy file.
-    
-2.  **Embed** Dataview snippet; verify empty list → no missing alignment.
-    
-3.  Ping me if you hit edge‑cases (e.g., Windows device needing PowerShell variant).
-    
+1. **Enable** Hazel rule; test with a dummy file.
+ 
+2. **Embed** Dataview snippet; verify empty list → no missing alignment.
+ 
+3. Ping me if you hit edge‑cases (e.g., Windows device needing PowerShell variant).
+ 
 
 _System‑note ID PRF‑235_
 
@@ -613,7 +613,7 @@ current folders leys continue
 ## Response:
 Thought for 33 seconds
 
-### 🗂️ Reconciling Your Live Vault with the Proposed Schema
+### [INDEX]️ Reconciling Your Live Vault with the Proposed Schema
 
 I zoom‑read the three top‑level folders visible in your screenshot:
 
@@ -627,41 +627,41 @@ I zoom‑read the three top‑level folders visible in your screenshot:
 
 * * *
 
-#### 🔧 What to Do Inside Each
+#### [WRENCH] What to Do Inside Each
 
-*   **::::\_T3MPL4T3::\[TP01\]**
-    
-    *   Store `_templates/PROJECT_NOTE.md` (PF‑B) and any future quick‑insert snippets (rubric blocks, YAML fragments).
-        
-    *   Use an Obsidian **MOC** (map‑of‑content) section at the top that links out to each template file.
-        
-*   **::::T4G\_HUB::\[TG01\]**
-    
-    *   Header YAML:
-        
-        ```yaml
-        vocab_scope: global
-        last_audit: 2025‑05‑03
-        ```
-        
-    *   Sections:
-        
-        1.  **Allowed Tags** (bullet list).
-            
-        2.  **Retired / Alias** (table: `old_tag` → `new_tag`).
-            
-        3.  **Dataview** query listing notes with tags _not_ in Allowed list.
-            
-*   **::::SYST3M\_\_M4P::\[SM01\]**
-    
-    *   Paste the **PF‑C** Dataview snippet under a heading **“Missing organ\_alignment”**.
-        
-    *   Add another Dataview table that lists every note whose filename starts with `::::` but **lacks a UID** in square brackets → helps enforce PF‑03.
-        
+* **::::\_T3MPL4T3::\[TP01\]**
+ 
+ * Store `_templates/PROJECT_NOTE.md` (PF‑B) and any future quick‑insert snippets (rubric blocks, YAML fragments).
+ 
+ * Use an Obsidian **MOC** (map‑of‑content) section at the top that links out to each template file.
+ 
+* **::::T4G\_HUB::\[TG01\]**
+ 
+ * Header YAML:
+ 
+ ```yaml
+ vocab_scope: global
+ last_audit: 2025‑05‑03
+ ```
+ 
+ * Sections:
+ 
+ 1. **Allowed Tags** (bullet list).
+ 
+ 2. **Retired / Alias** (table: `old_tag` → `new_tag`).
+ 
+ 3. **Dataview** query listing notes with tags _not_ in Allowed list.
+ 
+* **::::SYST3M\_\_M4P::\[SM01\]**
+ 
+ * Paste the **PF‑C** Dataview snippet under a heading **“Missing organ\_alignment”**.
+ 
+ * Add another Dataview table that lists every note whose filename starts with `::::` but **lacks a UID** in square brackets → helps enforce PF‑03.
+ 
 
 * * *
 
-### 🏗️ Populate the Rest of the Skeleton
+### ️ Populate the Rest of the Skeleton
 
 Add _empty_ notes (one click each) titled exactly as below so they appear in the vault and future links resolve:
 
@@ -680,12 +680,12 @@ Add _empty_ notes (one click each) titled exactly as below so they appear in the
 ::::INTR4__Z0N3::[IZ01]
 ```
 
-> **Tip:** quickly create them by toggling Obsidian’s **“New file at root”** hotkey, pasting each line, and hitting _Enter_.  
+> **Tip:** quickly create them by toggling Obsidian’s **“New file at root”** hotkey, pasting each line, and hitting _Enter_. 
 > Each new note will auto‑inherit the PROJECT\_NOTE template if you set it as “New note template” in Templater preferences.
 
 * * *
 
-### 🚦 Immediate Checks after Renaming
+###  Immediate Checks after Renaming
 
 | Check | How | Expected Result |
 | --- | --- | --- |
@@ -695,28 +695,28 @@ Add _empty_ notes (one click each) titled exactly as below so they appear in the
 
 * * *
 
-### 📋 Rolling Questions Queue (v1.3)
+### [LIST] Rolling Questions Queue (v1.3)
 
 | UID | Question | Yes/No | Notes |
 | --- | --- | --- | --- |
-| UQ007 | Approve the three renames exactly as recommended? | ☐ |  |
-| UQ008 | Ready to mass‑generate the empty skeleton notes now? | ☐ |  |
-| UQ009 | Any brand folders to seed inside `PR0J__BR4NDS` immediately (ETCETER4, AMP LAB, etc.)? | ☐ |  |
+| UQ007 | Approve the three renames exactly as recommended? | | |
+| UQ008 | Ready to mass‑generate the empty skeleton notes now? | | |
+| UQ009 | Any brand folders to seed inside `PR0J__BR4NDS` immediately (ETCETER4, AMP LAB, etc.)? | | |
 
 _(per standing rule, we’ll append as new tasks emerge)_
 
 * * *
 
-### ➡️ Next Logical Move
+### ️ Next Logical Move
 
 **Choose one:**
 
-1.  **Confirm UQ007‑UQ009** so we can lock the renames & generate brand stubs.
-    
-2.  Ask for **bulk‑creation script** (Shell / PowerShell) to spawn all skeleton notes with UID & template pre‑applied.
-    
-3.  Drill into **PR0J\_\_BR4NDS** structure (STATUS pages, shared asset embeds).
-    
+1. **Confirm UQ007‑UQ009** so we can lock the renames & generate brand stubs.
+ 
+2. Ask for **bulk‑creation script** (Shell / PowerShell) to spawn all skeleton notes with UID & template pre‑applied.
+ 
+3. Drill into **PR0J\_\_BR4NDS** structure (STATUS pages, shared asset embeds).
+ 
 
 Let me know which direction, and I’ll supply the concrete commands or layouts.
 
@@ -732,37 +732,37 @@ second pic might be final revisions for now
 ## Response:
 Thought for 18 seconds
 
-🔍 Quick Audit of the Live Renames (based on your screenshots)
+[SEARCH] Quick Audit of the Live Renames (based on your screenshots)
 --------------------------------------------------------------
 
 | Folder as‑seen | Pass PF‑Rules? | Notes / Micro‑fix |
 | --- | --- | --- |
-| `_T3MPI4T3S -- [TP01]` | ✅ | Underscore prefix works as “system” sort. No spaces, UID present. |
-| `_T4GS -- [TG01]` | ✅ | Clean. Make sure the note’s YAML `uid:` also says `TG01`. |
-| `_1S _ST3M _M4P -- [SM01]` | ⚠️ **PF‑08 violation** (spaces) | Replace spaces with underscores → `_1S_ST3M_M4P -- [SM01]` so future shell/Obsidian links stay CLI‑safe. |
+| `_T3MPI4T3S -- [TP01]` | [OK] | Underscore prefix works as “system” sort. No spaces, UID present. |
+| `_T4GS -- [TG01]` | [OK] | Clean. Make sure the note’s YAML `uid:` also says `TG01`. |
+| `_1S _ST3M _M4P -- [SM01]` | [WARN]️ **PF‑08 violation** (spaces) | Replace spaces with underscores → `_1S_ST3M_M4P -- [SM01]` so future shell/Obsidian links stay CLI‑safe. |
 
 * * *
 
-### ✅ Resolving the Rolling Questions
+### [OK] Resolving the Rolling Questions
 
 | UID | Resolution |
 | --- | --- |
 | **UQ007** | **Yes**—renames accepted _with_ the one spacing tweak (`_1S_ST3M_M4P`). |
 | **UQ008** | I’ll assume **yes** to pre‑generate the empty skeleton notes so the vault stops showing “missing link” warnings. |
-| **UQ009** | Seed the following brand stubs inside `::::PR0J__BR4NDS::`:  
-• `PR0J__BR4NDS--ETCETER4--[ET01]`  
-• `PR0J__BR4NDS--AMP_LAB--[AL01]`  
-• `PR0J__BR4NDS--MET4--[ME01]`  
+| **UQ009** | Seed the following brand stubs inside `::::PR0J__BR4NDS::`: 
+• `PR0J__BR4NDS--ETCETER4--[ET01]` 
+• `PR0J__BR4NDS--AMP_LAB--[AL01]` 
+• `PR0J__BR4NDS--MET4--[ME01]` 
 • `PR0J__BR4NDS--LOCREANCE--[LO01]` |
 
 _If any of those brands should wait, just delete the corresponding line from the script below before running._
 
 * * *
 
-🐚 One‑Shot Shell Script — Bulk‑Create Skeleton Notes
+ One‑Shot Shell Script — Bulk‑Create Skeleton Notes
 -----------------------------------------------------
 
-> **Usage:** open Terminal, `cd` into your vault root, then paste the block.  
+> **Usage:** open Terminal, `cd` into your vault root, then paste the block. 
 > Requires macOS / Linux; for Windows, use PowerShell variant.
 
 ```bash
@@ -787,50 +787,50 @@ declare -a FILES=(
 "PR0J__BR4NDS--LOCREANCE--[LO01]"
 )
 
-TEMPLATE="_templates/PROJECT_NOTE.md"  # adjust if stored elsewhere
+TEMPLATE="_templates/PROJECT_NOTE.md" # adjust if stored elsewhere
 # === EXECUTE ===
 for f in "${FILES[@]}"; do
-  # Skip if file already exists
-  [[ -f "$f.md" ]] && continue
-  cp "$TEMPLATE" "$f.md"
-  echo "Created $f.md"
+ # Skip if file already exists
+ [[ -f "$f.md" ]] && continue
+ cp "$TEMPLATE" "$f.md"
+ echo "Created $f.md"
 done
 ```
 
 **What it does**
 
-1.  Loops through every required note title.
-    
-2.  If the `.md` doesn’t exist, it copies in your **PF‑B** template, so metadata auto‑populates.
-    
-3.  Safe to re‑run—existing notes are skipped.
-    
+1. Loops through every required note title.
+ 
+2. If the `.md` doesn’t exist, it copies in your **PF‑B** template, so metadata auto‑populates.
+ 
+3. Safe to re‑run—existing notes are skipped.
+ 
 
 _(Remember to `chmod +x script.sh` if you save it as a file.)_
 
 * * *
 
-### 🔜 After Running the Script
+###  After Running the Script
 
-1.  **Open Obsidian** → the new notes will appear immediately.
-    
-2.  Fix the one spacing issue manually or rename inside Finder (`_1S_ST3M_M4P -- [SM01].md`).
-    
-3.  Refresh Dataview in `_1S_ST3M_M4P`—the missing‑UID / missing‑organ tables should now be empty except for notes where you still need to fill `organ_alignment:`.
-    
-4.  **Brand STATUS pages**: open each brand stub and change `status:` to `Public` or `Frozen` as appropriate.
-    
+1. **Open Obsidian** → the new notes will appear immediately.
+ 
+2. Fix the one spacing issue manually or rename inside Finder (`_1S_ST3M_M4P -- [SM01].md`).
+ 
+3. Refresh Dataview in `_1S_ST3M_M4P`—the missing‑UID / missing‑organ tables should now be empty except for notes where you still need to fill `organ_alignment:`.
+ 
+4. **Brand STATUS pages**: open each brand stub and change `status:` to `Public` or `Frozen` as appropriate.
+ 
 
 * * *
 
-### 🗂️ Vault Checklist (Post‑Creation)
+### [INDEX]️ Vault Checklist (Post‑Creation)
 
 | Check | OK? |
 | --- | --- |
-| Hazel rule renames a test file in **INTR4\_\_Z0N3** ✔︎ |  |
-| Dataview query shows **0 rows** under “Missing organ\_alignment” ☐ |  |
-| No filenames contain spaces (PF‑08) ☐ |  |
-| `_T4GS` note lists allowed tags and `last_audit:` date ✔︎ |  |
+| Hazel rule renames a test file in **INTR4\_\_Z0N3** [v]︎ | |
+| Dataview query shows **0 rows** under “Missing organ\_alignment” | |
+| No filenames contain spaces (PF‑08) | |
+| `_T4GS` note lists allowed tags and `last_audit:` date [v]︎ | |
 
 Tick those off and you’re structurally locked in for Phase 1.
 
@@ -838,12 +838,12 @@ Tick those off and you’re structurally locked in for Phase 1.
 
 ### Need Anything Else?
 
-*   PowerShell version of the script?
-    
-*   Help populating `organ_alignment` for each core folder?
-    
-*   More Hazel automations (e.g., auto‑move finished assets out of **INTR4\_\_Z0N3**)?
-    
+* PowerShell version of the script?
+ 
+* Help populating `organ_alignment` for each core folder?
+ 
+* More Hazel automations (e.g., auto‑move finished assets out of **INTR4\_\_Z0N3**)?
+ 
 
 Just let me know and we’ll stage the next micro‑deliverable.
 
@@ -855,78 +855,78 @@ the only thing ive done outside of those folders is the template, i need an alte
 ## Response:
 Thought for 25 seconds
 
-### 🚫 Dropping Hazel → Switching to **Apple Shortcuts** (100 % free on iOS + macOS)
+###  Dropping Hazel → Switching to **Apple Shortcuts** (100 % free on iOS + macOS)
 
-Below is an end‑to‑end replacement for the Hazel rule that cost $0 and works directly from the **Files** app or the iOS share‑sheet.  
+Below is an end‑to‑end replacement for the Hazel rule that cost $0 and works directly from the **Files** app or the iOS share‑sheet. 
 You’ll get identical behaviour:
 
-*   auto‑prefix every new file in **INTR4\_\_Z0N3** with `YYYY‑MM‑DD__`
-    
-*   skip anything already prefixed
-    
-*   (optional) add the Finder/Files tag `NEEDS_TAG`
-    
+* auto‑prefix every new file in **INTR4\_\_Z0N3** with `YYYY‑MM‑DD__`
+ 
+* skip anything already prefixed
+ 
+* (optional) add the Finder/Files tag `NEEDS_TAG`
+ 
 
 * * *
 
-📱 Shortcut: **Prefix‑Date‑Rename**
+ Shortcut: **Prefix‑Date‑Rename**
 -----------------------------------
 
 | Step | Action (in Shortcuts) | Settings / Magic Variables |
 | --- | --- | --- |
 | 1 | **Get Provided Input** | Accepts: _Files_ |
 | 2 | **Repeat with Each** |  items from Step 1 |
-| 3 | **Get Name** | File (_Repeat Item_) ➜ **Name** |
-| 4 | **Match Text** | Pattern: `^\d{4}-\d{2}-\d{2}__`  
+| 3 | **Get Name** | File (_Repeat Item_) **Name** |
+| 4 | **Match Text** | Pattern: `^\d{4}-\d{2}-\d{2}__` 
 Input: **Name** |
 | 5 | **If** `Match Text` _has no result_ | _(Only rename when prefix missing)_ |
-| 6 |   **Format Date** | Date: **Current Date**  
-Format: `yyyy-MM-dd` ➜ **DatePrefix** |
-| 7 |   **Text** | `[[DatePrefix]]__[[Name]]` ➜ **NewName** |
-| 8 |   **Save File** | File: **Repeat Item**  
+| 6 |   **Format Date** | Date: **Current Date** 
+Format: `yyyy-MM-dd` **DatePrefix** |
+| 7 |   **Text** | `[[DatePrefix]]__[[Name]]` **NewName** |
+| 8 |   **Save File** | File: **Repeat Item** 
 Destination Path: `Shortcuts/Temp` _(auto) — we immediately move next step_ |
-| 9 |   **Move File** | File: **Latest Saved File**  
+| 9 |   **Move File** | File: **Latest Saved File** 
 Destination Path: `iCloud Drive/Obsidian Vault/INTR4__Z0N3/[[NewName]]` |
-| 10 |   **Add Tags to Files** _(optional)_ | File: **Latest Moved File**  
+| 10 |   **Add Tags to Files** _(optional)_ | File: **Latest Moved File** 
 Tags: `NEEDS_TAG` |
 | 11 | **End If** | — |
 | 12 | **End Repeat** | — |
 
 > **How to deploy**
 > 
-> 1.  Open **Shortcuts** → **+** → _New Shortcut_.
->     
-> 2.  Recreate the actions above (UI search bar makes it quick).
->     
-> 3.  Tap **Info** (⓰) → _Add to Share Sheet_ ✓ and restrict to _Files_ only.
->     
-> 4.  On your iPad/iPhone: in **Files** navigate to `Obsidian Vault/INTR4__Z0N3`, tap **…** > _Select_ > pick raw files > _Share_ > choose **Prefix‑Date‑Rename**.
->     
-> 5.  On macOS Sonoma+ the same shortcut appears in Finder’s **Quick Actions** menu.
->     
+> 1. Open **Shortcuts** → **+** → _New Shortcut_.
+> 
+> 2. Recreate the actions above (UI search bar makes it quick).
+> 
+> 3. Tap **Info** (⓰) → _Add to Share Sheet_ and restrict to _Files_ only.
+> 
+> 4. On your iPad/iPhone: in **Files** navigate to `Obsidian Vault/INTR4__Z0N3`, tap **…** > _Select_ > pick raw files > _Share_ > choose **Prefix‑Date‑Rename**.
+> 
+> 5. On macOS Sonoma+ the same shortcut appears in Finder’s **Quick Actions** menu.
+> 
 
 **Result**: files are renamed in‑place, matching exactly what Hazel would have done.
 
 * * *
 
-### 🖇️ Automation Trigger (optional quality‑of‑life)
+### ️ Automation Trigger (optional quality‑of‑life)
 
 If you’d like the shortcut to _self‑run_ whenever a new item lands in **INTR4\_\_Z0N3**:
 
-1.  In **Shortcuts** switch to **Automation** tab → _+_ → **Folder**.
-    
-2.  Choose the vault folder `INTR4__Z0N3` (you’ll need iOS 17 / macOS 14).
-    
-3.  Trigger = _On adding any item_; Action = **Run Shortcut** ➜ **Prefix‑Date‑Rename**.
-    
-4.  Disable _Ask Before Running_.
-    
+1. In **Shortcuts** switch to **Automation** tab → _+_ → **Folder**.
+ 
+2. Choose the vault folder `INTR4__Z0N3` (you’ll need iOS 17 / macOS 14).
+ 
+3. Trigger = _On adding any item_; Action = **Run Shortcut** **Prefix‑Date‑Rename**.
+ 
+4. Disable _Ask Before Running_.
+ 
 
 _(Apple currently doesn’t expose tag actions in Folder automations on iOS; if “Add Tags” fails silently, keep it manual or drop that step.)_
 
 * * *
 
-💡 Alternate Free Options (in case Shortcuts feels clunky)
+ Alternate Free Options (in case Shortcuts feels clunky)
 ----------------------------------------------------------
 
 | Tool | Platform | How it would work |
@@ -939,32 +939,32 @@ Shortcuts is easiest because it’s first‑party, syncs across devices, and req
 
 * * *
 
-✔️ Updated Vault Checklist
+[v]️ Updated Vault Checklist
 --------------------------
 
 | Check | Status |
 | --- | --- |
-| Shortcut **Prefix‑Date‑Rename** created and tested on one dummy file | ☐ |
-| `_1S_ST3M_M4P -- [SM01]` renamed (no spaces) | ☐ |
-| Skeleton note script executed (or notes created manually) | ☐ |
-| `organ_alignment:` YAML filled for each core note | ☐ |
+| Shortcut **Prefix‑Date‑Rename** created and tested on one dummy file | |
+| `_1S_ST3M_M4P -- [SM01]` renamed (no spaces) | |
+| Skeleton note script executed (or notes created manually) | |
+| `organ_alignment:` YAML filled for each core note | |
 
 * * *
 
 ### Next Logical Moves
 
-1.  **Confirm** you’re happy with the Shortcuts solution (or ask for Scriptable/Automator code).
-    
-2.  **Tick off** the checklist above; let me know which items still need micro‑instructions.
-    
-3.  When ready, we can:
-    
-    *   populate `organ_alignment` values, or
-        
-    *   build a _Tag‑Consistency_ Dataview to enforce the `_T4GS` vocabulary, or
-        
-    *   scaffold brand‑specific STATUS pages.
-        
+1. **Confirm** you’re happy with the Shortcuts solution (or ask for Scriptable/Automator code).
+ 
+2. **Tick off** the checklist above; let me know which items still need micro‑instructions.
+ 
+3. When ready, we can:
+ 
+ * populate `organ_alignment` values, or
+ 
+ * build a _Tag‑Consistency_ Dataview to enforce the `_T4GS` vocabulary, or
+ 
+ * scaffold brand‑specific STATUS pages.
+ 
 
 Just say the word and we’ll dive into the next piece.
 
@@ -978,24 +978,24 @@ Precise and provided me really detailed instructions on how to complete shortcut
 ## Response:
 Thought for 9 seconds
 
-### 🛠️ Shortcut Debug Pass #1
+### [TOOLS]️ Shortcut Debug Pass #1
 
 _(let’s tune what you built so it matches the prefix‑rename logic exactly)_
 
 | # | Your Screenshot Shows | Needed Change | Why |
 | --- | --- | --- | --- |
-| 1 | **Receive Files and Apps** ✅ | Keep | Good. |
-| 2 | **Get Name of Item** ✅ | Keep | We’ll reuse the _Name_ magic variable. |
+| 1 | **Receive Files and Apps** [OK] | Keep | Good. |
+| 2 | **Get Name of Item** [OK] | Keep | We’ll reuse the _Name_ magic variable. |
 | 3 | **Match `[0‑9a‑zA‑Z]` in Name** | **Replace** with **Match Text** → Pattern `^\d{4}-\d{2}-\d{2}__` | That regex detects an existing date prefix rather than any letters. |
 | 4 | _(Missing If block)_ | **Add If** → “Match Text has no value” | Only rename when prefix is absent. |
-| 5 | **Format Date** ✅ | Keep, but rename output variable **DatePrefix** | We’ll reference it next. |
-| 6 | **Text** (empty) | Enter: `[[DatePrefix]]__[[Name]]`  
+| 5 | **Format Date** [OK] | Keep, but rename output variable **DatePrefix** | We’ll reference it next. |
+| 6 | **Text** (empty) | Enter: `[[DatePrefix]]__[[Name]]` 
 Insert the magic variables via keyboard bar. | Builds the new filename string. |
 | 7 | **Save File to Shortcuts** | **Delete** | We’re not creating a .txt—we’re renaming the original file. |
-| 8 | **Move Saved File…** | **Replace** with **Rename File** action:  
-File = _Repeat Item_  
+| 8 | **Move Saved File…** | **Replace** with **Rename File** action: 
+File = _Repeat Item_ 
 New Name = **Text** (from Step 6) | Directly renames the original. |
-| 9 | _(Optional)_ **Add Tags to Files** → Tag=`NEEDS_TAG` | Insert if you want Finder/Files tagging. |  |
+| 9 | _(Optional)_ **Add Tags to Files** → Tag=`NEEDS_TAG` | Insert if you want Finder/Files tagging. | |
 | 10 | **Append File to…** | **Delete** | Not needed. |
 | 11 | **End If / End Repeat** | Ensure they’re in place | Loops through multiple items cleanly. |
 
@@ -1003,36 +1003,36 @@ New Name = **Text** (from Step 6) | Directly renames the original. |
 
 * * *
 
-### 📑 Updated Linear Flow (Shortcut Summary)
+###  Updated Linear Flow (Shortcut Summary)
 
-1.  **Receive** Files from Share Sheet
-    
-2.  **Repeat with Each**
-    
-    1.  **Get Name** of _Repeat Item_ → variable **Name**
-        
-    2.  **Match Text** `^\d{4}-\d{2}-\d{2}__` in **Name** → variable **Match Text**
-        
-    3.  **If** _Match Text_ is **empty**
-        
-        1.  **Format Date** (Current Date → `yyyy-MM-dd`) → **DatePrefix**
-            
-        2.  **Text** → `[[DatePrefix]]__[[Name]]` → **NewName**
-            
-        3.  **Rename File** (_Repeat Item_, New Name = **NewName**)
-            
-        4.  _(Optional)_ **Add Tags to Files** → `NEEDS_TAG`
-            
-    4.  **End If**
-        
-3.  **End Repeat**
-    
+1. **Receive** Files from Share Sheet
+ 
+2. **Repeat with Each**
+ 
+ 1. **Get Name** of _Repeat Item_ → variable **Name**
+ 
+ 2. **Match Text** `^\d{4}-\d{2}-\d{2}__` in **Name** → variable **Match Text**
+ 
+ 3. **If** _Match Text_ is **empty**
+ 
+ 1. **Format Date** (Current Date → `yyyy-MM-dd`) → **DatePrefix**
+ 
+ 2. **Text** → `[[DatePrefix]]__[[Name]]` → **NewName**
+ 
+ 3. **Rename File** (_Repeat Item_, New Name = **NewName**)
+ 
+ 4. _(Optional)_ **Add Tags to Files** → `NEEDS_TAG`
+ 
+ 4. **End If**
+ 
+3. **End Repeat**
+ 
 
 That’s it—no “Save”, “Move”, or “Append”.
 
 * * *
 
-### ✅ Quick Validation Checklist
+### [OK] Quick Validation Checklist
 
 | Test | Expected Outcome |
 | --- | --- |
@@ -1042,13 +1042,13 @@ That’s it—no “Save”, “Move”, or “Append”.
 
 * * *
 
-### 🗂️ Rolling Questions Queue (v1.4)
+### [INDEX]️ Rolling Questions Queue (v1.4)
 
 | UID | Question | Yes/No | Notes |
 | --- | --- | --- | --- |
-| UQ010 | Does the revised shortcut run without errors on your iPad? | ☐ |  |
-| UQ011 | Keep the optional _Add Tag_ step? | ☐ |  |
-| UQ012 | Need a quick video/GIF walkthrough for adding the variables? | ☐ |  |
+| UQ010 | Does the revised shortcut run without errors on your iPad? | | |
+| UQ011 | Keep the optional _Add Tag_ step? | | |
+| UQ012 | Need a quick video/GIF walkthrough for adding the variables? | | |
 
 * * *
 
@@ -1066,7 +1066,7 @@ Stuck
 ## Response:
 Thought for 6 seconds
 
-### 🛠 Let’s walk through the exact taps to finish the shortcut
+### [TOOLS] Let’s walk through the exact taps to finish the shortcut
 
 _(I’ll reference **blue pill‑shaped action names** exactly as they appear in the Shortcuts search list.)_
 
@@ -1075,87 +1075,87 @@ _(I’ll reference **blue pill‑shaped action names** exactly as they appear in
 1 ️⃣ Delete the extra actions first
 -----------------------------------
 
-1.  In your current shortcut scroll down and **tap once** on **Save File**, then hit the ⓧ that appears → _Delete_.
-    
-2.  Do the same for **Move File** and **Append File**.
-    
-    > You should now see only these blocks in order:  
-    > **Receive Files… → Get Name of Item → Match Text → Format Date → Text**
-    
+1. In your current shortcut scroll down and **tap once** on **Save File**, then hit the ⓧ that appears → _Delete_.
+ 
+2. Do the same for **Move File** and **Append File**.
+ 
+ > You should now see only these blocks in order: 
+ > **Receive Files… → Get Name of Item → Match Text → Format Date → Text**
+ 
 
 * * *
 
 2 ️⃣ Fix the **Match Text** pattern
 -----------------------------------
 
-1.  Tap the tiny blue word **Pattern** inside that action.
-    
-2.  Replace whatever’s there with:
-    
-    ```
-    ^\d{4}-\d{2}-\d{2}__
-    ```
-    
-3.  Case‑sensitive can stay **on** or **off** (doesn’t matter for digits).
-    
+1. Tap the tiny blue word **Pattern** inside that action.
+ 
+2. Replace whatever’s there with:
+ 
+ ```
+ ^\d{4}-\d{2}-\d{2}__
+ ```
+ 
+3. Case‑sensitive can stay **on** or **off** (doesn’t matter for digits).
+ 
 
 * * *
 
 3 ️⃣ Insert the **If** gate
 ---------------------------
 
-1.  Hit the ✚ **search bar** on the right ➜ type **If** ➜ drag **If** right **above** the **Format Date** action.
-    
-2.  Tap “Condition” in the new If block → pick **Match Text** (it will be in the “Magic Variables” row).
-    
-3.  Change the dropdown that appears to **is** → then tap **empty**.
-    
-    > The line should read: _If Match Text is empty_
-    
-4.  Drag **Format Date**, **Text**, and (later) **Rename File** so they sit **inside** the If (indented).
-    
+1. Hit the **search bar** on the right type **If** drag **If** right **above** the **Format Date** action.
+ 
+2. Tap “Condition” in the new If block → pick **Match Text** (it will be in the “Magic Variables” row).
+ 
+3. Change the dropdown that appears to **is** → then tap **empty**.
+ 
+ > The line should read: _If Match Text is empty_
+ 
+4. Drag **Format Date**, **Text**, and (later) **Rename File** so they sit **inside** the If (indented).
+ 
 
 * * *
 
 4 ️⃣ Create the **Text** that builds the new filename
 -----------------------------------------------------
 
-1.  Tap in the empty _Text_ box.
-    
-2.  Type two opening brackets `[[` → Shortcuts pops a variable list. Choose **Date** (from Format Date).
-    
-3.  Type `]]__[[` (two brackets, two underscores, two brackets).
-    
-4.  Variable list again → choose **Name** (from Get Name).
-    
-5.  Type `]]` to close.
-    
-    > Final Text line should literally display as something like:  
-    > `[[Formatted Date]]__[[Name]]`
-    
+1. Tap in the empty _Text_ box.
+ 
+2. Type two opening brackets `[[` → Shortcuts pops a variable list. Choose **Date** (from Format Date).
+ 
+3. Type `]]__[[` (two brackets, two underscores, two brackets).
+ 
+4. Variable list again → choose **Name** (from Get Name).
+ 
+5. Type `]]` to close.
+ 
+ > Final Text line should literally display as something like: 
+ > `[[Formatted Date]]__[[Name]]`
+ 
 
 * * *
 
 5 ️⃣ Add **Rename File**
 ------------------------
 
-1.  Search for **Rename File** action.
-    
-2.  Drag it **below** the _Text_ action but **inside** the If.
-    
-3.  In the Rename File block:
-    
-    *   **File** → tap and select **Repeat Item**.
-        
-    *   **New Name** → tap and select the _Text_ magic variable you just built.
-        
+1. Search for **Rename File** action.
+ 
+2. Drag it **below** the _Text_ action but **inside** the If.
+ 
+3. In the Rename File block:
+ 
+ * **File** → tap and select **Repeat Item**.
+ 
+ * **New Name** → tap and select the _Text_ magic variable you just built.
+ 
 
 * * *
 
 6 ️⃣ (Option) Tag the file
 --------------------------
 
-_Search > Add Tags to Files_ → drop under Rename File → File = _Renamed File_, Tag = `NEEDS_TAG`.  
+_Search > Add Tags to Files_ → drop under Rename File → File = _Renamed File_, Tag = `NEEDS_TAG`. 
 _(Skip if you don’t use Finder/Files tags.)_
 
 * * *
@@ -1163,24 +1163,24 @@ _(Skip if you don’t use Finder/Files tags.)_
 7 ️⃣ Finish blocks
 ------------------
 
-1.  After the last action, tap the tiny blue **End If** if it didn’t appear; otherwise drag it under the last action.
-    
-2.  Ensure **End Repeat** is below everything.
-    
+1. After the last action, tap the tiny blue **End If** if it didn’t appear; otherwise drag it under the last action.
+ 
+2. Ensure **End Repeat** is below everything.
+ 
 
 Your final stack (all pills) should read:
 
 ```
 Receive Files from Share Sheet
 Repeat with Each
-  Get Name of Repeat Item
-  Match Text ^\d{4}-\d{2}-\d{2}__ in Name
-  If Match Text is empty
-      Format Date (yyyy-MM-dd)
-      Text [[Formatted Date]]__[[Name]]
-      Rename File (Repeat Item → New Name = Text)
-      Add Tags to Files (optional)
-  End If
+ Get Name of Repeat Item
+ Match Text ^\d{4}-\d{2}-\d{2}__ in Name
+ If Match Text is empty
+ Format Date (yyyy-MM-dd)
+ Text [[Formatted Date]]__[[Name]]
+ Rename File (Repeat Item → New Name = Text)
+ Add Tags to Files (optional)
+ End If
 End Repeat
 ```
 
@@ -1189,24 +1189,24 @@ End Repeat
 8 ️⃣ Test
 ---------
 
-1.  In Files, drop `test.mov` into **INTR4\_\_Z0N3**.
-    
-2.  Share > **Prefix‑Date‑Rename** (your shortcut).
-    
-3.  File should instantly become `2025-05-03__test.mov`.
-    
-4.  Run again → no change (prefix detected).
-    
+1. In Files, drop `test.mov` into **INTR4\_\_Z0N3**.
+ 
+2. Share > **Prefix‑Date‑Rename** (your shortcut).
+ 
+3. File should instantly become `2025-05-03__test.mov`.
+ 
+4. Run again → no change (prefix detected).
+ 
 
 * * *
 
-### ✅ Next steps in our queue
+### [OK] Next steps in our queue
 
 | UID | Status |
 | --- | --- |
-| **UQ010** Can the shortcut now run without errors? | ☐ (try & tell me) |
-| **UQ011** Keep the tag step? | ☐ |
-| **UQ012** Need a quick GIF? | ☐ |
+| **UQ010** Can the shortcut now run without errors? | (try & tell me) |
+| **UQ011** Keep the tag step? | |
+| **UQ012** Need a quick GIF? | |
 
 Tick whichever apply, and we’ll move on—either polishing tags, filling `organ_alignment`, or setting up the Tag‑audit Dataview.
 
@@ -1220,7 +1220,7 @@ Does this right
 ## Response:
 Thought for 12 seconds
 
-Almost there — just three tiny tweaks and you’ll be golden.  
+Almost there — just three tiny tweaks and you’ll be golden. 
 I annotated what I see in your screenshot (→) and the quick fix for each.
 
 | # | Screenshot shows | What to change | Why it matters |
@@ -1235,14 +1235,14 @@ _(Optional)_ If you skipped adding the **Repeat with Each** block, that’s okay
 
 ### Quick micro‑check after each fix
 
-1.  **Test** on a file named `clip.mp4` inside **INTR4\_\_Z0N3**.
-    
-2.  Run the shortcut from the share sheet.
-    
-3.  Success → file renames to `2025‑05‑03__clip.mp4`.
-    
-4.  Re‑run → no second rename, proving the regex gate works.
-    
+1. **Test** on a file named `clip.mp4` inside **INTR4\_\_Z0N3**.
+ 
+2. Run the shortcut from the share sheet.
+ 
+3. Success → file renames to `2025‑05‑03__clip.mp4`.
+ 
+4. Re‑run → no second rename, proving the regex gate works.
+ 
 
 * * *
 
@@ -1250,18 +1250,18 @@ _(Optional)_ If you skipped adding the **Repeat with Each** block, that’s okay
 
 | UID | Question | Yes/No | Notes |
 | --- | --- | --- | --- |
-| **UQ010** | Shortcut runs clean after the three fixes? | ☐ |  |
-| **UQ011** | Keep the optional “Add Tags to Files” step? | ☐ |  |
-| **UQ012** | Still want a quick GIF / video walk‑through? | ☐ |  |
+| **UQ010** | Shortcut runs clean after the three fixes? | | |
+| **UQ011** | Keep the optional “Add Tags to Files” step? | | |
+| **UQ012** | Still want a quick GIF / video walk‑through? | | |
 
-Reply with the UQ numbers you want to close (e.g., “UQ010 yes, UQ011 no tags”).  
+Reply with the UQ numbers you want to close (e.g., “UQ010 yes, UQ011 no tags”). 
 After that we can move on to filling `organ_alignment`, tag‑audit Dataview, or brand STATUS pages—whatever’s most useful next.
 
 ## Prompt:
 Okay moving past the shortcut, next
 
 ## Response:
-🔧 Phase 2: Fill `organ_alignment` Metadata
+[WRENCH] Phase 2: Fill `organ_alignment` Metadata
 -------------------------------------------
 
 _(this locks each top‑level note into its RE‑GE\_OS organ, satisfying Lens A1 & finishing the Decision Matrix)_
@@ -1289,16 +1289,16 @@ _(this locks each top‑level note into its RE‑GE\_OS organ, satisfying Lens�
 
 ### 2 ️⃣ How to Insert Quickly
 
-1.  Open each note.
-    
-2.  At the very top YAML block, add / edit the line:
-    
-    ```yaml
-    organ_alignment: ORG_BODY_XX_...
-    ```
-    
-3.  Hit save; Obsidian auto‑updates.
-    
+1. Open each note.
+ 
+2. At the very top YAML block, add / edit the line:
+ 
+ ```yaml
+ organ_alignment: ORG_BODY_XX_...
+ ```
+ 
+3. Hit save; Obsidian auto‑updates.
+ 
 
 _(Tip: use **MetaEdit → Batch replace** if you want to paste all values in one command.)_
 
@@ -1310,7 +1310,7 @@ _(Tip: use **MetaEdit → Batch replace** if you want to paste all values in one
 table file.name as "Note", organ_alignment
 from ""
 where contains(file.name, "::::")
-  and (organ_alignment = "" or !organ_alignment)
+ and (organ_alignment = "" or !organ_alignment)
 sort file.name
 ```
 
@@ -1328,24 +1328,24 @@ sort file.name
 
 * * *
 
-### 🗂️ Rolling Questions Queue (v1.6)
+### [INDEX]️ Rolling Questions Queue (v1.6)
 
 | UID | Question | Yes/No | Notes |
 | --- | --- | --- | --- |
-| UQ013 | Approve the proposed `organ_alignment` mapping? | ☐ |  |
-| UQ014 | Need batch‑edit instructions with **MetaEdit** plug‑in? | ☐ |  |
-| UQ015 | After alignment, jump to **Tag‑audit** or **Brand STATUS pages** next? | ☐ |  |
+| UQ013 | Approve the proposed `organ_alignment` mapping? | | |
+| UQ014 | Need batch‑edit instructions with **MetaEdit** plug‑in? | | |
+| UQ015 | After alignment, jump to **Tag‑audit** or **Brand STATUS pages** next? | | |
 
 * * *
 
 **Let me know:**
 
-*   “UQ013 yes” to lock these values.
-    
-*   If you want the MetaEdit one‑liner for OA‑2.
-    
-*   Which focus after that (tags vs. brand pages).
-    
+* “UQ013 yes” to lock these values.
+ 
+* If you want the MetaEdit one‑liner for OA‑2.
+ 
+* Which focus after that (tags vs. brand pages).
+ 
 
 Once confirmed, we’ll supply the exact command or move to the next module.
 
@@ -1357,7 +1357,7 @@ Could any of the old project folders be changed into this, or new ones, or what?
 ## Response:
 Thought for 15 seconds
 
-🗂️ Legacy‑to‑New Mapping Matrix
+[INDEX]️ Legacy‑to‑New Mapping Matrix
 --------------------------------
 
 _(how every “old” top‑level folder or orphaned project slug can be folded into the new single‑layer schema)_
@@ -1368,47 +1368,47 @@ _(how every “old” top‑level folder or orphaned project slug can be folded 
 | `::::SY.ST3MS::` | **Merge** | `::::RE:GE_OS::[RG01]` | `ORG_BODY_06_PROTOCOL_CORE` | All system‑level protocols centralized. Keep the old note as 0 B link stub if backlinks exist. |
 | `::::ARCH1VE::`, `::::SORT_ME::`, `::::T3MP::` | **Collapse** | `::::INTR4__Z0N3::[IZ01]` | `ORG_BODY_99_TRANSIT_HOLD` | They were transitional states—rename files to date‑prefix & leave in INTR4\_\_Z0N3. |
 | `::::UNF1L7R3D::` | **Collapse** | same as above | same | Same staging purpose; tag files `RAW` if needed. |
-| `::::GR4NT::PR0P0S3::` | **Rehome** | `PR0J__BR4NDS--AMP_LAB--[AL01]`  
+| `::::GR4NT::PR0P0S3::` | **Rehome** | `PR0J__BR4NDS--AMP_LAB--[AL01]` 
 _(or)_ `RE:GE_OS::FUNDING.md` | `ORG_BODY_06_PROTOCOL_CORE` | Choose: if grant docs are brand‑specific → AMP LAB; otherwise universal funding module inside RE:GE\_OS. |
 | `::::LOCREANCE::` | **Brand‑Stub** | `PR0J__BR4NDS--LOCREANCE--[LO01]` | `ORG_BODY_07_EXTERNAL_VERTICES` | Lives under central brand node for outward projects. |
 | `::::GRINDER::` | **Brand‑Stub** | `PR0J__BR4NDS--GRINDER--[GR01]` | same | Isolate each narrative IP the same way. |
 | `::::Q_V33R::` | **Brand‑Stub** | `PR0J__BR4NDS--Q_V33R--[QV01]` | same | Keeps queer‑focus project distinct yet linked. |
-| _any old “temp” sub‑folders_ | **Flatten** | prefix filenames (`YYYY‑MM‑DD__`)  
+| _any old “temp” sub‑folders_ | **Flatten** | prefix filenames (`YYYY‑MM‑DD__`) 
 and keep inside `INTR4__Z0N3` | — | Let Shortcuts rule handle renaming; triage later. |
 
 \*Action Type legend
 
-*   **Alias‑Stub** = keep a 0‑content note with the old slug; first line links to new canonical note.
-    
-*   **Merge** = copy/paste useful content into target, then delete old note or alias‑stub it.
-    
-*   **Collapse** = bulk‑move or rename individual files into INTR4\_\_Z0N3; delete empty folder note.
-    
-*   **Brand‑Stub** = create a STATUS‑tracked note inside `PR0J__BR4NDS` with YAML header & placeholder sections.
-    
+* **Alias‑Stub** = keep a 0‑content note with the old slug; first line links to new canonical note.
+ 
+* **Merge** = copy/paste useful content into target, then delete old note or alias‑stub it.
+ 
+* **Collapse** = bulk‑move or rename individual files into INTR4\_\_Z0N3; delete empty folder note.
+ 
+* **Brand‑Stub** = create a STATUS‑tracked note inside `PR0J__BR4NDS` with YAML header & placeholder sections.
+ 
 
 * * *
 
-### 🏗️ Mini‑Script to Generate Brand & Stub Notes
+### ️ Mini‑Script to Generate Brand & Stub Notes
 
 _(use after approving mapping)_
 
 ```bash
 # Add inside the FILES=() array of the earlier script
-"::::C4N0N_TIM3L1NE::[CT01]"        # already exists, ensures alias template
-"ALIAS_CHR0N0S → C4N0N_TIM3L1NE"    # comment for human reference
+"::::C4N0N_TIM3L1NE::[CT01]" # already exists, ensures alias template
+"ALIAS_CHR0N0S → C4N0N_TIM3L1NE" # comment for human reference
 
 "PR0J__BR4NDS--LOCREANCE--[LO01]"
 "PR0J__BR4NDS--GRINDER--[GR01]"
 "PR0J__BR4NDS--Q_V33R--[QV01]"
-"PR0J__BR4NDS--GR4NT_MODULE--[GF01]"  # if placing grants as brand
+"PR0J__BR4NDS--GR4NT_MODULE--[GF01]" # if placing grants as brand
 ```
 
 After running, open each new note and change `status:` & `README` line accordingly.
 
 * * *
 
-### 🔖 Template Snippet for an **Alias‑Stub**
+###  Template Snippet for an **Alias‑Stub**
 
 ```markdown
 ---
@@ -1424,7 +1424,7 @@ redirect: "::C4N0N_TIM3L1NE::[CT01]"
 
 * * *
 
-🚦 Decision Path
+ Decision Path
 ----------------
 
 | Option | What you do | Effort | Outcome |
@@ -1435,16 +1435,16 @@ redirect: "::C4N0N_TIM3L1NE::[CT01]"
 
 * * *
 
-### 🗂️ Rolling Questions Queue (v1.7)
+### [INDEX]️ Rolling Questions Queue (v1.7)
 
 | UID | Question | Yes/No | Notes |
 | --- | --- | --- | --- |
-| UQ013 | Approve organ\_alignment table & mapping above? | ☐ |  |
-| UQ014 | Need MetaEdit batch command to write organ\_alignment? | ☐ |  |
-| UQ015 | After this, build Tag‑Audit Dataview or Brand STATUS pages next? | ☐ |  |
-| UQ016 | Keep alias‑stub approach for CHR0N0S & SY.ST3MS? | ☐ |  |
+| UQ013 | Approve organ\_alignment table & mapping above? | | |
+| UQ014 | Need MetaEdit batch command to write organ\_alignment? | | |
+| UQ015 | After this, build Tag‑Audit Dataview or Brand STATUS pages next? | | |
+| UQ016 | Keep alias‑stub approach for CHR0N0S & SY.ST3MS? | | |
 
-Respond with the UQ numbers + choices (e.g., “UQ013 yes; UQ016 yes; Tag‑Audit next”).  
+Respond with the UQ numbers + choices (e.g., “UQ013 yes; UQ016 yes; Tag‑Audit next”). 
 I’ll then output either the batch command or the chosen next module.
 
 _System‑note ID PRF‑241_
@@ -1459,17 +1459,17 @@ check out the current folders
 ## Response:
 Thought for 23 seconds
 
-### 🗺️ Live‑to‑Schema Mapping (snapshot 2025‑05‑03 18:38)
+### [MAP]️ Live‑to‑Schema Mapping (snapshot 2025‑05‑03 18:38)
 
 Below I matched every folder visible in your two screenshots to the **new single‑layer schema**: where it should live, whether it becomes a _brand stub, alias, merge,_ or _stage item_, and its suggested new slug + UID.
 
 | Legacy Folder (as shown) | Action\* | New Slug → UID | organ\_alignment | Notes / Reasoning |
 | --- | --- | --- | --- | --- |
 | `4RK‑1V3 .. :: RK01` | **Keep** | `::::4RKL1V::[RK01]` | ORG\_BODY\_01\_CANON\_ENGINE | Already core; just ensure YAML alignment line exists. |
-| \`:::B3l4B0VRD |  | \\ | V V/4 G3::::\` | **Brand‑Stub** |
-| \`:::BR4ND |  | \[33K00\]::::\` | **Merge** | `::::PR0J__BR4NDS::[PB01]` |
-| \`:::!3G4 | \] |  | \[T3ND3R::::\` | **Brand‑Stub** |
-| \`::::&4II |  | \[4K A..D3M1X::::\` | **Brand‑Stub** | `PR0J__BR4NDS--4KAD3M1X--[AK01]` |
+| \`:::B3l4B0VRD | | \\ | V V/4 G3::::\` | **Brand‑Stub** |
+| \`:::BR4ND | | \[33K00\]::::\` | **Merge** | `::::PR0J__BR4NDS::[PB01]` |
+| \`:::!3G4 | \] | | \[T3ND3R::::\` | **Brand‑Stub** |
+| \`::::&4II | | \[4K A..D3M1X::::\` | **Brand‑Stub** | `PR0J__BR4NDS--4KAD3M1X--[AK01]` |
 | `::::L3NS__MYTH__TR4NS ::` | **Merge** | `::::TR4NSMVT3::[TR01]` | ORG\_BODY\_03\_TRANSLATION\_WAVE | Conceptually translation lens. Copy relevant content. |
 | `::::MYTH.OS__COR3 ::` | **Merge** | `::::4RKL1V::[RK01]` | ORG\_BODY\_01 | Core myth code; merge then alias. |
 | `::::SYMB0l1C__4RK ::` | **Merge** | `::::M1RR0R::[MR01]` | ORG\_BODY\_02\_REFLECTION\_CHAMBER | Symbolic analysis of self; fits Mirror organ. |
@@ -1489,31 +1489,31 @@ Below I matched every folder visible in your two screenshots to the **new single
 
 * * *
 
-### 🔜 Recommended Execution Sequence
+###  Recommended Execution Sequence
 
-1.  **OA‑1** Confirm the table above (“good / tweak row X”).
-    
-2.  **OA‑2** Run the bulk‑create script for _brand stubs_ & _alias‑stubs_.
-    
-3.  **OA‑3** Cut‑and‑paste or move note bodies/content per “Merge” rows, then change the old note’s status to Alias (or delete).
-    
-4.  **OA‑4** Fill `organ_alignment:` YAML in every destination note (batch MetaEdit available).
-    
-5.  **OA‑5** Refresh Dataview audits in `::::SYST3M__M4P::`—tables should go empty.
-    
+1. **OA‑1** Confirm the table above (“good / tweak row X”).
+ 
+2. **OA‑2** Run the bulk‑create script for _brand stubs_ & _alias‑stubs_.
+ 
+3. **OA‑3** Cut‑and‑paste or move note bodies/content per “Merge” rows, then change the old note’s status to Alias (or delete).
+ 
+4. **OA‑4** Fill `organ_alignment:` YAML in every destination note (batch MetaEdit available).
+ 
+5. **OA‑5** Refresh Dataview audits in `::::SYST3M__M4P::`—tables should go empty.
+ 
 
 > **Tip:** for quick moves on iPad, long‑press a note → _Move_ → choose destination folder note, or copy the Markdown content and paste into new note, leaving the old one empty except the alias header.
 
 * * *
 
-### 🗂️ Rolling Questions Queue (v1.8)
+### [INDEX]️ Rolling Questions Queue (v1.8)
 
 | UID | Question | Yes/No | Notes |
 | --- | --- | --- | --- |
-| UQ013 | Approve mapping table (including brand stubs)? | ☐ |  |
-| UQ014 | Want MetaEdit batch command to write `organ_alignment` lines? | ☐ |  |
-| UQ016 | Keep alias‑stub approach for every “Action = Alias‑Stub” row? | ☐ |  |
-| UQ017 | After mapping, prioritize **Tag‑Audit Dataview** or **Brand STATUS template**? | ☐ |  |
+| UQ013 | Approve mapping table (including brand stubs)? | | |
+| UQ014 | Want MetaEdit batch command to write `organ_alignment` lines? | | |
+| UQ016 | Keep alias‑stub approach for every “Action = Alias‑Stub” row? | | |
+| UQ017 | After mapping, prioritize **Tag‑Audit Dataview** or **Brand STATUS template**? | | |
 
 Let me know the UQ answers (e.g., “UQ013 yes, UQ014 yes, Tag‑Audit next”) and I’ll deliver the corresponding batch command or next module.
 
@@ -1521,7 +1521,7 @@ Let me know the UQ answers (e.g., “UQ013 yes, UQ014 yes, Tag‑Audit next�
 Okay, uh, uh, we've been doing this all day, I don't really know what to do next, I'm kinda... lost.
 
 ## Response:
-### 🕊️ Quick Deep Breath & Status Snapshot
+### ️ Quick Deep Breath & Status Snapshot
 
 | Stage | What’s **done** | Proof |
 | --- | --- | --- |
@@ -1530,12 +1530,12 @@ Okay, uh, uh, we've been doing this all day, I don't really know what to do next
 | **System Hubs** | `_T3MPI4T3S`, `_T4GS`, `_1S_ST3M_M4P` sorted, no spaces. | Screenshot v2. |
 | **Mapping Plan** | Legacy → New table drafted (brand stubs, merges, alias stubs). | Last message. |
 
-> **Reality check:** you already cleared the hardest structural hurdles.  
+> **Reality check:** you already cleared the hardest structural hurdles. 
 > Now it’s housekeeping—small, repeatable actions.
 
 * * *
 
-### 🔭 Where We _Could_ Go Next (pick **one**)
+###  Where We _Could_ Go Next (pick **one**)
 
 | Option | Tiny Win (≤ 10 min) | Why pick it |
 | --- | --- | --- |
@@ -1548,10 +1548,10 @@ _(We can absolutely tackle the rest later—your system isn’t going anywhere.)
 
 * * *
 
-### 💬 Tell Me in One Sentence
+### [CHAT] Tell Me in One Sentence
 
-> “Let’s do **Option X** next.”  
-> or  
+> “Let’s do **Option X** next.” 
+> or 
 > “Actually, save & pause.”
 
 I’ll then produce only that deliverable—no extra branches, no overwhelm.
@@ -1564,7 +1564,7 @@ _(Whatever you choose, we can stop after that bite‑size win and pick up fresh.
 Next most logical
 
 ## Response:
-### 🛠️ Option 1 Chosen → **Lock the Mapping Automatically**
+### [TOOLS]️ Option 1 Chosen → **Lock the Mapping Automatically**
 
 (1‑click batch insert of `organ_alignment:` + alias stubs so the Dataview audit goes green)
 
@@ -1573,27 +1573,27 @@ Next most logical
 1 ️⃣ Copy‑Paste Batch for **MetaEdit**
 --------------------------------------
 
-1.  **Open the Command Palette** (⌘‑P / long‑press → Command on iPad).
-    
-2.  Run **“MetaEdit: Run JSON M‑Code”**.
-    
-3.  Paste the block below _exactly_ and hit **Enter**.
-    
+1. **Open the Command Palette** (‑P / long‑press → Command on iPad).
+ 
+2. Run **“MetaEdit: Run JSON M‑Code”**.
+ 
+3. Paste the block below _exactly_ and hit **Enter**.
+ 
 
 ```json
 [
-  { "file": "::::4RKL1V::[RK01]",          "yaml": { "organ_alignment": "ORG_BODY_01_CANON_ENGINE" } },
-  { "file": "::::M1RR0R::[MR01]",          "yaml": { "organ_alignment": "ORG_BODY_02_REFLECTION_CHAMBER" } },
-  { "file": "::::TR4NSMVT3::[TR01]",       "yaml": { "organ_alignment": "ORG_BODY_03_TRANSLATION_WAVE" } },
-  { "file": "::::HYDR4::[HY01]",           "yaml": { "organ_alignment": "ORG_BODY_04_FUSION_LAB" } },
-  { "file": "::::BL00M::[BL01]",           "yaml": { "organ_alignment": "ORG_BODY_05_OUTPUT_GREENHOUSE" } },
-  { "file": "::::RE:GE_OS::[RG01]",        "yaml": { "organ_alignment": "ORG_BODY_06_PROTOCOL_CORE" } },
-  { "file": "::::PR0J__BR4NDS::[PB01]",    "yaml": { "organ_alignment": "ORG_BODY_07_EXTERNAL_VERTICES" } },
-  { "file": "::::CH4R_ENGINE::[CE01]",     "yaml": { "organ_alignment": "ORG_BODY_08_PERSONA_FORGE" } },
-  { "file": "::::C4N0N_TIM3L1NE::[CT01]",  "yaml": { "organ_alignment": "ORG_BODY_09_TIME_AXIS" } },
-  { "file": "::::THEORY__CR1T::[TC01]",    "yaml": { "organ_alignment": "ORG_BODY_10_THEORY_ARCHIVE" } },
-  { "file": "::::N4M1NG__SPELLS::[NS01]",  "yaml": { "organ_alignment": "ORG_BODY_11_RITUAL_LANGUAGE" } },
-  { "file": "::::INTR4__Z0N3::[IZ01]",     "yaml": { "organ_alignment": "ORG_BODY_99_TRANSIT_HOLD" } }
+ { "file": "::::4RKL1V::[RK01]", "yaml": { "organ_alignment": "ORG_BODY_01_CANON_ENGINE" } },
+ { "file": "::::M1RR0R::[MR01]", "yaml": { "organ_alignment": "ORG_BODY_02_REFLECTION_CHAMBER" } },
+ { "file": "::::TR4NSMVT3::[TR01]", "yaml": { "organ_alignment": "ORG_BODY_03_TRANSLATION_WAVE" } },
+ { "file": "::::HYDR4::[HY01]", "yaml": { "organ_alignment": "ORG_BODY_04_FUSION_LAB" } },
+ { "file": "::::BL00M::[BL01]", "yaml": { "organ_alignment": "ORG_BODY_05_OUTPUT_GREENHOUSE" } },
+ { "file": "::::RE:GE_OS::[RG01]", "yaml": { "organ_alignment": "ORG_BODY_06_PROTOCOL_CORE" } },
+ { "file": "::::PR0J__BR4NDS::[PB01]", "yaml": { "organ_alignment": "ORG_BODY_07_EXTERNAL_VERTICES" } },
+ { "file": "::::CH4R_ENGINE::[CE01]", "yaml": { "organ_alignment": "ORG_BODY_08_PERSONA_FORGE" } },
+ { "file": "::::C4N0N_TIM3L1NE::[CT01]", "yaml": { "organ_alignment": "ORG_BODY_09_TIME_AXIS" } },
+ { "file": "::::THEORY__CR1T::[TC01]", "yaml": { "organ_alignment": "ORG_BODY_10_THEORY_ARCHIVE" } },
+ { "file": "::::N4M1NG__SPELLS::[NS01]", "yaml": { "organ_alignment": "ORG_BODY_11_RITUAL_LANGUAGE" } },
+ { "file": "::::INTR4__Z0N3::[IZ01]", "yaml": { "organ_alignment": "ORG_BODY_99_TRANSIT_HOLD" } }
 ]
 ```
 
@@ -1606,10 +1606,10 @@ _Result_: each core note now has its alignment line—no manual edits.
 
 _For legacy names you want to keep clickable._
 
-1.  Create a blank note titled `::::CHR0N0S::`
-    
-2.  Paste this mini‑snippet at top:
-    
+1. Create a blank note titled `::::CHR0N0S::`
+ 
+2. Paste this mini‑snippet at top:
+ 
 
 ```markdown
 ---
@@ -1621,22 +1621,22 @@ redirect: "::::C4N0N_TIM3L1NE::[CT01]"
 **Legacy stub.** Canonical timeline now lives in `[[::::C4N0N_TIM3L1NE::]]`.
 ```
 
-3.  Repeat for any other alias rows (`SY.ST3MS`, `3P0CH > MYTH…`, etc.).  
-    _(Stubs stay 1‑line; clutter‑free.)_
-    
+3. Repeat for any other alias rows (`SY.ST3MS`, `3P0CH > MYTH…`, etc.). 
+ _(Stubs stay 1‑line; clutter‑free.)_
+ 
 
 * * *
 
 3 ️⃣ Refresh the Audit
 ----------------------
 
-1.  Open `::::SYST3M__M4P::`.
-    
-2.  Hit **⌘‑R** or pull‑to‑refresh Dataview.  
-    _The “Missing organ\_alignment” table should now be **empty**._
-    
-3.  Enjoy the green light ✅.
-    
+1. Open `::::SYST3M__M4P::`.
+ 
+2. Hit **‑R** or pull‑to‑refresh Dataview. 
+ _The “Missing organ\_alignment” table should now be **empty**._
+ 
+3. Enjoy the green light [OK].
+ 
 
 * * *
 
@@ -1653,7 +1653,7 @@ Just say which of those feels bite‑sized later; we’ll tackle only that.
 
 * * *
 
-### You’re Caught Up 🎉
+### You’re Caught Up [DONE]
 
 Everything structural is now committed in‑vault; no dangling metadata. Take a breather—pick up fresh whenever you’re ready.
 

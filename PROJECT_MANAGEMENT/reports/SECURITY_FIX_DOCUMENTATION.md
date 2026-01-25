@@ -38,7 +38,7 @@ Added strict input validation using a whitelist approach at line 134-136 of `exp
 ```python
 # Validate experiment name to prevent path traversal
 if not re.match(r'^[a-zA-Z0-9_-]+$', experiment.name):
-    raise ValueError(f"Invalid experiment name '{experiment.name}'. Name must contain only alphanumeric characters, underscores, and hyphens.")
+ raise ValueError(f"Invalid experiment name '{experiment.name}'. Name must contain only alphanumeric characters, underscores, and hyphens.")
 ```
 
 ### Security Strategy
@@ -49,9 +49,9 @@ if not re.match(r'^[a-zA-Z0-9_-]+$', experiment.name):
 4. **Defense in Depth**: Validation happens BEFORE any filesystem operations
 
 ### What's Allowed
-- ✅ Alphanumeric characters: `a-z`, `A-Z`, `0-9`
-- ✅ Underscores: `_`
-- ✅ Hyphens: `-`
+- [OK] Alphanumeric characters: `a-z`, `A-Z`, `0-9`
+- [OK] Underscores: `_`
+- [OK] Hyphens: `-`
 
 Examples of valid names:
 - `recursive_myth_engine`
@@ -59,25 +59,25 @@ Examples of valid names:
 - `MyExperiment_v2`
 
 ### What's Blocked
-- ❌ Path traversal sequences: `..`, `/`, `\`
-- ❌ Special characters: `;`, `|`, `&`, `$`, `` ` ``, etc.
-- ❌ Whitespace: spaces, tabs, newlines
-- ❌ Quotes: `'`, `"`
-- ❌ Any other non-alphanumeric characters
+- [FAIL] Path traversal sequences: `..`, `/`, `\`
+- [FAIL] Special characters: `;`, `|`, `&`, `$`, `` ` ``, etc.
+- [FAIL] Whitespace: spaces, tabs, newlines
+- [FAIL] Quotes: `'`, `"`
+- [FAIL] Any other non-alphanumeric characters
 
 ## Testing
 
 ### Automated Tests
 A comprehensive test suite (`test_path_traversal_fix.py`) verifies:
-- ✅ Valid experiment names are accepted
-- ✅ All 23+ malicious patterns are rejected
-- ✅ Error messages are clear and informative
+- [OK] Valid experiment names are accepted
+- [OK] All 23+ malicious patterns are rejected
+- [OK] Error messages are clear and informative
 
 ### Test Results
 ```
-✅ All 5 valid names were accepted
-✅ All 23/23 malicious names were rejected
-✅ Path traversal vulnerability fix is working correctly!
+[OK] All 5 valid names were accepted
+[OK] All 23/23 malicious names were rejected
+[OK] Path traversal vulnerability fix is working correctly!
 ```
 
 ## Security Impact

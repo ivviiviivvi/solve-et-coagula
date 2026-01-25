@@ -4,7 +4,7 @@ _A cross‑disciplinary blueprint for building the OS **and** educating yourse
 
 ---
 
-## 📜 HOW TO READ THIS DOCUMENT
+##  HOW TO READ THIS DOCUMENT
 
 |Column|Meaning|
 |---|---|
@@ -18,18 +18,18 @@ _Copy this file to `ACTIVE_CORE/OS_SYLLABUS/README.md` and update as you progr
 
 ---
 
-## 🌑 PHASE I — BOOT THE SPINE (Weeks 1‑4)
+## [PHASE-NEW] PHASE I — BOOT THE SPINE (Weeks 1‑4)
 
 |OS Component|Module|Required Reading / Resource|Checkpoint|Tool Integrations|
 |---|---|---|---|---|
-|`RECURSION_ENGINE/`|**M1 – Visual Algorithms**|_Grokking Algorithms_ 💠 + **VisuAlgo.net** + CS50 Week 0‑2|Python script: visual bubble‑sort & recursion trace.|Python + Jupyter|
+|`RECURSION_ENGINE/`|**M1 – Visual Algorithms**|_Grokking Algorithms_  + **VisuAlgo.net** + CS50 Week 0‑2|Python script: visual bubble‑sort & recursion trace.|Python + Jupyter|
 |`UID_CORE/`|**M2 – Naming Law**|Your `UID_Constitution_v2.md`; _A Common‑Sense Guide…_|Auto‑generate UID CLI (`uidgen.py`) + 5 demo files.|Bash / PowerShell|
 |`SYMB0L_GRAMMAR/`|**M3 – Metaphor Engine**|_Metaphors We Live By_ + GPT prompt experiments|Draft 10 metaphors → convert to code comments.|GPT‑4 interactive|
 |`WAVE_TRACKER.md`|**M4 – Ritual Cycle**|Eno’s _Oblique Strategies_ (cards), CS50 Study Schedule|Build `SPELLBOOK_STUDY_SCHEDULER.md` + first 5‑day log.|Cron / Obsidian Tasks|
 
 ---
 
-## 🌒 PHASE II — CANONICAL CORE (Weeks 5‑8)
+## [PHASE-WAX1] PHASE II — CANONICAL CORE (Weeks 5‑8)
 
 |OS Component|Module|Required Reading|Checkpoint|Tools|
 |---|---|---|---|---|
@@ -40,7 +40,7 @@ _Copy this file to `ACTIVE_CORE/OS_SYLLABUS/README.md` and update as you progr
 
 ---
 
-## 🌓 PHASE III — SYSTEMS IN MOTION (Weeks 9‑12)
+## [PHASE-WAX2] PHASE III — SYSTEMS IN MOTION (Weeks 9‑12)
 
 |OS Component|Module|Reading|Checkpoint|Tools|
 |---|---|---|---|---|
@@ -51,7 +51,7 @@ _Copy this file to `ACTIVE_CORE/OS_SYLLABUS/README.md` and update as you progr
 
 ---
 
-## 🌔 PHASE IV — AI & SYMBOLIC BLOOM (Weeks 13‑16)
+## [PHASE-WAX3] PHASE IV — AI & SYMBOLIC BLOOM (Weeks 13‑16)
 
 |OS Component|Module|Reading|Checkpoint|Tools|
 |---|---|---|---|---|
@@ -60,12 +60,12 @@ _Copy this file to `ACTIVE_CORE/OS_SYLLABUS/README.md` and update as you progr
 |`DSL_FORGE/`|**M15 – Custom Language**|Holden _Build Your Own PL_|Parse “ritual chant” DSL → JSON AST.|ANTLR|
 |`DATA_FUSION_LAYER/`|**M16 – Event Streams**|Kleppmann _DDIA_ (Ch. 1‑3)|Append‑only ritual log into Postgres.|Kafka / Postgres|
 
-**Capstone Deliverable → `REGE_OS~v1`:**  
+**Capstone Deliverable → `REGE_OS~v1`:** 
 Bootable ISO + containerized agents + voice invocation + diagnostic daemon.
 
 ---
 
-## 🧭 CROSS‑DISCIPLINARY CONTINUOUS EDUCATION
+## [COMPASS] CROSS‑DISCIPLINARY CONTINUOUS EDUCATION
 
 |Domain|Why it Matters to OS|Quick Entry Reading / Course|
 |---|---|---|
@@ -82,7 +82,7 @@ _Whenever you spawn a new thread, pick one “Fresh Field” from this table, n
 
 ---
 
-## 🛠 MINIMUM TOOLCHAIN (Tied to Components)
+## [TOOLS] MINIMUM TOOLCHAIN (Tied to Components)
 
 |Component|Primary Tools|
 |---|---|
@@ -98,7 +98,7 @@ _Whenever you spawn a new thread, pick one “Fresh Field” from this table, n
 
 ---
 
-## 🗓 12‑WEEK RITUAL CALENDAR (Example)
+## [CAL] 12‑WEEK RITUAL CALENDAR (Example)
 
 |Week|Monday|Tuesday|Wednesday|Thursday|Friday|
 |---|---|---|---|---|---|

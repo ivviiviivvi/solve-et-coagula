@@ -62,11 +62,11 @@ find . -name "*.md" -exec markdown {} \; > /dev/null
 
 ### Key Directories and Files
 - **Root Level**: Main documentation and system files
-  - `README.md` - Primary vault description
-  - `SYSTEM_ROOT_README.md` - Central navigation index
-  - `__VAULT_GUIDE__.md` - Usage principles and setup
-  - `SYMBOLIC_TREE_MAP.md` - Project organization overview
-  - `vault_state.md` - Current system status
+ - `README.md` - Primary vault description
+ - `SYSTEM_ROOT_README.md` - Central navigation index
+ - `__VAULT_GUIDE__.md` - Usage principles and setup
+ - `SYMBOLIC_TREE_MAP.md` - Project organization overview
+ - `vault_state.md` - Current system status
 - **ARCHIVAL_STACK/** - Contains PR01-PR19 thread digests and archived materials
 - **.obsidian/** - Obsidian configuration (DO NOT MODIFY unless necessary)
 - **Symbolic Folders**: Special naming like `; RE•GE•OS ; RG•01 ;` (handle with care due to special characters)
@@ -92,7 +92,7 @@ find . -name "*.md" | wc -l
 ## Understanding the Content System
 
 ### Symbolic Naming Convention
-- `4` = Identity signature, recursion, transformation  
+- `4` = Identity signature, recursion, transformation 
 - `S0VRC3` = Archive, library, wellspring, generative base
 - Project IDs: PR01-PR19 with specific thematic assignments
 - Special folder names use symbols and encoded characters (handle carefully)
@@ -100,7 +100,7 @@ find . -name "*.md" | wc -l
 ### Content Categories
 - **Thread Digests**: AI conversation logs in ARCHIVAL_STACK/
 - **Creative Projects**: Various multimedia and narrative builds
-- **System Protocols**: Operating procedures and workflows  
+- **System Protocols**: Operating procedures and workflows 
 - **Templates**: Reusable structures and seed files
 
 ### Working with Special Characters in Filenames
@@ -157,7 +157,7 @@ wc -l "ChatGPT-Merge Project Folders.md"
 # Find files by content
 grep -r "search_term" . --include="*.md"
 
-# Find files by name pattern  
+# Find files by name pattern 
 find . -name "*pattern*.md"
 
 # Search within specific directories
@@ -181,7 +181,7 @@ When modifying content in this vault, **ALWAYS** run these validation steps:
 
 ```bash
 # 1. Verify your changes don't break markdown syntax
-find . -name "*.md" -exec markdown {} \; > /dev/null && echo "✓ All markdown valid"
+find . -name "*.md" -exec markdown {} \; > /dev/null && echo " All markdown valid"
 
 # 2. Check git status shows expected changes
 git --no-pager status
@@ -191,7 +191,7 @@ git --no-pager diff --name-only
 git --no-pager diff
 
 # 4. Test file accessibility if you modified special character names
-ls -la "; RE•GE•OS ; RG•01 ;" > /dev/null && echo "✓ Special folders accessible"
+ls -la "; RE•GE•OS ; RG•01 ;" > /dev/null && echo " Special folders accessible"
 
 # 5. Verify repository integrity
 echo "Files tracked by git: $(git ls-files | wc -l)"
@@ -203,29 +203,29 @@ echo "Thread digests: $(ls ARCHIVAL_STACK/PR*_THREAD_DIGEST.md | wc -l)"
 **CRITICAL**: Always test these specific scenarios after changes:
 
 1. **Content Navigation Test**:
-   ```bash
-   cat SYSTEM_ROOT_README.md | head -10  # Should show system overview
-   cat __VAULT_GUIDE__.md | head -10     # Should show usage guide
-   ```
+ ```bash
+ cat SYSTEM_ROOT_README.md | head -10 # Should show system overview
+ cat __VAULT_GUIDE__.md | head -10 # Should show usage guide
+ ```
 
 2. **Search Functionality Test**:
-   ```bash
-   grep -r "protocol" . --include="*.md" | wc -l  # Should show ~88 results
-   find . -name "*THREAD*" | head -5              # Should show thread files
-   ```
+ ```bash
+ grep -r "protocol" . --include="*.md" | wc -l # Should show ~88 results
+ find . -name "*THREAD*" | head -5 # Should show thread files
+ ```
 
 3. **Special Character Handling Test**:
-   ```bash
-   ls -la "; RE•GE•OS ; RG•01 ;"  # Should list RE•GE•OS contents
-   find . -name "*RE•GE•OS*"     # Should find symbolic folders
-   ```
+ ```bash
+ ls -la "; RE•GE•OS ; RG•01 ;" # Should list RE•GE•OS contents
+ find . -name "*RE•GE•OS*" # Should find symbolic folders
+ ```
 
 4. **File Count Integrity Test**:
-   ```bash
-   # These counts should remain consistent unless you specifically added/removed files
-   find . -name "*.md" | wc -l                    # Should show 136+ 
-   ls ARCHIVAL_STACK/PR*_THREAD_DIGEST.md | wc -l # Should show 15
-   ```
+ ```bash
+ # These counts should remain consistent unless you specifically added/removed files
+ find . -name "*.md" | wc -l # Should show 136+ 
+ ls ARCHIVAL_STACK/PR*_THREAD_DIGEST.md | wc -l # Should show 15
+ ```
 
 ## Timing Expectations and Performance
 - `git status` and `git log` (instant)
@@ -234,7 +234,7 @@ echo "Thread digests: $(ls ARCHIVAL_STACK/PR*_THREAD_DIGEST.md | wc -l)"
 - Markdown file counting
 - File existence checks
 
-### Medium Operations (1-10 seconds)  
+### Medium Operations (1-10 seconds) 
 - Repository-wide content searches
 - Large file operations
 - Multiple file markdown processing
@@ -287,7 +287,7 @@ git --no-pager fsck --no-reflogs
 # Always start navigation from vault guide
 cat __VAULT_GUIDE__.md
 
-# Use the system map for orientation  
+# Use the system map for orientation 
 cat SYSTEM_ROOT_README.md
 
 # Find files by content when structure is unclear
@@ -297,8 +297,8 @@ grep -r "search_term" . --include="*.md"
 ### Performance Issues
 ```bash
 # If operations seem slow, check system resources
-df -h .  # Check disk space
-ls -la | wc -l  # Check file count in current directory
+df -h . # Check disk space
+ls -la | wc -l # Check file count in current directory
 
 # Large file operations - these files are biggest:
 # ChatGPT-Merge Project Folders.md (~2000 lines)
@@ -312,10 +312,10 @@ find . -name "*.md" -exec markdown {} \; 2>&1 | head -10
 
 # If file counts are wrong, investigate
 find . -name "*.md" -exec echo "Processing: {}" \; | tail -10
-git ls-files "*.md" | wc -l  # Compare git tracking vs filesystem
+git ls-files "*.md" | wc -l # Compare git tracking vs filesystem
 
 # If special folders are inaccessible
-find . -name "*•*" -type d  # Find all folders with special characters
+find . -name "*•*" -type d # Find all folders with special characters
 ```
 
 This vault is a living creative system - approach changes thoughtfully and preserve the symbolic structure that makes it functional.

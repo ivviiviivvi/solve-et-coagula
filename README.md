@@ -2,11 +2,11 @@
 uniqueID: "04"
 title: 4_S0VRC3
 tags:
-  - protocol
-  - template
-  - digest
-  - system
-  - thread
+ - protocol
+ - template
+ - digest
+ - system
+ - thread
 ---
 
 # 4_S0VRC3
@@ -38,7 +38,7 @@ emergency recovery procedures, and clear pathways for experimentation to product
 
 ---
 
-## 🔍 Meaning
+## [SEARCH] Meaning
 
 "4_S0VRC3" is read as "A Source."
 It is both a symbolic node and a practical sandbox.
@@ -46,7 +46,7 @@ It is both a symbolic node and a practical sandbox.
 **Canonical Path:**
 `+ ~/Documents/4_S0VRC3/`
 
-## 📦 Contents
+## [PACKAGE] Contents
 
 ### Core System Folders
 
@@ -69,7 +69,7 @@ It is both a symbolic node and a practical sandbox.
 
 - Various project and analysis documents in development
 
-## 📂 Organization
+## [FOLDER] Organization
 
 - `DOCUMENTATION/root_overview.md` — quick index of organizational files
 - `DOCUMENTATION/folder_map.md` — canonical vault tree
@@ -89,7 +89,7 @@ It is both a symbolic node and a practical sandbox.
 - `docs/guides/EMERGENCY_ACCESS.md` — token recovery and emergency rebuild procedures
 - `docs/policies/ARCHIVE_BACKUP_POLICY.md` — external backup strategy for gitignored content
 
-## 💬 Community
+## [CHAT] Community
 
 Join our [GitHub Discussions](https://github.com/4-b100m/4_S0VRC3/discussions) to:
 
@@ -101,12 +101,12 @@ Join our [GitHub Discussions](https://github.com/4-b100m/4_S0VRC3/discussions) t
 
 See [DISCUSSIONS.md](DISCUSSIONS.md) for more details and [community guidelines](.github/COMMUNITY_GUIDELINES.md).
 
-## 🤖 Commit Agent
+## [BOT] Commit Agent
 
 Automation support lives in [`scripts/commit_agent.py`](scripts/commit_agent.py) and the workflow [`./.github/workflows/commit-agent.yml`](.github/workflows/commit-agent.yml).
 Run `python scripts/commit_agent.py` to review commit messages, or `python scripts/commit_agent.py --merge <source> <target>` to perform a guarded local merge.
 
-## 🔒 Status
+## [LOCKED] Status
 
 Naming logic frozen as of `2025-05-04`
 Vault version: `v1.0`

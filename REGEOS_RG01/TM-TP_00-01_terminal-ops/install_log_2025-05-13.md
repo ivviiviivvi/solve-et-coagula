@@ -1,4 +1,4 @@
-# 🧾 INSTALL LOG — May 13, 2025
+# INSTALL LOG — May 13, 2025
 
 Executed via `dev_bootstrap.sh`
 

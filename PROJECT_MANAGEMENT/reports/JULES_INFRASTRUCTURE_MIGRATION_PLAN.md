@@ -1,11 +1,11 @@
 # Jules Infrastructure Migration Plan
-**Target**: Move Jules coordination to `ivviiviivvi/.github` repository  
-**Date**: 2026-01-19  
+**Target**: Move Jules coordination to `ivviiviivvi/.github` repository 
+**Date**: 2026-01-19 
 **Reason**: Centralize workflow tooling for all repositories using Jules
 
 ---
 
-## 🎯 Why Centralize in `.github` Repository?
+## [TARGET] Why Centralize in `.github` Repository?
 
 ### Current Problem
 - Jules workflow fixes duplicated across every repo
@@ -14,51 +14,51 @@
 - Updates require changing 10+ repositories
 
 ### Benefits of `.github` Repository
-✅ **Reusable workflows** - One workflow, all repos  
-✅ **Organization defaults** - Apply to all repos automatically  
-✅ **Centralized maintenance** - Update once, fix everywhere  
-✅ **Shared state** - Cross-repo coordination possible  
-✅ **GitHub convention** - Standard practice for org-level config
+[OK] **Reusable workflows** - One workflow, all repos 
+[OK] **Organization defaults** - Apply to all repos automatically 
+[OK] **Centralized maintenance** - Update once, fix everywhere 
+[OK] **Shared state** - Cross-repo coordination possible 
+[OK] **GitHub convention** - Standard practice for org-level config
 
 ---
 
-## 📂 Proposed Repository Structure
+## [FOLDER] Proposed Repository Structure
 
 ```
 ivviiviivvi/.github/
 ├── README.md
-├── workflow-templates/                    # Reusable workflow templates
-│   ├── jules-coordinator.yml             # Main coordination workflow
-│   ├── jules-cleanup.yml                 # Stale branch cleanup
-│   ├── jules-tournament.yml              # Branch winner selection
-│   └── jules-task-check.yml              # Task completion detector
+├── workflow-templates/ # Reusable workflow templates
+│ ├── jules-coordinator.yml # Main coordination workflow
+│ ├── jules-cleanup.yml # Stale branch cleanup
+│ ├── jules-tournament.yml # Branch winner selection
+│ └── jules-task-check.yml # Task completion detector
 │
-├── scripts/                               # Shared scripts
-│   ├── jules/
-│   │   ├── check_task_completion.py      # Detect if task done
-│   │   ├── check_base_freshness.py       # Ensure fresh base
-│   │   ├── branch_tournament.py          # Run competitions
-│   │   ├── cleanup_stale_branches.py     # Delete old branches
-│   │   └── shared_state.py               # State coordination API
-│   │
-│   └── common/
-│       ├── git_utils.py                   # Git helper functions
-│       └── metrics.py                     # Telemetry collection
+├── scripts/ # Shared scripts
+│ ├── jules/
+│ │ ├── check_task_completion.py # Detect if task done
+│ │ ├── check_base_freshness.py # Ensure fresh base
+│ │ ├── branch_tournament.py # Run competitions
+│ │ ├── cleanup_stale_branches.py # Delete old branches
+│ │ └── shared_state.py # State coordination API
+│ │
+│ └── common/
+│ ├── git_utils.py # Git helper functions
+│ └── metrics.py # Telemetry collection
 │
 ├── .github/
-│   └── workflows/
-│       ├── deploy-to-repos.yml           # Push updates to consumer repos
-│       └── test-workflows.yml            # Test workflow changes
+│ └── workflows/
+│ ├── deploy-to-repos.yml # Push updates to consumer repos
+│ └── test-workflows.yml # Test workflow changes
 │
 └── docs/
-    ├── JULES_COORDINATION.md             # How coordination works
-    ├── INTEGRATION_GUIDE.md              # How to adopt in your repo
-    └── TROUBLESHOOTING.md                # Common issues
+ ├── JULES_COORDINATION.md # How coordination works
+ ├── INTEGRATION_GUIDE.md # How to adopt in your repo
+ └── TROUBLESHOOTING.md # Common issues
 ```
 
 ---
 
-## 🔧 Migration Steps
+## [WRENCH] Migration Steps
 
 ### Phase 1: Create `.github` Repository (1 hour)
 
@@ -123,7 +123,7 @@ cd scripts/jules/
 
 # Copy scripts (create these based on JULES_WORKFLOW_FIX_PROPOSAL.md)
 # - check_task_completion.py
-# - check_base_freshness.py  
+# - check_base_freshness.py 
 # - branch_tournament.py
 # - cleanup_stale_branches.py
 
@@ -135,14 +135,14 @@ cd scripts/jules/
 ```python
 # OLD (repo-specific):
 def check_task_complete(task_type, branch='main'):
-    content = subprocess.check_output(['git', 'show', f'{branch}:file.py'])
-    
+ content = subprocess.check_output(['git', 'show', f'{branch}:file.py'])
+ 
 # NEW (repo-agnostic):
 def check_task_complete(task_type, repo_path, branch='main'):
-    content = subprocess.check_output(
-        ['git', 'show', f'{branch}:file.py'],
-        cwd=repo_path
-    )
+ content = subprocess.check_output(
+ ['git', 'show', f'{branch}:file.py'],
+ cwd=repo_path
+ )
 ```
 
 ### Phase 3: Create Reusable Workflows (3 hours)
@@ -154,60 +154,60 @@ def check_task_complete(task_type, repo_path, branch='main'):
 name: Jules Coordinator (Reusable)
 
 on:
-  workflow_call:
-    inputs:
-      task_type:
-        required: true
-        type: string
-      task_description:
-        required: true
-        type: string
-      repository:
-        required: true
-        type: string
-    outputs:
-      should_proceed:
-        description: "Whether Jules should run"
-        value: ${{ jobs.check.outputs.proceed }}
+ workflow_call:
+ inputs:
+ task_type:
+ required: true
+ type: string
+ task_description:
+ required: true
+ type: string
+ repository:
+ required: true
+ type: string
+ outputs:
+ should_proceed:
+ description: "Whether Jules should run"
+ value: ${{ jobs.check.outputs.proceed }}
 
 jobs:
-  check:
-    runs-on: ubuntu-latest
-    outputs:
-      proceed: ${{ steps.check.outputs.proceed }}
-    steps:
-      - name: Checkout target repo
-        uses: actions/checkout@v4
-        with:
-          repository: ${{ inputs.repository }}
-          fetch-depth: 0
-      
-      - name: Checkout .github scripts
-        uses: actions/checkout@v4
-        with:
-          repository: ivviiviivvi/.github
-          path: .github-org
-      
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-      
-      - name: Check task completion
-        id: check
-        run: |
-          python .github-org/scripts/jules/check_task_completion.py \
-            --task-type "${{ inputs.task_type }}" \
-            --repo-path "." \
-            --description "${{ inputs.task_description }}"
-          
-          echo "proceed=$?" >> $GITHUB_OUTPUT
-      
-      - name: Check base freshness
-        if: steps.check.outputs.proceed == '0'
-        run: |
-          python .github-org/scripts/jules/check_base_freshness.py \
-            --repo-path "."
+ check:
+ runs-on: ubuntu-latest
+ outputs:
+ proceed: ${{ steps.check.outputs.proceed }}
+ steps:
+ - name: Checkout target repo
+ uses: actions/checkout@v4
+ with:
+ repository: ${{ inputs.repository }}
+ fetch-depth: 0
+ 
+ - name: Checkout .github scripts
+ uses: actions/checkout@v4
+ with:
+ repository: ivviiviivvi/.github
+ path: .github-org
+ 
+ - name: Set up Python
+ uses: actions/setup-python@v5
+ with:
+ python-version: '3.11'
+ 
+ - name: Check task completion
+ id: check
+ run: |
+ python .github-org/scripts/jules/check_task_completion.py \
+ --task-type "${{ inputs.task_type }}" \
+ --repo-path "." \
+ --description "${{ inputs.task_description }}"
+ 
+ echo "proceed=$?" >> $GITHUB_OUTPUT
+ 
+ - name: Check base freshness
+ if: steps.check.outputs.proceed == '0'
+ run: |
+ python .github-org/scripts/jules/check_base_freshness.py \
+ --repo-path "."
 ```
 
 ### Phase 4: Consumer Repo Integration (Per Repo, 30 min each)
@@ -218,30 +218,30 @@ jobs:
 name: Jules Wrapped (Uses Org Coordination)
 
 on:
-  workflow_dispatch:
-    inputs:
-      task:
-        required: true
-        description: 'Task for Jules to perform'
+ workflow_dispatch:
+ inputs:
+ task:
+ required: true
+ description: 'Task for Jules to perform'
 
 jobs:
-  coordinate:
-    uses: ivviiviivvi/.github/.github/workflows/jules-coordinator.yml@main
-    with:
-      task_type: ${{ github.event.inputs.task }}
-      task_description: ${{ github.event.inputs.task }}
-      repository: ${{ github.repository }}
-  
-  run-jules:
-    needs: coordinate
-    if: needs.coordinate.outputs.should_proceed == 'true'
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Run Jules
-        run: |
-          # Your existing Jules invocation
-          echo "Running Jules on task: ${{ github.event.inputs.task }}"
+ coordinate:
+ uses: ivviiviivvi/.github/.github/workflows/jules-coordinator.yml@main
+ with:
+ task_type: ${{ github.event.inputs.task }}
+ task_description: ${{ github.event.inputs.task }}
+ repository: ${{ github.repository }}
+ 
+ run-jules:
+ needs: coordinate
+ if: needs.coordinate.outputs.should_proceed == 'true'
+ runs-on: ubuntu-latest
+ steps:
+ - uses: actions/checkout@v4
+ - name: Run Jules
+ run: |
+ # Your existing Jules invocation
+ echo "Running Jules on task: ${{ github.event.inputs.task }}"
 ```
 
 ### Phase 5: Deploy Cleanup Workflow (1 hour)
@@ -252,60 +252,60 @@ jobs:
 name: Deploy Jules Infrastructure to Repos
 
 on:
-  workflow_dispatch:
-    inputs:
-      target_repos:
-        description: 'Repos to update (comma-separated, or "all")'
-        required: true
-        default: 'all'
+ workflow_dispatch:
+ inputs:
+ target_repos:
+ description: 'Repos to update (comma-separated, or "all")'
+ required: true
+ default: 'all'
 
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        repo:
-          - solve-et-coagula
-          # Add other repos using Jules
-    steps:
-      - name: Checkout .github
-        uses: actions/checkout@v4
-      
-      - name: Deploy to ${{ matrix.repo }}
-        env:
-          GH_TOKEN: ${{ secrets.ORG_PAT }}
-        run: |
-          # Clone target repo
-          git clone "https://github.com/ivviiviivvi/${{ matrix.repo }}"
-          cd "${{ matrix.repo }}"
-          
-          # Create integration branch
-          git checkout -b "infra/jules-coordination"
-          
-          # Copy workflow template
-          mkdir -p .github/workflows
-          cp ../workflow-templates/jules-coordinator.yml \
-             .github/workflows/jules-coordinator.yml
-          
-          # Commit and push
-          git add .github/workflows/jules-coordinator.yml
-          git commit -m "feat: integrate Jules coordination from .github repo"
-          git push origin infra/jules-coordination
-          
-          # Create PR
-          gh pr create \
-            --title "Integrate Jules coordination infrastructure" \
-            --body "Adopts centralized Jules coordination from ivviiviivvi/.github" \
-            --base main \
-            --head infra/jules-coordination
+ deploy:
+ runs-on: ubuntu-latest
+ strategy:
+ matrix:
+ repo:
+ - solve-et-coagula
+ # Add other repos using Jules
+ steps:
+ - name: Checkout .github
+ uses: actions/checkout@v4
+ 
+ - name: Deploy to ${{ matrix.repo }}
+ env:
+ GH_TOKEN: ${{ secrets.ORG_PAT }}
+ run: |
+ # Clone target repo
+ git clone "https://github.com/ivviiviivvi/${{ matrix.repo }}"
+ cd "${{ matrix.repo }}"
+ 
+ # Create integration branch
+ git checkout -b "infra/jules-coordination"
+ 
+ # Copy workflow template
+ mkdir -p .github/workflows
+ cp ../workflow-templates/jules-coordinator.yml \
+ .github/workflows/jules-coordinator.yml
+ 
+ # Commit and push
+ git add .github/workflows/jules-coordinator.yml
+ git commit -m "feat: integrate Jules coordination from .github repo"
+ git push origin infra/jules-coordination
+ 
+ # Create PR
+ gh pr create \
+ --title "Integrate Jules coordination infrastructure" \
+ --body "Adopts centralized Jules coordination from ivviiviivvi/.github" \
+ --base main \
+ --head infra/jules-coordination
 ```
 
 ---
 
-## 📋 Repository-by-Repository Rollout
+## [LIST] Repository-by-Repository Rollout
 
 ### Priority 1: solve-et-coagula (This Repo)
-**Status**: Has 182 stale branches - needs immediate cleanup  
+**Status**: Has 182 stale branches - needs immediate cleanup 
 **Actions**:
 1. Run cleanup from .github scripts
 2. Integrate coordinator workflow
@@ -318,14 +318,14 @@ jobs:
 ```bash
 # Find all repos with Jules branches
 gh repo list ivviiviivvi --limit 100 --json name | \
-  jq -r '.[].name' | \
-  while read repo; do
-    count=$(gh api "repos/ivviiviivvi/$repo/branches" | \
-            jq '[.[] | select(.name | test("bolt-|sentinel-|palette-"))] | length')
-    if [ "$count" -gt 10 ]; then
-      echo "$repo: $count Jules branches"
-    fi
-  done
+ jq -r '..name' | \
+ while read repo; do
+ count=$(gh api "repos/ivviiviivvi/$repo/branches" | \
+ jq '[. | select(.name | test("bolt-|sentinel-|palette-"))] | length')
+ if [ "$count" -gt 10 ]; then
+ echo "$repo: $count Jules branches"
+ fi
+ done
 ```
 
 ### Priority 3: Documentation
@@ -335,29 +335,29 @@ gh repo list ivviiviivvi --limit 100 --json name | \
 
 ---
 
-## 🎯 Success Criteria
+## [TARGET] Success Criteria
 
 ### Organization Level
-- [ ] .github repository created and populated
-- [ ] Reusable workflows tested
-- [ ] Scripts work across multiple repos
-- [ ] Documentation complete
+-  .github repository created and populated
+-  Reusable workflows tested
+-  Scripts work across multiple repos
+-  Documentation complete
 
 ### Per Repository
-- [ ] Integrated coordinator workflow
-- [ ] Stale branches cleaned (182 → <20)
-- [ ] No duplicate branch creation
-- [ ] Team trained on new workflows
+-  Integrated coordinator workflow
+-  Stale branches cleaned (182 → <20)
+-  No duplicate branch creation
+-  Team trained on new workflows
 
 ### Long-term
-- [ ] Jules creates <5 branches per task
-- [ ] Average branch age <7 days
-- [ ] 80% of branches auto-converged
-- [ ] Cross-repo state coordination working
+-  Jules creates <5 branches per task
+-  Average branch age <7 days
+-  80% of branches auto-converged
+-  Cross-repo state coordination working
 
 ---
 
-## 🚀 Quick Start (Right Now)
+## [LAUNCH] Quick Start (Right Now)
 
 ```bash
 # 1. Create .github repository
@@ -389,7 +389,7 @@ cd ../solve-et-coagula
 
 ---
 
-## 📞 Next Steps
+## Next Steps
 
 ### Immediate (Today)
 1. **Create** `ivviiviivvi/.github` repository
