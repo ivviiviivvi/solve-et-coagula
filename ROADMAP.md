@@ -8,13 +8,13 @@ tags:
 - system
 ---
 
-# [MAP]️ ROADMAP: solve-et-coagula
+# ROADMAP: solve-et-coagula
 
 **Project Vision:** A recursive creative operating system (RE:GE:OS) that transforms myths, narratives, and symbolic processes into executable functions—a living MythOS where code becomes ritualized repetition and identity becomes modular and generative.
 
 **Status:** v1.0 Active
 **Maintainer:** Anthony James Padavano (AJP)
-**Last Updated:** 2026-01-24
+**Last Updated:** 2026-01-25
 
 ---
 
@@ -49,6 +49,14 @@ tags:
 - [x] **Security Fix** – Remove breach_detected() placeholder and associated dead code [OK]
 - [x] **Path Normalization** – Rename directories with special characters ("; M1R•R0R ; MR•01 ;" → MIRROR_MR01) [OK]
 - [x] **SOP Path Corrections** – Update SOP_SYSTEM_OVERVIEW.md with correct script paths (scripts/vault_utils/) [OK]
+
+#### Repository Restructure (Completed 2026-01-25)
+- [x] **Simplified Naming Convention** – Rename all folders to 4-letter suffix codes (REGEOS_RG01, ARCHIVE_RK01, etc.) [OK]
+- [x] **Root Cleanup** – Reduce root from 103 files to 10 essential files [OK]
+- [x] **Python Package Creation** – Create `src/habitat/` package with proper imports [OK]
+- [x] **GitHub Issues Housekeeping** – Close 10 stale/non-actionable issues [OK]
+- [x] **Emoji Removal** (Issue #28) – Replace emojis with text alternatives throughout codebase [OK]
+- [x] **Documentation Consolidation** – Move SOPs, guides, policies to DOCUMENTATION/ [OK]
 
 #### Documentation Baseline
 -  **Update Core Documentation**
@@ -99,14 +107,14 @@ tags:
  - [x] Symbolic abbreviations and codes
  - [x] RE:GE:OS terminology
  - [x] Project-specific jargon
- - Created at `docs/guides/GLOSSARY.md`
+ - Located at `DOCUMENTATION/guides/GLOSSARY.md`
 - [x] **Emergency Access Guide** (Completed 2026-01-24) [OK]
  - [x] Token recovery procedures
  - [x] Emergency rebuild documentation
- - Created at `docs/guides/EMERGENCY_ACCESS.md`
+ - Located at `DOCUMENTATION/guides/EMERGENCY_ACCESS.md`
 - [x] **Archive Backup Policy** (Completed 2026-01-24) [OK]
  - [x] External backup strategy for gitignored RC-VK_*/ directories
- - Created at `docs/policies/ARCHIVE_BACKUP_POLICY.md`
+ - Located at `DOCUMENTATION/policies/ARCHIVE_BACKUP_POLICY.md`
 
 #### Knowledge Organization
 -  **Enhanced Thread ↔ Project Linking**
@@ -401,14 +409,11 @@ These tracks run parallel to the phased timeline and represent ongoing areas of 
 
 ---
 
-## [COMPASS] Navigation
+## Navigation
 
-- See `docs/documentation_roadmap.md` for detailed documentation plans
-- See `docs/expansion_ideas.md` for feature brainstorming
-- See `vault_state.md` for current system status
-- See `CHANGELOG.md` for version history
-- See `__VAULT_GUIDE__.md` for onboarding guidance
-- See `SYSTEM_ROOT_README.md` for structural navigation
+- See `DOCUMENTATION/` for guides, SOPs, and policies
+- See `PROJECT_MANAGEMENT/CHANGELOG.md` for version history
+- See `CLAUDE.md` for command reference and development setup
 
 ---
 
@@ -420,8 +425,8 @@ This roadmap is a living document. Update it:
 - **When Vision Shifts** – Reflect changes in project direction or scope
 - **Community Input** – Integrate feedback and feature requests
 
-**Last Review:** 2026-01-24
-**Next Review:** 2026-02-24
+**Last Review:** 2026-01-25
+**Next Review:** 2026-02-25
 
 ---
 

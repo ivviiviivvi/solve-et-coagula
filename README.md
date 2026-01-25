@@ -11,103 +11,104 @@ tags:
 
 # 4_S0VRC3
 
-This is the unified origin point for Anthony James Padavano's recursive creative system.
-It serves as the master database for all generated, archived, and active content across media.
-All writing, protocols, myths, digests, and documents begin or pass through this vault.
+> A living specification that implements itself.
 
 ---
 
 ## The Problem
 
-Creative knowledge management systems fragment across tools, lose context over time,
-and lack meaningful organization beyond basic folders and tags.
+Creative knowledge management systems fragment across tools, lose context over time, and lack meaningful organization that reflects how creative work actually evolves. Folders and tags are not enough—they impose static structure on dynamic, recursive creative processes.
 
 ## The Approach
 
-4_S0VRC3 implements a symbolic operating system using:
-- **Consonant-only UIDs** for semantic naming (UID Constitution)
-- **RE:GE organizational bodies** mapping creative functions to mythic archetypes
-- **Experimental Habitat System** for safe code/content experimentation
-- **SOP framework** with daily/weekly/monthly operational rhythms
+4_S0VRC3 implements RE:GE:OS (Recursive Generative Operating System)—a symbolic operating system where:
+
+- **The vault structure IS the specification** — organizing principles encoded in directory layout
+- **Naming conventions encode meaning** — consonant-only UIDs create semantic identifiers
+- **22 organizational bodies** map creative functions to mythic archetypes
+- **Experimental code lives in safe containment** — the Habitat System isolates experiments
+- **The specification implements itself** — documentation and implementation are unified
+
+The repository name tells the story: *radix-recursiva–solve–coagula–redī* — root recursion, dissolve and coagulate, return. Alchemical transformation through recursive self-reference.
 
 ## The Outcome
 
-A unified vault that serves as master database for all creative work—
-writing, protocols, myths, and documentation—with built-in knowledge transfer,
-emergency recovery procedures, and clear pathways for experimentation to production.
+A self-documenting creative system with built-in knowledge transfer, emergency recovery procedures, and clear pathways from experimentation to production. The vault serves as master database for all creative work—writing, protocols, myths, and documentation.
 
 ---
 
-## [SEARCH] Meaning
+## Quick Start
 
-"4_S0VRC3" is read as "A Source."
-It is both a symbolic node and a practical sandbox.
+```bash
+pip install -e .
+habitat-demo
+```
 
-**Canonical Path:**
-`+ ~/Documents/4_S0VRC3/`
+See [CLAUDE.md](CLAUDE.md) for full command reference and development setup.
 
-## [PACKAGE] Contents
+---
 
-### Core System Folders
+## What This Repository Contains
 
-- `REGEOS_RG01/` — Recursive Generative Operating System logic and protocols
-- `ARCHIVE_RK01/` — Long-term archival storage and symbolic lifeforce records
-- `MIRROR_MR01/` — Shadow self, reflection, and inner critic materials
-- `TEMPLATES_TP01/` — Repeatable structures, seed files, and note templates
-- `TAGS_TA01/` — Symbolic naming systems and tag management
-- `SYSTEM_MAP_SM01/` — System architecture and navigation maps
+### Specification Folders
 
-### Project and Documentation
+| Folder | Purpose |
+|--------|---------|
+| `REGEOS_RG01/` | Core RE:GE:OS logic, symbolic laws, 22 organizational bodies |
+| `DOCUMENTATION/` | SOPs, guides, policies, reference documentation |
+| `TEMPLATES_TP01/` | Seed files, note templates |
+| `TAGS_TA01/` | Tag and symbol management |
+| `CATALOGS_AND_INDEXES/` | Master indexes, UID registries |
 
-- `ARCHIVAL_STACK/` — Project thread digests and processed conversations
-- `DOCUMENTATION/` — Vault guides, system documentation, and structural notes
-- `PROJECT_MANAGEMENT/` — Manifests, changelogs, and system core files
-- `CATALOGS_AND_INDEXES/` — Master indexes, crosswalks, and folder catalogs
-- `Users/` — User-specific content and personal materials
+### Reference Implementation
 
-### Active Files
+| Folder | Purpose |
+|--------|---------|
+| `src/habitat/` | Python package for Experimental Habitat System |
+| `scripts/` | CLI tools, vault utilities, validation |
+| `tests/` | Test suite (pytest) |
 
-- Various project and analysis documents in development
+### Working Directories
 
-## [FOLDER] Organization
+| Folder | Purpose |
+|--------|---------|
+| `ARCHIVE_RK01/` | Long-term archival storage (gitignored) |
+| `MIRROR_MR01/` | Shadow self, reflection systems |
+| `SYSTEM_MAP_SM01/` | System architecture, experiments |
+| `PROJECT_MANAGEMENT/` | Changelogs, manifests, meta-operations |
+| `ARCHIVAL_STACK/` | Project thread digests |
 
-- `DOCUMENTATION/root_overview.md` — quick index of organizational files
-- `DOCUMENTATION/folder_map.md` — canonical vault tree
-- `CATALOGS_AND_INDEXES/FOLDER_CATALOG_FINAL.md` — UID list of major folders
-- `DOCUMENTATION/NAME_STRUCTURE_OVERVIEW.md` — naming conventions
-- `CATALOGS_AND_INDEXES/THREAD_PROJECT_CROSSWALK.md` — GPT thread index
-- `CATALOGS_AND_INDEXES/PR_FOLDERS_MASTER_INDEX_FINAL.md` — master project folder index
-- `PROJECT_MANAGEMENT/GPT_PROJECTS_ARCHIVE.md` — archive of GPT projects
-- `DOCUMENTATION/SYSTEM_ROOT_README.md` — master navigation hub
-- `DOCUMENTATION/vault_state.md` — vault status snapshot
-- `PROJECT_MANAGEMENT/CHANGELOG.md` — structural history
-- `PROJECT_MANAGEMENT/COMPLETION_SUMMARY.md` — current progress overview
+---
 
-### Guides & Policies
+## Key Specifications
 
-- `docs/guides/GLOSSARY.md` — RE:GE:OS symbolic terminology glossary
-- `docs/guides/EMERGENCY_ACCESS.md` — token recovery and emergency rebuild procedures
-- `docs/policies/ARCHIVE_BACKUP_POLICY.md` — external backup strategy for gitignored content
+- **UID Constitution** — Consonant-only naming convention for semantic identifiers
+- **22 Bodies of RE:GE:OS** — Organizational archetypes (Code Forge, Echo Shell, Dream Council, etc.)
+- **Experimental Habitat System** — Safe containment for code experiments with lifecycle: Spawn → Run → Graduate/Compost
+- **SOP Framework** — Daily/weekly/monthly operational rhythms
 
-## [CHAT] Community
+---
 
-Join our [GitHub Discussions](https://github.com/4-b100m/4_S0VRC3/discussions) to:
+## For Developers
 
-- Ask questions about the system and creative processes
-- Share ideas for new projects and workflows
-- Collaborate on specific projects (PR01-PR19)
-- Show your creative work and insights
-- Connect with other members of the recursive creative community
+Technical details, commands, and architecture documentation: [CLAUDE.md](CLAUDE.md)
 
-See [DISCUSSIONS.md](DISCUSSIONS.md) for more details and [community guidelines](.github/COMMUNITY_GUIDELINES.md).
+Entry points after install:
+- `habitat-manager` — Experimental Habitat containment system
+- `habitat-interactive` — Interactive habitat interface
+- `habitat-demo` — Simple demonstration
+- `habitat-workflow` — Complete workflow demo
 
-## [BOT] Commit Agent
+---
 
-Automation support lives in [`scripts/commit_agent.py`](scripts/commit_agent.py) and the workflow [`./.github/workflows/commit-agent.yml`](.github/workflows/commit-agent.yml).
-Run `python scripts/commit_agent.py` to review commit messages, or `python scripts/commit_agent.py --merge <source> <target>` to perform a guarded local merge.
+## Community
 
-## [LOCKED] Status
+Join [GitHub Discussions](https://github.com/4-b100m/4_S0VRC3/discussions) to ask questions, share ideas, and connect with the recursive creative community.
 
-Naming logic frozen as of `2025-05-04`
-Vault version: `v1.0`
-Last updated: `2026-01-24`
+---
+
+## Status
+
+- **Vault version:** v1.0
+- **Naming logic frozen:** 2025-05-04
+- **Last updated:** 2026-01-25
